@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>牛人榜</string>
+		<key>image</key>
+		<string>home_niurenbang</string>
+		<key>selectedImage</key>
+		<string>home_niurenbang_selected</string>
+		<key>backgroundColor</key>
+		<string>FFBA00</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>行情</string>
+		<key>image</key>
+		<string>home_hangqing</string>
+		<key>selectedImage</key>
+		<string>home_hangqing_selected</string>
+		<key>backgroundColor</key>
+		<string>FF693B</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>自选股</string>
+		<key>image</key>
+		<string>home_zixuangu</string>
+		<key>selectedImage</key>
+		<string>home_zixuangu_selected</string>
+		<key>backgroundColor</key>
+		<string>5DADFF</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>社区</string>
+		<key>image</key>
+		<string>home_shequ</string>
+		<key>selectedImage</key>
+		<string>home_shequ_selected</string>
+		<key>backgroundColor</key>
+		<string>FF5C5C</string>
+	</dict>
+</array>
+</plist>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ct-wc-BCT">
+                    <rect key="frame" x="0.0" y="349" width="320" height="1"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.82352941176470584" green="0.42745098039215684" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="knT-zJ-zOy"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lauchImage_3" translatesAutoresizingMaskIntoConstraints="NO" id="57S-mh-gfi" userLabel="icon">
+                    <rect key="frame" x="65" y="375" width="80" height="80"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="URM-OA-7eX"/>
+                        <constraint firstAttribute="height" constant="80" id="y6F-lf-Iyv"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lauchImage_2" translatesAutoresizingMaskIntoConstraints="NO" id="ioF-MV-ZvY">
+                    <rect key="frame" x="165" y="390" width="105" height="50"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="105" id="MJF-17-7ot"/>
+                        <constraint firstAttribute="height" constant="50" id="ZHH-zb-fNc"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EFP-j2-hgy" userLabel="contentView">
+                    <rect key="frame" x="10" y="75" width="300" height="200"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="第一条：保住本金最重要，" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTt-al-lp5">
+                            <rect key="frame" x="0.0" y="28" width="300" height="23.5"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" name="FZLTZHK--GBK1-0" family="Lantinghei SC" pointSize="20"/>
+                            <color key="textColor" red="0.34901960784313724" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="第二条：永远不要忘记第一条" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPD-yl-wAY">
+                            <rect key="frame" x="0.0" y="63" width="300" height="25"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="Mqn-HI-1Pg"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="FZLTZHK--GBK1-0" family="Lantinghei SC" pointSize="20"/>
+                            <color key="textColor" red="0.34901960784313724" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="——  沃伦·巴菲特" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lp1-Cp-k1D">
+                            <rect key="frame" x="27" y="123" width="255" height="25"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="QYv-a0-KOy"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="MicrosoftYaHei" family="Microsoft YaHei" pointSize="16"/>
+                            <color key="textColor" red="0.24313725490196078" green="0.22745098039215686" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Lp1-Cp-k1D" firstAttribute="leading" secondItem="EFP-j2-hgy" secondAttribute="leading" constant="27" id="5AY-Lh-gDe"/>
+                        <constraint firstItem="yTt-al-lp5" firstAttribute="top" secondItem="EFP-j2-hgy" secondAttribute="top" constant="28" id="5F6-Cj-r6S"/>
+                        <constraint firstItem="WPD-yl-wAY" firstAttribute="top" secondItem="yTt-al-lp5" secondAttribute="bottom" constant="12" id="JxJ-57-2e7"/>
+                        <constraint firstItem="Lp1-Cp-k1D" firstAttribute="top" secondItem="WPD-yl-wAY" secondAttribute="bottom" constant="35" id="Zn8-LO-37e"/>
+                        <constraint firstAttribute="height" constant="200" id="rCt-eb-jIX"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="EFP-j2-hgy" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="3La-Yr-zcj"/>
+                <constraint firstItem="EFP-j2-hgy" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-65" id="3Xg-bu-mue"/>
+                <constraint firstItem="4ct-wc-BCT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="8FY-G2-CXZ"/>
+                <constraint firstAttribute="trailing" secondItem="WPD-yl-wAY" secondAttribute="trailing" constant="10" id="EwK-Je-1Vq"/>
+                <constraint firstAttribute="trailing" secondItem="Lp1-Cp-k1D" secondAttribute="trailing" constant="28" id="ME0-kD-PhQ"/>
+                <constraint firstItem="57S-mh-gfi" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="-55" id="Oom-N1-y6v"/>
+                <constraint firstItem="WPD-yl-wAY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="T0j-38-f8n"/>
+                <constraint firstItem="4ct-wc-BCT" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="X3w-OI-J2W"/>
+                <constraint firstItem="yTt-al-lp5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="aKf-wd-pMi"/>
+                <constraint firstAttribute="bottom" secondItem="57S-mh-gfi" secondAttribute="bottom" constant="25" id="ciV-4w-xMv"/>
+                <constraint firstAttribute="trailing" secondItem="EFP-j2-hgy" secondAttribute="trailing" constant="10" id="i9v-pQ-Mvg"/>
+                <constraint firstAttribute="bottom" secondItem="4ct-wc-BCT" secondAttribute="bottom" constant="130" id="nBZ-RS-GQf"/>
+                <constraint firstItem="EFP-j2-hgy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="phd-hC-Gg9"/>
+                <constraint firstItem="ioF-MV-ZvY" firstAttribute="leading" secondItem="57S-mh-gfi" secondAttribute="trailing" constant="20" id="rQ5-us-ZUb"/>
+                <constraint firstItem="ioF-MV-ZvY" firstAttribute="centerY" secondItem="57S-mh-gfi" secondAttribute="centerY" id="tVi-vt-Dnu"/>
+                <constraint firstAttribute="trailing" secondItem="yTt-al-lp5" secondAttribute="trailing" constant="10" id="y2j-zA-DuO"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="377" y="343"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="lauchImage_2" width="104" height="50"/>
+        <image name="lauchImage_3" width="80" height="80"/>
+    </resources>
+</document>

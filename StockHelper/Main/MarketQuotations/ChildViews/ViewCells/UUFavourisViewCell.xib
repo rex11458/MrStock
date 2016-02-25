@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Z6U-hA-a3n" customClass="UUFavourisViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z6U-hA-a3n" id="SZ4-ZE-o5A">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qmE-cR-OuP">
+                        <rect key="frame" x="10" y="0.0" width="300" height="44.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="股票名称" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aei-sL-E8y">
+                                <rect key="frame" x="10" y="0.0" width="140" height="44.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.20784313725490197" green="0.20784313725490197" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VGt-k3-bGi" userLabel="股票价格">
+                                <rect key="frame" x="150" y="0.0" width="70" height="46"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.20784313730000001" green="0.20784313730000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6Jd-PB-ij3" userLabel="股票涨跌幅">
+                                <rect key="frame" x="220" y="0.0" width="60" height="44.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="rUg-RU-M8d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.792156862745098" green="0.792156862745098" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="aei-sL-E8y" secondAttribute="width" multiplier="2" constant="20" id="3uf-J0-idz"/>
+                            <constraint firstItem="6Jd-PB-ij3" firstAttribute="top" secondItem="qmE-cR-OuP" secondAttribute="top" id="41r-09-C60"/>
+                            <constraint firstItem="VGt-k3-bGi" firstAttribute="top" secondItem="qmE-cR-OuP" secondAttribute="top" id="8fh-A2-hzd"/>
+                            <constraint firstItem="aei-sL-E8y" firstAttribute="top" secondItem="qmE-cR-OuP" secondAttribute="top" id="BOZ-Jf-avV"/>
+                            <constraint firstAttribute="trailing" secondItem="6Jd-PB-ij3" secondAttribute="trailing" constant="20" id="DTf-pi-UJV"/>
+                            <constraint firstItem="6Jd-PB-ij3" firstAttribute="leading" secondItem="VGt-k3-bGi" secondAttribute="trailing" id="FjK-tE-iyY"/>
+                            <constraint firstAttribute="bottom" secondItem="VGt-k3-bGi" secondAttribute="bottom" constant="-1.5" id="cBV-e9-xfr"/>
+                            <constraint firstItem="aei-sL-E8y" firstAttribute="leading" secondItem="qmE-cR-OuP" secondAttribute="leading" constant="10" id="hqR-D8-RXU"/>
+                            <constraint firstItem="VGt-k3-bGi" firstAttribute="leading" secondItem="aei-sL-E8y" secondAttribute="trailing" id="owU-rT-MO1"/>
+                            <constraint firstAttribute="bottom" secondItem="6Jd-PB-ij3" secondAttribute="bottom" id="vzT-c3-AJ7"/>
+                            <constraint firstItem="aei-sL-E8y" firstAttribute="height" secondItem="qmE-cR-OuP" secondAttribute="height" id="wXk-Nz-44k"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.95686274509803926" green="0.95686274509803926" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="qmE-cR-OuP" firstAttribute="top" secondItem="SZ4-ZE-o5A" secondAttribute="top" id="8ag-xa-s28"/>
+                    <constraint firstAttribute="bottom" secondItem="qmE-cR-OuP" secondAttribute="bottom" constant="1" id="8no-aP-fCZ"/>
+                    <constraint firstItem="qmE-cR-OuP" firstAttribute="leading" secondItem="SZ4-ZE-o5A" secondAttribute="leading" constant="10" id="E0q-AW-fLj"/>
+                    <constraint firstAttribute="trailing" secondItem="qmE-cR-OuP" secondAttribute="trailing" constant="10" id="P1a-XQ-l3J"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="markUpLabel" destination="6Jd-PB-ij3" id="t4x-kZ-eDi"/>
+                <outlet property="stockNameLabel" destination="aei-sL-E8y" id="CmK-UD-SF2"/>
+                <outlet property="stockPriceLabel" destination="VGt-k3-bGi" id="uKr-RQ-txF"/>
+            </connections>
+            <point key="canvasLocation" x="479" y="347"/>
+        </tableViewCell>
+    </objects>
+</document>

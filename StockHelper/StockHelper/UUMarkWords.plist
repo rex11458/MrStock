@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>network_unavailable</key>
+	<string>网络不给力,请检查网络~</string>
+	<key>loading_ reminder</key>
+	<string>股先生正为您加载，请稍等!</string>
+	<key>no_data_ transaction_ chance</key>
+	<string>牛人们都很忙,没时间交易</string>
+	<key>no_data_ genius_stability</key>
+	<string>稳健王产生中,请耐心等待</string>
+	<key>no_data_ genius_profit</key>
+	<string>收益王产生中,请耐心等待</string>
+	<key>no_data_genius_ popularity</key>
+	<string>人气王产生中,请耐心等待</string>
+	<key>no_data_stock_hold</key>
+	<string>暂无持仓</string>
+	<key>no_data_stock_delegate</key>
+	<string>当日无委托</string>
+	<key>no_data_stock_deal</key>
+	<string>当日无成交</string>
+	<key>no_data_stock_transaction_history</key>
+	<string>暂无历史记录</string>
+	<key>no_data_community_topic</key>
+	<string>暂无话题,等您发表哦!</string>
+	<key>no_data_community_topic_reply</key>
+	<string>暂无点评,等你来点评哦!</string>
+</dict>
+</plist>

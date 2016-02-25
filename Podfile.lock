@@ -1,0 +1,66 @@
+PODS:
+  - AFNetworking (2.6.0):
+    - AFNetworking/NSURLConnection (= 2.6.0)
+    - AFNetworking/NSURLSession (= 2.6.0)
+    - AFNetworking/Reachability (= 2.6.0)
+    - AFNetworking/Security (= 2.6.0)
+    - AFNetworking/Serialization (= 2.6.0)
+    - AFNetworking/UIKit (= 2.6.0)
+  - AFNetworking/NSURLConnection (2.6.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.0)
+  - AFNetworking/Security (2.6.0)
+  - AFNetworking/Serialization (2.6.0)
+  - AFNetworking/UIKit (2.6.0):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - CocoaAsyncSocket (7.4.2)
+  - FMDB (2.5):
+    - FMDB/standard (= 2.5)
+  - FMDB/common (2.5)
+  - FMDB/standard (2.5):
+    - FMDB/common
+  - JSONModel (1.1.0)
+  - Masonry (0.6.3)
+  - MJRefresh (2.4.11)
+  - MTDates (1.0.2)
+  - SDWebImage (3.7.3):
+    - SDWebImage/Core (= 3.7.3)
+  - SDWebImage/Core (3.7.3)
+  - SVProgressHUD (1.1.3)
+  - TMCache (2.1.0)
+  - UMengAnalytics-NO-IDFA (3.5.17)
+
+DEPENDENCIES:
+  - AFNetworking (~> 2.5)
+  - CocoaAsyncSocket (~> 7.4)
+  - FMDB (~> 2.5)
+  - JSONModel (~> 1.0)
+  - Masonry (~> 0.6)
+  - MJRefresh (~> 2.2)
+  - MTDates (~> 1.0)
+  - SDWebImage (~> 3.7)
+  - SVProgressHUD (~> 1.1)
+  - TMCache (~> 2.1)
+  - UMengAnalytics-NO-IDFA (~> 3.5)
+
+SPEC CHECKSUMS:
+  AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
+  CocoaAsyncSocket: f5783bdedd232d91b89769bc4b5a1580aed518ad
+  FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
+  JSONModel: ec77e9865236a7a09d9cf7668df6b4b328d9ec1d
+  Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
+  MJRefresh: b327947f35ab3eb16ca42646b26f7347e6aa7186
+  MTDates: aa8006ac046c3fc4f2bb9df95603e9b5bdac9467
+  SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
+  SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
+  TMCache: 95ebcc9b3c7e90fb5fd8fc3036cba3aa781c9bed
+  UMengAnalytics-NO-IDFA: 601dab9ffe32f9de3fa0a6116768aed18a56f8a9
+
+COCOAPODS: 0.38.2

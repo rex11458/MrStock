@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>0条讨论</string>
+		<key>image</key>
+		<string>Toolbar_taolun</string>
+		<key>selectedImage</key>
+		<string>Toolbar_taolun_selected</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>自选</string>
+		<key>image</key>
+		<string>Toolbar_zixuan</string>
+		<key>selectedImage</key>
+		<string>Toolbar_zixuan_selected</string>
+	</dict>
+</array>
+</plist>

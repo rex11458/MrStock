@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<dict>
+			<key>k_TITLE</key>
+			<string>我的收藏</string>
+			<key>k_SUB_TITLE</key>
+			<string></string>
+			<key>k_ICON</key>
+			<string>Me_faverouis</string>
+		</dict>
+		<dict>
+			<key>New item</key>
+			<dict>
+				<key>k_TITLE</key>
+				<string>消息</string>
+				<key>k_SUB_TITLE</key>
+				<string></string>
+				<key>k_ICON</key>
+				<string>Me_message</string>
+			</dict>
+			<key>k_TITLE</key>
+			<string>我的消息</string>
+			<key>k_SUB_TITLE</key>
+			<string></string>
+			<key>k_ICON</key>
+			<string>Me_message</string>
+		</dict>
+		<dict>
+			<key>New item</key>
+			<dict>
+				<key>k_TITLE</key>
+				<string>消息</string>
+				<key>k_SUB_TITLE</key>
+				<string></string>
+				<key>k_ICON</key>
+				<string>Me_message</string>
+			</dict>
+			<key>k_TITLE</key>
+			<string>系统通知</string>
+			<key>k_SUB_TITLE</key>
+			<string></string>
+			<key>k_ICON</key>
+			<string>Me_sysNotifaction</string>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>k_TITLE</key>
+			<string>分享</string>
+			<key>k_SUB_TITLE</key>
+			<string></string>
+			<key>k_ICON</key>
+			<string>Me_share</string>
+		</dict>
+	</array>
+</array>
+</plist>

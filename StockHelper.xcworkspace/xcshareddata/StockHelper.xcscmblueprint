@@ -1,0 +1,65 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "1c5e1773-a8e4-4814-866c-3a785c61d780++8019+++11C49CA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "1c5e1773-a8e4-4814-866c-3a785c61d780++8019+++11C49CA" : {
+
+    },
+    "1c5e1773-a8e4-4814-866c-3a785c61d780++8019+++2CB9709" : {
+
+    },
+    "1c5e1773-a8e4-4814-866c-3a785c61d780++8019+++8D7DB2E" : {
+
+    },
+    "1c5e1773-a8e4-4814-866c-3a785c61d780++8019+++E5F7FBD" : {
+
+    },
+    "1c5e1773-a8e4-4814-866c-3a785c61d780++8019+++8160540" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "1c5e1773-a8e4-4814-866c-3a785c61d780++8019+++11C49CA" : 0,
+    "1c5e1773-a8e4-4814-866c-3a785c61d780++8019+++2CB9709" : 0,
+    "1c5e1773-a8e4-4814-866c-3a785c61d780++8019+++8D7DB2E" : 0,
+    "1c5e1773-a8e4-4814-866c-3a785c61d780++8019+++E5F7FBD" : 0,
+    "1c5e1773-a8e4-4814-866c-3a785c61d780++8019+++8160540" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C373B599-A67C-460D-8C61-D3D71885B4A1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "1c5e1773-a8e4-4814-866c-3a785c61d780++8019+++11C49CA" : "UUStock_20151127\/",
+    "1c5e1773-a8e4-4814-866c-3a785c61d780++8019+++2CB9709" : "UUStock_20151126\/",
+    "1c5e1773-a8e4-4814-866c-3a785c61d780++8019+++8D7DB2E" : "UUStock\/",
+    "1c5e1773-a8e4-4814-866c-3a785c61d780++8019+++E5F7FBD" : "UUStock_temp\/",
+    "1c5e1773-a8e4-4814-866c-3a785c61d780++8019+++8160540" : "UUStock\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "StockHelper",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "StockHelper.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/192.168.2.152\/svn\/stockapp",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1c5e1773-a8e4-4814-866c-3a785c61d780++8019+++11C49CA"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/192.168.2.152\/svn\/stockapp",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1c5e1773-a8e4-4814-866c-3a785c61d780++8019+++2CB9709"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/192.168.2.152\/svn\/stockapp",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1c5e1773-a8e4-4814-866c-3a785c61d780++8019+++8160540"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/192.168.2.152\/svn\/stockapp",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1c5e1773-a8e4-4814-866c-3a785c61d780++8019+++8D7DB2E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/192.168.2.152\/svn\/stockapp",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1c5e1773-a8e4-4814-866c-3a785c61d780++8019+++E5F7FBD"
+    }
+  ]
+}
