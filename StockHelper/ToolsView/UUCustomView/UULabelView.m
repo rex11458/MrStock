@@ -35,11 +35,14 @@
 
 - (void)setUpperText:(NSString *)upperText
 {
+    if(!upperText) return;
     _upperLabel.attributedText = [[NSAttributedString alloc] initWithString:upperText attributes:_upperAttributes];
 }
 
 - (void)setUnderText:(NSString *)underText
 {
+    if(!underText) return;
+
     _underLabel.attributedText = [[NSAttributedString alloc] initWithString:underText attributes:_underAttributes];
 }
 

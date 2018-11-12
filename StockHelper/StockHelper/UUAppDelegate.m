@@ -17,7 +17,7 @@
 #import "UUThemeManager.h"
 #import "APService.h"
 #import <UMengAnalytics-NO-IDFA/MobClick.h>
-
+#import "UUStockListViewController.h"
 #import "UUIntroductionView.h"
 
 #import "UUMarketQuationHandler.h"
@@ -120,6 +120,7 @@
     [self connectSocket];
     [[UUSocketManager manager] setSuccess:^(AsyncSocket *socket){
         [self getStockList];
+        [[UUStockListViewController sharedUUStockListViewController] loadData];
         //        [SVProgressHUD showSuccessWithStatus:@"连接成功!"];
     }];
     

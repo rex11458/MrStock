@@ -100,7 +100,12 @@
         //获取个人资料
 //        [SVProgressHUD setStatus:@"正在获取个人资料..."];
         [[UULoginHandler sharedLoginHandler] getUserInfoWithSessionId:sessionId success:^(id obj) {
-         
+            [SVProgressHUD dismiss];
+            [self loginSuccessPopViewController];
+            
+            if (_success) {
+                _success();
+            }
             //同步自选股列表
 //            [SVProgressHUD setStatus:@"同步自选股信息..."];
             [[UUMarketQuationHandler sharedMarkeQuationHandler] getFavourisStockListSuccess:^(NSArray *favStockModelArray) {
@@ -150,13 +155,7 @@
                 {
 //                    [SVProgressHUD showErrorWithStatus:@"自选股同步失败"];
                 }
-                [SVProgressHUD dismiss];
-                [self loginSuccessPopViewController];
-                
-                if (_success) {
-                    _success();
-                }
-                
+        
             } failue:^(NSString *errorMessage) {
 //                [SVProgressHUD showErrorWithStatus:@"自选股同步失败"];
                 [SVProgressHUD dismiss];

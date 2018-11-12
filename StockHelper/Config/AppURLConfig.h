@@ -10,15 +10,15 @@
 #define StockHelper_AppURLConfig_h
 
 //sockt请求地址
-#define k_SOCKET_HOST @"115.29.32.50"
-#define k_socket_PORT 6660
+#define k_SOCKET_HOST @"114.141.132.228"
+#define k_socket_PORT 16660
 
 //http请求地址
-#define k_BASE_URL  @"http://115.28.183.108/"
+#define k_BASE_URL  @"https://mrgu.toutoujinrong.com/"
 
 #define k_HEADER_SUBJECT_URL @"http://115.28.183.108/head/subject/"
 //测试地址
-//#define k_BASE_URL  @"http://192.168.1.110:8585/baseweb/"
+//#define k_BASE_URL  @"http://192.168.1.110:8585/BaseWeb/"
 //测试图片地址
 //#define k_IMAGE_BASE_URL @"http://192.168.1.110:8585/img/subject/"
 /*-----------------------------行情--------------------------------------*/
@@ -123,59 +123,59 @@
 #define k_PRICE_RESULT_URL(code) [NSString stringWithFormat:@"priceresult/%@",code]
 //---------自选---------------------
 //自选列表
-#define k_FAVOURIS_STOCK_LIST_URL @"baseweb/sim/user/getUserStock.do"
+#define k_FAVOURIS_STOCK_LIST_URL @"BaseWeb/sim/user/getUserStock.do"
 //添加自选
-#define k_ADD_FAVOURIS_URL @"baseweb/sim/user/addUserStock.do"
+#define k_ADD_FAVOURIS_URL @"BaseWeb/sim/user/addUserStock.do"
 #define k_ADD_FAVOURIS_BODY(code,pos) @{@"code":code,@"pos":pos}
 //添加多个自选
-#define k_ADD_FAVOURISES_URL @"baseweb/sim/user/addUserStocks.do"
+#define k_ADD_FAVOURISES_URL @"BaseWeb/sim/user/addUserStocks.do"
 #define k_ADD_FAVOURISES_BODY(codes) @{@"codes":codes}
 //修改排序
-#define k_UPDATE_POSITION_URL @"baseweb/sim/user/updatePos.do"
+#define k_UPDATE_POSITION_URL @"BaseWeb/sim/user/updatePos.do"
 #define k_UPDATE_POSITION_BODY(listIDA,pos) @{@"listIDA":listIDA,@"listIDB":listIDB}
 //删除自选
-#define k_DELETE_FAVOURIS_URL @"baseweb/sim/user/removeUserStock.do"
+#define k_DELETE_FAVOURIS_URL @"BaseWeb/sim/user/removeUserStock.do"
 #define k_DELETE_FAVOURIS_BODY(listID) @{@"listID":listID}
 
 
 /*-----------------------------交易--------------------------------------*/
 //资金信息
-#define k_VIRTUAL_TANSACTION_GET_BALANCE_URL @"baseweb/sim/user/getBalance.do"
+#define k_VIRTUAL_TANSACTION_GET_BALANCE_URL @"BaseWeb/sim/user/getBalance.do"
 #define k_VIRTUAL_TANSACTION_GET_BALANCE_BODY @{}
 
 //收益走势
-#define k_VIRTUAL_TANSACTION_PROFIT_HISTORY_URL @"baseweb/sim/user/getBalanceHistory.do"
+#define k_VIRTUAL_TANSACTION_PROFIT_HISTORY_URL @"BaseWeb/sim/user/getBalanceHistory.do"
 #define k_VIRTUAL_TANSACTION_PROFIT_HISTORY_BODY(userId,startDate,endDate) @{@"userID":userId,@"startDate":startDate,@"endDate":endDate}
 
 //用户持仓
-#define k_VIRTUAL_TANSACTION_HOLD_URL @"baseweb/sim/user/getPosition.do"
+#define k_VIRTUAL_TANSACTION_HOLD_URL @"BaseWeb/sim/user/getPosition.do"
 #define k_VIRTUAL_TANSACTION_HOLD_BODY(code) @{@"code":code}
 //历史交易
-#define k_VIRTUAL_TRANSACTION_HISTORY_HOLD_URL @"baseweb/sim/user/getPositionHistory.do"
+#define k_VIRTUAL_TRANSACTION_HISTORY_HOLD_URL @"BaseWeb/sim/user/getPositionHistory.do"
 #define k_VIRTUAL_TRANSACTION_HISTORY_HOLD_BODY(userId,code,startDate) @{@"userID":userId,@"code":code,@"startDate":startDate}
 //委托交易
-#define k_VIRTUAL_TANSACTION_MAKE_DRDER_URL @"baseweb/sim/user/makeOrder.do"
+#define k_VIRTUAL_TANSACTION_MAKE_DRDER_URL @"BaseWeb/sim/user/makeOrder.do"
 #define k_VIRTUAL_TANSACTION_MAKE_DRDER_BODY(code,buySell,price,amount) @{@"code":code,@"buySell":buySell,@"price":price,@"amount":amount}//@{@"code":code,@"buySell":buySell,@"price":price,@"amount":amount}
 //可撤单委托列表
-#define k_VIRTUAL_TANSACTION_CANCEL_DRDER_LIST_URL @"baseweb/sim/user/canCancelOrder.do"
+#define k_VIRTUAL_TANSACTION_CANCEL_DRDER_LIST_URL @"BaseWeb/sim/user/canCancelOrder.do"
 
 //撤销委托
-#define k_VIRTUAL_TANSACTION_CANCEL_ORCER_URL @"baseweb/sim/user/cancelOrder.do"
+#define k_VIRTUAL_TANSACTION_CANCEL_ORCER_URL @"BaseWeb/sim/user/cancelOrder.do"
 #define k_VIRTUAL_TANSACTION_CANCEL_ORCER_BODY(orderID) @{@"orderID":orderID}
 //当日委托
-#define k_VIRTUAL_TANSACTION_GET_ORCER_URL @"baseweb/sim/user/getOrder.do"
+#define k_VIRTUAL_TANSACTION_GET_ORCER_URL @"BaseWeb/sim/user/getOrder.do"
 #define k_VIRTUAL_TANSACTION_GET_ORCER_BODY @{}
 //当日成交
-#define k_VIRTUAL_TANSACTION_GET_RESULT_URL @"baseweb/sim/user/getResult.do"
+#define k_VIRTUAL_TANSACTION_GET_RESULT_URL @"BaseWeb/sim/user/getResult.do"
 #define k_VIRTUAL_TANSACTION_GET_RESULT_BODY @{}
 //历史成交
-#define k_VIRTUAL_TANSACTION_GET_HISTORY_URL @"baseweb/sim/user/getResultHistory.do"
+#define k_VIRTUAL_TANSACTION_GET_HISTORY_URL @"BaseWeb/sim/user/getResultHistory.do"
 #define k_VIRTUAL_TANSACTION_GET_HISTORY_BODY(startDate,endDate) @{@"startDate":startDate,@"endDate":endDate}
 /*--------------------------------交易机会----------------------------------------------*/
-#define k_TRADE_CHANCE_URL @"baseweb/sim/stock/getTradeChance.do"
+#define k_TRADE_CHANCE_URL @"BaseWeb/sim/stock/getTradeChance.do"
 
 /*-------------------------------牛人榜----------------------------------*/
-#define k_GENIUS_RANK_LIST_URL @"baseweb/sim/stock/getStatistics.do"
+#define k_GENIUS_RANK_LIST_URL @"BaseWeb/sim/stock/getStatistics.do"
 #define k_GENIUS_RANK_LIST_BODY(sort) @{@"sort":@(sort)}
 
 /*-----------------------------登录/注册--------------------------------------*/
@@ -224,13 +224,13 @@
 
 
 /*-----------------------------社区--------------------------------------*/
-#define k_COMMUNITY_HEADER_URL @"baseweb/community/subject"
+#define k_COMMUNITY_HEADER_URL @"BaseWeb/community/subject"
 
 //获取栏目列表
 //getColumns.do?type=1
 #define k_COMMUNITY_COLUMNS_LIST_URL [NSString stringWithFormat:@"%@/getColumns.do",k_COMMUNITY_HEADER_URL]
 #define k_COMMUNITY_COLUMNS_LIST_BODY(type) @{@"type":@(type)}
-//   115.28.183.108/baseweb/subject/getSubjects.do?pageNo=1&pageSize=10&type=1&relevanceId=r1&status=0
+//   115.28.183.108/BaseWeb/subject/getSubjects.do?pageNo=1&pageSize=10&type=1&relevanceId=r1&status=0
 //话题列表
 #define k_COMMUNITY_TOPIC_LIST_URL [NSString stringWithFormat:@"%@/getSubjects.do",k_COMMUNITY_HEADER_URL]
 #define k_COMMUNITY_TOPIC_LIST_BODY(relevanceId,status,pageNo,pageSize,type) @{@"relevanceId":relevanceId,@"status":@(status),@"pageNo":@(pageNo),@"pageSize":@(pageSize),@"type":@(type)}
@@ -263,7 +263,7 @@
 #define k_COMMUNITY_PRAISE_TOPIC_URL [NSString stringWithFormat:@"%@/support.do",k_COMMUNITY_HEADER_URL]
 #define k_COMMUNITY_PRAISE_TOPIC_BODY(subjectId,isSupport) @{@"subjectId":@(subjectId),@"isSupport":isSupport}
 /*----------------------------------------收藏-----------------------------------------------------*/
-#define k_COLLECTION_HEADER_URL @"baseweb/community"
+#define k_COLLECTION_HEADER_URL @"BaseWeb/community"
 //收藏列表
 #define k_COLLECTE_LIST_URL  [NSString stringWithFormat:@"%@/collection/list.do",k_COLLECTION_HEADER_URL]
 #define k_COLLECTE_LIST_BODY(type,start,count) @{@"type":@(type),@"start":@(start),@"count":@(count)}
@@ -305,18 +305,18 @@
 #define k_IS_CHECKED_IN_URL [NSString stringWithFormat:@"%@/isCheckIned.do",k_COLLECTION_HEADER_URL]
 
 //系统消息
-#define k_SYSTEM_MESSAGE_URL @"baseweb/interaction/message/getReceiviMessageList.do"
+#define k_SYSTEM_MESSAGE_URL @"BaseWeb/interaction/message/getReceiviMessageList.do"
 
 //红点提醒
-#define k_USER_REMAIND_URL @"baseweb/interaction/message/messageRedInfo.do"
+#define k_USER_REMAIND_URL @"BaseWeb/interaction/message/messageRedInfo.do"
 #define k_USER_REAMIND_BODY @{}
 
 //取消红点
-#define k_USER_CNACEL_REMAIND_URL @"/baseweb/interaction/message/cencelMessageRed.do"
+#define k_USER_CNACEL_REMAIND_URL @"/BaseWeb/interaction/message/cencelMessageRed.do"
 #define k_USER_CNACEL_REMAIND_BODY(messageType) @{@"messageType":@(messageType)}
 
 //关注信息列表
-#define k_USER_ATTENTION_LIST_URL @"baseweb/interaction/message/attentionMessageList.do"
+#define k_USER_ATTENTION_LIST_URL @"BaseWeb/interaction/message/attentionMessageList.do"
 #define k_USER_ATTENTION_LIST_BODY(pageNo,pageSize) @{@"pageNo":@(pageNo),@"pageSize":@(pageSize)}
 
 #endif

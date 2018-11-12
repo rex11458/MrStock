@@ -53,17 +53,18 @@
     _customTabbar = [[UUTabbar alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.bounds) - k_TABBER_HEIGHT, PHONE_WIDTH, k_TABBER_HEIGHT) items:items];
     _customTabbar.delegate = self;
     _customTabbar.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
+    
     [self.view addSubview:_customTabbar];
 }
 
 - (void)initViewControllers
 {
-    NSArray *viewControllerClassArray = @[@"UUDiscoverViewController",@"UUTransactionViewController",@"UUPersonalCenterViewController"];
+    NSArray *viewControllerClassArray = @[@"UUStockListViewController",@"UUFavourisStockViewController",@"UUPersonalCenterViewController"];
     NSMutableArray *viewControllers = [NSMutableArray array];
 
     for (NSInteger i = 0; i < viewControllerClassArray.count; i++) {
         UIViewController *vc = [[NSClassFromString([viewControllerClassArray objectAtIndex:i]) alloc] init];
-
+        
         [viewControllers addObject:vc];
     }
     self.viewControllers = viewControllers;

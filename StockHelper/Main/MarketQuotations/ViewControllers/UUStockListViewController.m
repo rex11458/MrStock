@@ -27,6 +27,8 @@
 
 #define UUStockBlockHeaderViewHeight (SQUARE_HEIGHT + k_TOP_MARGIN)
 
+static UUStockListViewController *g_vc = nil;
+
 @implementation UUStockBlockHeaderView
 
 - (id)initWithFrame:(CGRect)frame
@@ -220,11 +222,24 @@
 
 @implementation UUStockListViewController
 
++ (UUStockListViewController *)sharedUUStockListViewController{
+    return g_vc;
+}
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+        g_vc = self;
+    }
+    return self;
+}
+
 
 #pragma mark ----
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
     _sectionTitleArray = @[@"热门行业",@"概念板块",@"涨幅榜",@"跌幅榜",@"振幅榜",@"换手率榜"];
     
     [self configNavigationBar];
@@ -250,10 +265,10 @@
     NSArray *modelArray = @[favStockModel1,favStockModel2,favStockModel3];
 
     if (![_collectionView.header isRefreshing]) {
-        [self showLoading];
+//        [self showLoading];
     }
     _indexObserver = [[UUMarketQuationHandler sharedMarkeQuationHandler] getStockDetailWithFavStockModelArray:modelArray success:^(NSArray *indexDataArray) {
-        [self stopLoading];
+//        [self stopLoading];
         [modelArray enumerateObjectsUsingBlock:^(UUFavourisStockModel *favStockModel, NSUInteger idx, BOOL * _Nonnull stop) {
             [indexDataArray enumerateObjectsUsingBlock:^(UUIndexDetailModel *model, NSUInteger idx, BOOL * _Nonnull stop) {
                 
@@ -313,8 +328,8 @@
 
 - (void)configNavigationBar
 {
-    self.navigationItem.title = @"行情";
-    
+    self.tabBarController.navigationItem.title = @"行情";
+    self.tabBarController.navigationItem.titleView = nil;
     UIImage *searchImage = [UIImage imageNamed:@"Nav_search"];
     UIButton *searchButton = [UIKitHelper buttonWithFrame:CGRectMake(0, 0, searchImage.size.width  * 2, searchImage.size.height) title:nil titleHexColor:nil font:nil];
     [searchButton setImage:searchImage forState:UIControlStateNormal];

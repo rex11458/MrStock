@@ -14,5 +14,6 @@ target :StockHelper do
     pod 'MTDates', '~> 1.0'
     pod 'UMengAnalytics-NO-IDFA', '~> 3.5'
     pod 'CocoaAsyncSocket', '~> 7.4'
+    pod 'Masonry', '~> 0.6.4'
     xcodeproj 'StockHelper/StockHelper.xcodeproj'
 end

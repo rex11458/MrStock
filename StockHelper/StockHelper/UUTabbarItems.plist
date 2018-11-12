@@ -4,7 +4,7 @@
 <array>
 	<dict>
 		<key>title</key>
-		<string>首页</string>
+		<string>行情</string>
 		<key>image</key>
 		<string>tabbar_home</string>
 		<key>selectedImage</key>
@@ -12,7 +12,7 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>交易</string>
+		<string>自选股</string>
 		<key>image</key>
 		<string>tabbar_trade</string>
 		<key>selectedImage</key>
