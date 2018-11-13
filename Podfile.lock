@@ -42,6 +42,7 @@ DEPENDENCIES:
   - CocoaAsyncSocket (~> 7.4)
   - FMDB (~> 2.5)
   - JSONModel (~> 1.0)
+  - Masonry
   - Masonry (~> 0.6)
   - MJRefresh (~> 2.2)
   - MTDates (~> 1.0)
@@ -49,6 +50,20 @@ DEPENDENCIES:
   - SVProgressHUD (~> 1.1)
   - TMCache (~> 2.1)
   - UMengAnalytics-NO-IDFA (~> 3.5)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - CocoaAsyncSocket
+    - FMDB
+    - JSONModel
+    - Masonry
+    - MJRefresh
+    - MTDates
+    - SDWebImage
+    - SVProgressHUD
+    - TMCache
+    - UMengAnalytics-NO-IDFA
 
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
@@ -63,4 +78,6 @@ SPEC CHECKSUMS:
   TMCache: 95ebcc9b3c7e90fb5fd8fc3036cba3aa781c9bed
   UMengAnalytics-NO-IDFA: 601dab9ffe32f9de3fa0a6116768aed18a56f8a9
 
-COCOAPODS: 0.38.2
+PODFILE CHECKSUM: 14867ea4fb3745659f596def3e800fb23ef6ef2f
+
+COCOAPODS: 1.5.3

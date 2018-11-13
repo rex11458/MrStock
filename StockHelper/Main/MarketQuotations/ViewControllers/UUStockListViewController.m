@@ -135,7 +135,7 @@ static UUStockListViewController *g_vc = nil;
 {
     if (self = [super initWithFrame:frame]) {
 
-        self.backgroundColor = k_BG_COLOR;//[UIColorTools colorWithHexString:@"#F6F6F6" withAlpha:1.0f];
+        self.backgroundColor = [UIColor clearColor];//[UIColorTools colorWithHexString:@"#F6F6F6" withAlpha:1.0f];
 
     }
     return self;
@@ -347,17 +347,17 @@ static UUStockListViewController *g_vc = nil;
     [searchButton addTarget:self action:@selector(searchAction) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *item1 = [[UIBarButtonItem alloc] initWithCustomView:searchButton];
     
-    self.navigationItem.rightBarButtonItems = @[item1];
+    self.tabBarController.navigationItem.rightBarButtonItems = @[item1];
 }
 
 
 - (void)configCollectionView
 {
 //    [self.view addSubview:[self headerView]];
-    CGRect frame = self.view.bounds;
+    CGRect frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), PHONE_HEIGHT - kTabBarHeight);
 
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-    layout.headerReferenceSize = CGSizeMake(0, UUStockBlockSectionViewHeight);
+    layout.headerReferenceSize = CGSizeMake(CGRectGetWidth(self.view.frame) - 20, UUStockBlockSectionViewHeight);
     _collectionView = [[UICollectionView alloc] initWithFrame:frame collectionViewLayout:layout];
     _collectionView.backgroundColor = k_BG_COLOR;//[UIColorTools colorWithHexString:@"#F6F6F6" withAlpha:1.0f];
     _collectionView.dataSource = self;
@@ -371,7 +371,6 @@ static UUStockListViewController *g_vc = nil;
     
     _headerView = [self collectionHeaderView];
     [_collectionView addSubview:_headerView];
-    
     
     [_collectionView registerClass:[UUStockBlockCollectionViewCell class] forCellWithReuseIdentifier:NSStringFromClass([UUStockBlockCollectionViewCell class])];
     [_collectionView registerClass:[UUStockBlockSectionView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:NSStringFromClass([UUStockBlockSectionView class])];
@@ -429,8 +428,8 @@ static UUStockListViewController *g_vc = nil;
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
         
         UUStockBlockSectionView *sectionView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:NSStringFromClass([UUStockBlockSectionView class]) forIndexPath:indexPath];
-
         sectionView.title = [_sectionTitleArray objectAtIndex:indexPath.section];
+
         sectionView.index = indexPath.section;
         sectionView.delegate = self;
 
@@ -465,17 +464,7 @@ static UUStockListViewController *g_vc = nil;
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UUStockModel *stockModel = nil;
-    
-    if (indexPath.section == 0) {
-        
-        stockModel = [[_hotProfessionArray objectAtIndex:indexPath.row] stockModel];
-        
-    }else if (indexPath.section == 1){
-        stockModel = [[_conceptArray objectAtIndex:indexPath.row] stockModel];
-    }else{
-        stockModel = _dataArray[indexPath.section - 2][indexPath.row];
-    }
+    UUStockModel *stockModel = _dataArray[indexPath.section][indexPath.row];
     UUStockDetailViewController *stockDetailVC = [[UUStockDetailViewController alloc] initWithStockModel:stockModel];
     [self.navigationController pushViewController:stockDetailVC animated:YES];
 }
@@ -493,29 +482,29 @@ static UUStockListViewController *g_vc = nil;
     UUDailyLimitViewController *dailyLimitVC = [[UUDailyLimitViewController alloc] init];
     //更多
     switch (sectionView.index) {
+//        case 0:
+//            //热门行业
+////            dailyLimitVC.rankType ;
+//            dailyLimitVC.rankType = UUHotProfessionType;
+//            break;
+//        case 1:
+//            //概念板块
+//            //            dailyLimitVC.rankType ;
+//            dailyLimitVC.rankType = UUConceptType;
+//            break;
         case 0:
-            //热门行业
-//            dailyLimitVC.rankType ;
-            dailyLimitVC.rankType = UUHotProfessionType;
-            break;
-        case 1:
-            //概念板块
-            //            dailyLimitVC.rankType ;
-            dailyLimitVC.rankType = UUConceptType;
-            break;
-        case 2:
             //涨幅榜
                 dailyLimitVC.rankType = UUIncreaseRateType;
             break;
-        case 3:
+        case 1:
             //跌幅榜
                 dailyLimitVC.rankType = UUDecreaseRateType;
             break;
-        case 4:
+        case 2:
             //振幅榜
                 dailyLimitVC.rankType = UUAmplitudeRateType;
             break;
-        case 5:
+        case 3:
             //换手率榜
             dailyLimitVC.rankType =UUExchangeRateType;
             break;

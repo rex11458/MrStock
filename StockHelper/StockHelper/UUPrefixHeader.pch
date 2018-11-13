@@ -33,7 +33,7 @@
 #import "UUserDataManager.h"
 
 #import "BaseViewCell.h"
-
+#import <Masonry/Masonry.h>
 #endif
 
 //自定义Log

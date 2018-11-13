@@ -125,7 +125,7 @@
         [[UUStockListViewController sharedUUStockListViewController] loadData];
         
         [UUStockListViewController sharedUUStockListViewController].loadDataCompeleted = ^{
-            [weakSelf getStockList];
+//            [weakSelf getStockList];
 
         };
     }];

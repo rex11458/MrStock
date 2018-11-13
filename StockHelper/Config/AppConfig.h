@@ -56,6 +56,13 @@
 //搜索键盘高度
 #define KEYBOARD_HEIGHT  178.0f
 
+#define iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+#define kTabBarHeight (iPhoneX ? (49.f+34.f) : 49.f)
+#define kNavigationBarHeight (iPhoneX ? 88.f : 64.f)
+#define kStatusBarHeight (iPhoneX ? 44.f : 20.f)
+#define kHomeIndicatorHeight (iPhoneX ? 34.f : 0.f)  //底部多余部分
+
+
 //tabbar高度
 #define k_TABBER_HEIGHT 49.0f
 

@@ -713,52 +713,6 @@ static UUMarketQuationHandler *shared = nil;
     }];
 }
 
-/*
- *收到通知数据后统一处理
- */
-- (id)dealNotificationDataWithRequest:(const UUCommRequest *)request success:(void(^)(UUCommResponse *))success failure:(void(^)(NSError *))failure
-{
-    char s_identifier = request->head.cIdentifier;
-    
-   __block NSMutableData *m_data = [NSMutableData data];
-    id observer = [[NSNotificationCenter defaultCenter] addObserverForName:SocketdidReceivedDataNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
-        NSData *temp_data = note.object;
-        [m_data appendData:temp_data];
-        UUCommResponse *respose = (UUCommResponse *)m_data.bytes;
-
-        if (respose->head.cIdentifier != s_identifier)
-        {
-            [m_data setLength:0];
-        }
-        else if (m_data.length == respose->head.nLength)
-        {
-            if (UUMarket__VaildRespose(respose)) {
-                //完整包返回
-                success(respose);
-                //m_data 清空
-                [m_data setLength:0];
-            }else{
-            }
-        }else if (m_data.length > respose->head.nLength){
-            
-            NSData *temp_data = [m_data subdataWithRange:NSMakeRange(0, respose->head.nLength)];
-            UUCommResponse *temp_response = (UUCommResponse *)temp_data.bytes;
-            if (UUMarket__VaildRespose(temp_response)) {
-                //完整包返回
-                success(temp_response);
-                //m_data 清空
-                [m_data setLength:0];
-                m_data = [[m_data subdataWithRange:NSMakeRange(respose->head.nLength - 1, temp_data.length - respose->head.nLength)] mutableCopy];
-            }else{
-            }
-        }else{
-        }
-    }];
-    
-    return observer;
-}
-
-
 
 /*
  *  公司简介
@@ -953,5 +907,53 @@ static UUMarketQuationHandler *shared = nil;
         }
     }];
 }
+
+
+
+/*
+ *收到通知数据后统一处理
+ */
+- (id)dealNotificationDataWithRequest:(const UUCommRequest *)request success:(void(^)(UUCommResponse *))success failure:(void(^)(NSError *))failure
+{
+    char s_identifier = request->head.cIdentifier;
+    
+    __block NSMutableData *m_data = [NSMutableData data];
+    id observer = [[NSNotificationCenter defaultCenter] addObserverForName:SocketdidReceivedDataNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
+        NSData *temp_data = note.object;
+        [m_data appendData:temp_data];
+        UUCommResponse *respose = (UUCommResponse *)m_data.bytes;
+        
+        if (respose->head.cIdentifier != s_identifier)
+        {
+            [m_data setLength:0];
+        }
+        else if (m_data.length == respose->head.nLength)
+        {
+            if (UUMarket__VaildRespose(respose)) {
+                //完整包返回
+                success(respose);
+                //m_data 清空
+                [m_data setLength:0];
+            }else{
+            }
+        }else if (m_data.length > respose->head.nLength){
+            
+            NSData *temp_data = [m_data subdataWithRange:NSMakeRange(0, respose->head.nLength)];
+            UUCommResponse *temp_response = (UUCommResponse *)temp_data.bytes;
+            if (UUMarket__VaildRespose(temp_response)) {
+                //完整包返回
+                success(temp_response);
+                //m_data 清空
+                [m_data setLength:0];
+                m_data = [[m_data subdataWithRange:NSMakeRange(respose->head.nLength - 1, temp_data.length - respose->head.nLength)] mutableCopy];
+            }else{
+            }
+        }
+    }];
+    
+    return observer;
+}
+
+
 
 @end

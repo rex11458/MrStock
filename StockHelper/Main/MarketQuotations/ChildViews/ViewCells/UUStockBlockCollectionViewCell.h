@@ -11,6 +11,9 @@
 #define UUStockBlockViewCellHeight 80.0f
 #define UUStockBlockViewSortCellHeight 44.0f
 #define UUStockBlockSectionViewHeight 33.0f
+
+
+
 @class UUReportSortStockModel;
 @class UUStockBlockModel;
 @interface UUStockBlockCollectionViewCell : BaseCollectionViewCell

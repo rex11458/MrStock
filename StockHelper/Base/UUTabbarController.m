@@ -55,6 +55,10 @@
     _customTabbar.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
     
     [self.view addSubview:_customTabbar];
+    [_customTabbar mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.bottom.right.equalTo(self.view);
+        make.height.equalTo(self.tabBar);
+    }];
 }
 
 - (void)initViewControllers
