@@ -11,6 +11,8 @@
 @protocol UUStockBlockHeaderViewDelegate;
 @class UUExponentView;
 @interface UUStockListViewController : BaseViewController
+
+@property (nonatomic, copy) void(^loadDataCompeleted)(void);
 + (UUStockListViewController *)sharedUUStockListViewController;
 
 - (void)loadData;

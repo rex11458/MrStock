@@ -118,10 +118,16 @@
     //连接Socket服务器
     //    [SVProgressHUD showWithStatus:@"连接服务器" maskType:SVProgressHUDMaskTypeBlack];
     [self connectSocket];
+    
+    __weak typeof(self) weakSelf = self;
+
     [[UUSocketManager manager] setSuccess:^(AsyncSocket *socket){
-        [self getStockList];
         [[UUStockListViewController sharedUUStockListViewController] loadData];
-        //        [SVProgressHUD showSuccessWithStatus:@"连接成功!"];
+        
+        [UUStockListViewController sharedUUStockListViewController].loadDataCompeleted = ^{
+            [weakSelf getStockList];
+
+        };
     }];
     
     [UUSocketManager manager].failure = ^(NSError *error){
@@ -130,34 +136,34 @@
         
     };
     
-    NSSetUncaughtExceptionHandler (&UncaughtExceptionHandler);
+//    NSSetUncaughtExceptionHandler (&UncaughtExceptionHandler);
     //主题
     [UUThemeManager customAppAppearance];
-    // 分享
-    [ShareSDK registerApp:@"58122a897162"];
-    //友盟统计
-    [MobClick setAppVersion:k_Xcode_AppVersion];
-    [MobClick startWithAppkey:k_Umeng_AppKey reportPolicy:BATCH channelId:nil];
-#if DEBUG
-    // 打开友盟sdk调试，注意Release发布时需要注释掉此行,减少io消耗
-    [MobClick setLogEnabled:YES];
-#endif
+//    // 分享
+//    [ShareSDK registerApp:@"58122a897162"];
+//    //友盟统计
+//    [MobClick setAppVersion:k_Xcode_AppVersion];
+//    [MobClick startWithAppkey:k_Umeng_AppKey reportPolicy:BATCH channelId:nil];
+//#if DEBUG
+//    // 打开友盟sdk调试，注意Release发布时需要注释掉此行,减少io消耗
+//    [MobClick setLogEnabled:YES];
+//#endif
     
     //分享
-    [self initShared];
+//    [self initShared];
     //行情刷新时间
     //    [self initRefreshTime];
     
     return YES;
 }
 
-void UncaughtExceptionHandler(NSException *exception) {
-    
-    NSString *reason = [exception reason];
-    NSString *name = [exception name];
-    
-    NSLog(@"%@,%@",name,reason);
-}
+//void UncaughtExceptionHandler(NSException *exception) {
+//
+//    NSString *reason = [exception reason];
+//    NSString *name = [exception name];
+//
+//    NSLog(@"%@,%@",name,reason);
+//}
 
 - (void)initRefreshTime
 {
@@ -202,17 +208,17 @@ void UncaughtExceptionHandler(NSException *exception) {
     
 }
 
+////
+//- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+//{
+//    return [ShareSDK handleOpenURL:url sourceApplication:sourceApplication annotation:annotation wxDelegate:self];
+//}
 //
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
-{
-    return [ShareSDK handleOpenURL:url sourceApplication:sourceApplication annotation:annotation wxDelegate:self];
-}
-
-
-- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
-{
-    return [ShareSDK handleOpenURL:url wxDelegate:self];
-}
+//
+//- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+//{
+//    return [ShareSDK handleOpenURL:url wxDelegate:self];
+//}
 
 /*
  //

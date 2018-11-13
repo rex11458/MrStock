@@ -139,10 +139,14 @@
         button.tag = i;
         button.layer.cornerRadius = buttonWidth * 0.5;
         button.layer.masksToBounds = YES;
+        button.hidden = YES;
         [button setBackgroundImage:[UIKitHelper imageWithColor:[UIColorTools colorWithHexString:hexColors[i] withAlpha:1.0f]] forState:UIControlStateNormal];
         [button setImage:[UIImage imageNamed:imageArray[i]] forState:UIControlStateNormal];
         [_scrollView addSubview:button];
     }
+    
+    lineView.hidden = YES;
+    textLabel.hidden = YES;
     
     
     //----

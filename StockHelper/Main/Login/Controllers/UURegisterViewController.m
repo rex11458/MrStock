@@ -55,7 +55,7 @@
         [[UULoginHandler sharedLoginHandler] getCodeWithMobile:values success:^(NSString *code) {
            
             [_registerView timerBeginFire];
-            _registerView.code = code;
+//            _registerView.code = code;
             [SVProgressHUD showSuccessWithStatus:@"获取成功!"];
         
         } failure:^(NSString *errorMessage) {

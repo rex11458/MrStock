@@ -155,7 +155,7 @@ static UUStockDetailViewController *g_shared;
         weakSelf.headerView.stockModel = stockModel;
         weakSelf.landspaceView.stockModel = stockModel;
         
-        _titleView.accesoryTitle = [NSString stringWithFormat:@"%@ %@",weakSelf.stockModel.lstMarktDate,stockModel.time];
+       _titleView.accesoryTitle = [NSString stringWithFormat:@"%@ %@",weakSelf.stockModel.lstMarktDate?:@"",stockModel.time];
     
        //个股 获取财务数据
        if (!k_IS_INDEX(_stockModel.market) && _financailLoaded == NO) {

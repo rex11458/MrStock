@@ -75,7 +75,7 @@
 
     if (![leftViewText isNull] && leftViewText.length > 0) {
         //textField.leftView
-        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(15, 0, 60,41)];
+        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(15, 0, 65,41)];
         label.backgroundColor=[UIColor clearColor];
         label.font = [UIFont boldSystemFontOfSize:15.0f];
         label.textAlignment = NSTextAlignmentLeft;

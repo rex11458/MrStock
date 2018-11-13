@@ -56,6 +56,18 @@
     return self;
 }
 
+
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.tabBarController.navigationItem.title = @"自选股";
+    self.tabBarController.navigationItem.rightBarButtonItem = nil;
+    if (_dataArray != nil) {
+        [self getStocksDetailInfo];
+    }
+}
+
+
 - (void)addRightBarButtons
 {
     UIImage *searchImage = [UIImage imageNamed:@"Nav_search"];
@@ -316,13 +328,6 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return UUFavourisViewCellHeight;
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    if (_dataArray != nil) {
-        [self getStocksDetailInfo];
-    }
 }
 
 - (void)dealloc

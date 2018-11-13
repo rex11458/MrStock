@@ -55,7 +55,7 @@
     
     _viewControllers = @[
 //                         @[@"UUWarningRemindViewController"],
-                         @[@"UUFavourisViewController",@"UUAttentionViewController",@"UUNotificationViewController"]
+                         @[@"UUFavourisStockViewController",@"UUAttentionViewController",@"UUNotificationViewController"]
                          ];
     [self configSubViews];
 }
@@ -393,7 +393,7 @@
     UIImage *checkedInImage = [UIImage imageNamed:@"me_checked_in"];
     [_checkInButton setImage:checkInImage forState:UIControlStateNormal];
     [_checkInButton setImage:checkedInImage forState:UIControlStateSelected];
-
+    _checkInButton.hidden = YES;
     _checkInButton.tag = 1;
     [_checkInButton addTarget:self action:@selector(checkInAction:) forControlEvents:UIControlEventTouchUpInside];
     _checkInButton.frame = CGRectMake(CGRectGetMidX(self.bounds) + image.size.width * 0.5 + k_LEFT_MARGIN * 2, _headerImageView.center.y - checkInImage.size.height * 0.5, checkInImage.size.width, checkInImage.size.height);
@@ -415,7 +415,7 @@
     _experienceLabel.underAttributes = @{NSFontAttributeName:k_SMALL_TEXT_FONT,NSForegroundColorAttributeName:[UIColor whiteColor]};
     _experienceLabel.underText = @"积分";
     _experienceLabel.upperText = @"0";
-    [self addSubview:_experienceLabel];
+//    [self addSubview:_experienceLabel];
     //粉丝数
     _fansCountLabel = [[UULabelView alloc] initWithFrame:CGRectMake(labelWidth, UUPersonalCenterHeaderViewHieght - k_BOTTOM_MARGIN - labelHeight, labelWidth, labelHeight)];
     _fansCountLabel.upperAttributes = @{NSFontAttributeName:k_BIG_TEXT_FONT,NSForegroundColorAttributeName:[UIColor whiteColor]};
@@ -424,7 +424,7 @@
     _fansCountLabel.upperText = @"0";
     _fansCountLabel.tag = 2;
     [_fansCountLabel addTarget:self action:@selector(fansCountAction:) forControlEvents:UIControlEventTouchUpInside];
-    [self addSubview:_fansCountLabel];
+//    [self addSubview:_fansCountLabel];
     //关注
     //经验值
     _attentionCountLabel = [[UULabelView alloc] initWithFrame:CGRectMake(labelWidth * 2, UUPersonalCenterHeaderViewHieght - k_BOTTOM_MARGIN - labelHeight, labelWidth, labelHeight)];
@@ -435,7 +435,7 @@
     _attentionCountLabel.tag = 3;
     [_attentionCountLabel addTarget:self action:@selector(fansCountAction:) forControlEvents:UIControlEventTouchUpInside];
 
-    [self addSubview:_attentionCountLabel];
+//    [self addSubview:_attentionCountLabel];
     
     //提醒
     _fansCountRemindView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Me_fans_remaind"]];
@@ -484,7 +484,8 @@
     _attentionCountLabel.upperText = [_user.followCount stringValue];
 
     _nameLabel.text = _user.nickName;
-    [_headerImageView sd_setImageWithURL:[NSURL URLWithString:_user.headImg]];
+//    [_headerImageView sd_setImageWithURL:[NSURL URLWithString:_user.headImg]];
+    _headerImageView.image = [UIImage imageNamed:@"Me_default_icon"];
 
 //
 //    //显示小红点
@@ -494,11 +495,12 @@
 
 - (void)showWithIsLogging:(BOOL)isLogging
 {
-    _checkInButton.hidden = !isLogging;
+//    _checkInButton.hidden = !isLogging;
     if (isLogging)
     {
         UULoginUser *user = [UUserDataManager sharedUserDataManager].user;
-        [_headerImageView sd_setImageWithURL:[NSURL URLWithString:user.headImg] placeholderImage:[UIImage imageNamed:@"Me_default_icon"]];
+//        [_headerImageView sd_setImageWithURL:[NSURL URLWithString:user.headImg] placeholderImage:[UIImage imageNamed:@"Me_default_icon"]];
+        _headerImageView.image = [UIImage imageNamed:@"Me_default_icon"];
         _nameLabel.text = user.nickName;
     }
     else

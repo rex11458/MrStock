@@ -8,6 +8,8 @@
 
 #import "UUSuggestionViewController.h"
 #import "UUSuggestionView.h"
+#import <SVProgressHUD/SVProgressHUD.h>
+
 @interface UUSuggestionViewController ()
 {
     UUSuggestionView *_suggestionView;
@@ -30,7 +32,12 @@
 {
     [_suggestionView endEditing:YES];
     if (actionTag == UUCommitButtionActionTag) {
-        
+        [SVProgressHUD showWithStatus:@"正在执行..."];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [SVProgressHUD showSuccessWithStatus:@"提交成功,感谢反馈"];
+
+            [self.navigationController popViewControllerAnimated:YES];
+        });
     }
 }
 

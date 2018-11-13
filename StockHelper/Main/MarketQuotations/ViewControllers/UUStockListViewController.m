@@ -35,7 +35,7 @@ static UUStockListViewController *g_vc = nil;
 {
     if (self = [super initWithFrame:frame]) {
         
-        self.backgroundColor = [UIColor clearColor];//[UIColorTools colorWithHexString:@"#F6F6F6" withAlpha:1.0f];
+        self.backgroundColor = [UIColor whiteColor];//[UIColorTools colorWithHexString:@"#F6F6F6" withAlpha:1.0f];
   
         [self configSubViews];
     }
@@ -234,20 +234,27 @@ static UUStockListViewController *g_vc = nil;
 }
 
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+
+    [self configNavigationBar];
+}
+
 #pragma mark ----
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     
-    _sectionTitleArray = @[@"热门行业",@"概念板块",@"涨幅榜",@"跌幅榜",@"振幅榜",@"换手率榜"];
+    _sectionTitleArray = @[@"涨幅榜",@"跌幅榜",@"振幅榜",@"换手率榜"];
     
     [self configNavigationBar];
     
     [self configCollectionView];
 
-    [self loadData];
+//    [self loadData];
 }
+
 
 - (void)loadData
 {
@@ -265,10 +272,10 @@ static UUStockListViewController *g_vc = nil;
     NSArray *modelArray = @[favStockModel1,favStockModel2,favStockModel3];
 
     if (![_collectionView.header isRefreshing]) {
-//        [self showLoading];
+        [self showLoading];
     }
     _indexObserver = [[UUMarketQuationHandler sharedMarkeQuationHandler] getStockDetailWithFavStockModelArray:modelArray success:^(NSArray *indexDataArray) {
-//        [self stopLoading];
+        [self stopLoading];
         [modelArray enumerateObjectsUsingBlock:^(UUFavourisStockModel *favStockModel, NSUInteger idx, BOOL * _Nonnull stop) {
             [indexDataArray enumerateObjectsUsingBlock:^(UUIndexDetailModel *model, NSUInteger idx, BOOL * _Nonnull stop) {
                 
@@ -281,36 +288,34 @@ static UUStockListViewController *g_vc = nil;
         [_collectionView.header endRefreshing];
         
         _headerView.indexDataArray = indexDataArray;
-        
+        [self loadStockSortRank];
+
     } failue:^(NSString *errorMessage) {
-    
+        [self loadStockSortRank];
+
+        [self stopLoading];
         [_collectionView.header endRefreshing];
 
     }];
-    //热门行业
-    _hotProfessionObserver = [[UUMarketQuationHandler sharedMarkeQuationHandler] getReportBlockWithType:0 count:6 sortType:0 Success:^(NSArray *dataArray) {
-        
-        _hotProfessionArray = [dataArray copy];
-        [_collectionView reloadSections:[NSIndexSet indexSetWithIndex:0]];
-        
-    } failure:^(NSString *errorMessage) {
-        
-    }];
+//    //热门行业
+//    _hotProfessionObserver = [[UUMarketQuationHandler sharedMarkeQuationHandler] getReportBlockWithType:0 count:6 sortType:0 Success:^(NSArray *dataArray) {
+//
+//        _hotProfessionArray = [dataArray copy];
+//        [_collectionView reloadSections:[NSIndexSet indexSetWithIndex:0]];
+//
+//    } failure:^(NSString *errorMessage) {
+//
+//    }];
     
-    //概念板块
-    _conceptObserver = [[UUMarketQuationHandler sharedMarkeQuationHandler] getReportBlockWithType:1 count:6 sortType:0 Success:^(NSArray *dataArray) {
-        
-        _conceptArray = [dataArray copy];
-        [_collectionView reloadSections:[NSIndexSet indexSetWithIndex:1]];
-        
-    } failure:^(NSString *errorMessage) {
-        
-    }];
-
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self loadStockSortRank];
-    });
+//    //概念板块
+//    _conceptObserver = [[UUMarketQuationHandler sharedMarkeQuationHandler] getReportBlockWithType:1 count:6 sortType:0 Success:^(NSArray *dataArray) {
+//
+//        _conceptArray = [dataArray copy];
+//        [_collectionView reloadSections:[NSIndexSet indexSetWithIndex:1]];
+//
+//    } failure:^(NSString *errorMessage) {
+//
+//    }];
 }
 
 - (void)loadStockSortRank
@@ -320,9 +325,15 @@ static UUStockListViewController *g_vc = nil;
         _dataArray = [dataArray copy];
         [_collectionView reloadData];
         [_collectionView.header endRefreshing];
-        
+        if (self.loadDataCompeleted) {
+            self.loadDataCompeleted();
+        }
     } failure:^(NSString *errorMessage) {
         [_collectionView.header endRefreshing];
+        if (self.loadDataCompeleted) {
+            self.loadDataCompeleted();
+            self.loadDataCompeleted = nil;
+        }
     }];
 }
 
@@ -390,22 +401,12 @@ static UUStockListViewController *g_vc = nil;
 #pragma mark - UICollectionViewDelegate,Datasource
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return 2 + _dataArray.count;
+    return _dataArray.count;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-
-    if (section == 0) {
-        //热门行业
-        
-        return _hotProfessionArray.count;
-    }else if (section == 1){
-        //概念板块
-        return _conceptArray.count;
-        return 0;
-    }
-    return [_dataArray[section - 2] count];
+    return [_dataArray[section] count];
 }
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
@@ -417,18 +418,8 @@ static UUStockListViewController *g_vc = nil;
         cell = [[UUStockBlockCollectionViewCell alloc] initWithFrame:CGRectZero];
     }
     
-    if (indexPath.section <2){
-        if (indexPath.section == 0) {
-            cell.blockModel = [_hotProfessionArray objectAtIndex:indexPath.row];
-        }else if (indexPath.section == 1){
-            cell.blockModel = [_conceptArray objectAtIndex:indexPath.row];
-        }
-    }
-    else
-    {
-        cell.indexPath = indexPath;
-        cell.reportSortStockModel = _dataArray[indexPath.section - 2][indexPath.row];
-    }
+    cell.indexPath = indexPath;
+    cell.reportSortStockModel = _dataArray[indexPath.section][indexPath.row];
     return cell;
 }
 
@@ -452,10 +443,6 @@ static UUStockListViewController *g_vc = nil;
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section < 2) {
-       return CGSizeMake((CGRectGetWidth(collectionView.bounds) - 2 - 2 * k_LEFT_MARGIN) / 3.0f, UUStockBlockViewCellHeight);
-    }
-    
     return CGSizeMake(CGRectGetWidth(collectionView.bounds) - 2 * k_LEFT_MARGIN, UUStockBlockViewSortCellHeight);
 }
 

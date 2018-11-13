@@ -302,6 +302,7 @@ static UUMarketQuationHandler *shared = nil;
         
         if (temp_response->head.cIdentifier != request->head.cIdentifier) {
             [totalData setLength:0];
+            failure(nil);
             return ;
         }
         
@@ -736,6 +737,7 @@ static UUMarketQuationHandler *shared = nil;
                 success(respose);
                 //m_data 清空
                 [m_data setLength:0];
+            }else{
             }
         }else if (m_data.length > respose->head.nLength){
             
@@ -747,7 +749,9 @@ static UUMarketQuationHandler *shared = nil;
                 //m_data 清空
                 [m_data setLength:0];
                 m_data = [[m_data subdataWithRange:NSMakeRange(respose->head.nLength - 1, temp_data.length - respose->head.nLength)] mutableCopy];
+            }else{
             }
+        }else{
         }
     }];
     
