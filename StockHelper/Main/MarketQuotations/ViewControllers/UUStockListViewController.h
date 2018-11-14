@@ -11,7 +11,9 @@
 @protocol UUStockBlockHeaderViewDelegate;
 @class UUExponentView;
 @interface UUStockListViewController : BaseViewController
-
+{
+    UIActivityIndicatorView *_indicator;
+}
 @property (nonatomic, copy) void(^loadDataCompeleted)(void);
 + (UUStockListViewController *)sharedUUStockListViewController;
 

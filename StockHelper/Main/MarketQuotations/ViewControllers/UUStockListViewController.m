@@ -270,12 +270,15 @@ static UUStockListViewController *g_vc = nil;
     UUFavourisStockModel *favStockModel3 = [[UUFavourisStockModel alloc] initWithName:@"创业板指" code:@"399006" market:4608];
     
     NSArray *modelArray = @[favStockModel1,favStockModel2,favStockModel3];
+    [_indicator startAnimating];
 
-    if (![_collectionView.header isRefreshing]) {
-        [self showLoading];
-    }
+//    if (![_collectionView.header isRefreshing]) {
+//        [self showLoading];
+//    }
     _indexObserver = [[UUMarketQuationHandler sharedMarkeQuationHandler] getStockDetailWithFavStockModelArray:modelArray success:^(NSArray *indexDataArray) {
-        [self stopLoading];
+//        [self stopLoading];
+        [_indicator stopAnimating];
+
         [modelArray enumerateObjectsUsingBlock:^(UUFavourisStockModel *favStockModel, NSUInteger idx, BOOL * _Nonnull stop) {
             [indexDataArray enumerateObjectsUsingBlock:^(UUIndexDetailModel *model, NSUInteger idx, BOOL * _Nonnull stop) {
                 
@@ -293,7 +296,7 @@ static UUStockListViewController *g_vc = nil;
     } failue:^(NSString *errorMessage) {
         [self loadStockSortRank];
 
-        [self stopLoading];
+        [_indicator stopAnimating];
         [_collectionView.header endRefreshing];
 
     }];
@@ -339,8 +342,28 @@ static UUStockListViewController *g_vc = nil;
 
 - (void)configNavigationBar
 {
-    self.tabBarController.navigationItem.title = @"行情";
-    self.tabBarController.navigationItem.titleView = nil;
+//    self.tabBarController.navigationItem.title = @"行情";
+    
+    UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(PHONE_WIDTH* 0.5 - 80, 0, 160.0f, 44.0f)];
+    UILabel *label = [UILabel new];
+    label.font = [UIFont systemFontOfSize:18];
+    label.textColor = [UIColor whiteColor];
+    label.text = @"行情";
+    [titleView addSubview:label];
+    UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    _indicator = indicator;
+
+    indicator.hidesWhenStopped = YES;
+    [titleView addSubview:indicator];
+    [label mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(titleView);
+    }];
+    [indicator mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(titleView);
+        make.right.equalTo(label.mas_left).mas_offset(-5);
+    }];
+    
+    self.tabBarController.navigationItem.titleView = titleView;
     UIImage *searchImage = [UIImage imageNamed:@"Nav_search"];
     UIButton *searchButton = [UIKitHelper buttonWithFrame:CGRectMake(0, 0, searchImage.size.width  * 2, searchImage.size.height) title:nil titleHexColor:nil font:nil];
     [searchButton setImage:searchImage forState:UIControlStateNormal];
