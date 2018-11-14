@@ -48,7 +48,7 @@
     [super viewDidLoad];
     [self loadDataWithIndex:0];
     
-    [self getDiscussCount];
+//    [self getDiscussCount];
 }
 
 - (void)configSubViews
@@ -75,21 +75,29 @@
     _sectionView = [self sectionView];
     
     //    //工具条
-    NSArray *orgItems = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"UUToolBarItems.plist" ofType:nil]];
+//    NSArray *orgItems = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"UUToolBarItems.plist" ofType:nil]];
     
-    NSMutableArray *items = [NSMutableArray array];
-    for (NSInteger i = 0 ; i < orgItems.count ;i++) {
-        NSDictionary *dic = [orgItems objectAtIndex:i];
-        NSString *title = [dic objectForKey:@"title"];
-        UIImage *image = [UIImage imageNamed:[dic objectForKey:@"image"]];
-        UIImage *selectedImage = [UIImage imageNamed:[dic objectForKey:@"selectedImage"]];
-        UUTabbarItem *item = [[UUTabbarItem alloc] initWithTitle:title image:image selectedImage:selectedImage tag:i];
-        [items addObject:item];
-    }
-    _toolbar = [[UUToolBar alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.bounds) - UUToolBarHeight, CGRectGetWidth(self.view.bounds), UUToolBarHeight) items:items delegate:self];
-    _toolbar.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
+//    NSMutableArray *items = [NSMutableArray array];
+//    for (NSInteger i = 0 ; i < orgItems.count ;i++) {
+    NSString *title = @"自选";
+    UIImage *image = [UIImage imageNamed:@"Toolbar_zixuan"];
+    UIImage *selectedImage = [UIImage imageNamed:@"Toolbar_zixuan_selected"];
+    UUTabbarItem *item = [[UUTabbarItem alloc] initWithTitle:title image:image selectedImage:selectedImage tag:0];
+    _toolbar = [[UUToolBar alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.bounds) - UUToolBarHeight, CGRectGetWidth(self.view.bounds), UUToolBarHeight) items:@[item] delegate:self];
+//    _toolbar.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
 
     [self.view addSubview:_toolbar];
+    
+    [_toolbar mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(self.view);
+        make.height.mas_equalTo(UUToolBarHeight);
+        make.bottom.equalTo(self.mas_bottomLayoutGuide);
+    }];
+    
+    [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.right.equalTo(self.view);
+        make.bottom.equalTo(_toolbar.mas_top);
+    }];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadDataSuccess) name:stockDetailDidLoadSuccessNotificaiton object:nil];
 }
@@ -130,9 +138,9 @@
     //获取话题列表
     [[UUCommunityHandler sharedCommunityHandler] getCommunityTopicListWithRelevanceId:relenvanceId status:0 type:1 pageNo:1 pageSize:1 success:^(UUCommunityTopicListModel *topicListModel) {
         
-        NSString *title = [NSString stringWithFormat:@"%@条讨论",topicListModel.todayAmount];
+//        NSString *title = [NSString stringWithFormat:@"%@条讨论",topicListModel.todayAmount];
         
-        [_toolbar setTitle:title index:0];
+//        [_toolbar setTitle:title index:0];
         
     } failure:^(NSString *errorMessage) {
         
@@ -171,39 +179,38 @@
 - (void)toolBar:(UUToolBar *)toolBar didSeletedIndex:(NSInteger)index
 {
     __weak typeof(self) weakSelf = self;
-    if (index == 0) {
-        //讨论
-        [[UUStockDetailViewController g_sharedStockDetailViewController] discuss];
-    }else if (index == 1) {
-        //添加自选
-        if (!_isFav) {
+    
+    if (!_isFav) {
+        
+        NSString *code = _stockModel.code;
+        code = [code stringByAppendingString:@".INX"];
+        //加自选
+        [[UUMarketQuationHandler sharedMarkeQuationHandler] addFavourisStockWithCode:code pos:0 success:^(id obj) {
             
-            NSString *code = _stockModel.code;
-            code = [code stringByAppendingString:@".INX"];
-            //加自选
-            [[UUMarketQuationHandler sharedMarkeQuationHandler] addFavourisStockWithCode:code pos:0 success:^(id obj) {
-                
-                [SVProgressHUD showSuccessWithStatus:@"添加成功" maskType:SVProgressHUDMaskTypeBlack];
-                
-                weakSelf.isFav = YES;
-                
-            } failue:^(NSString *errorMessage) {
-                [SVProgressHUD showErrorWithStatus:errorMessage maskType:SVProgressHUDMaskTypeBlack];
-            }];
-        }else{
+            [SVProgressHUD showSuccessWithStatus:@"添加成功" maskType:SVProgressHUDMaskTypeBlack];
             
-            [[UUMarketQuationHandler sharedMarkeQuationHandler] deleteFavourisStockWithListID:@"" success:^(id obj) {
-                
-                weakSelf.isFav = NO;
-                [SVProgressHUD showSuccessWithStatus:@"删除自选成功" maskType:SVProgressHUDMaskTypeBlack];
-                
-            } failue:^(NSString *errorMessage) {
-                
-                [SVProgressHUD showErrorWithStatus:errorMessage maskType:SVProgressHUDMaskTypeBlack];
-                
-            }];
-        }
+            weakSelf.isFav = YES;
+            
+        } failue:^(NSString *errorMessage) {
+            [SVProgressHUD showErrorWithStatus:errorMessage maskType:SVProgressHUDMaskTypeBlack];
+        }];
+    }else{
+        
+        [[UUMarketQuationHandler sharedMarkeQuationHandler] deleteFavourisStockWithListID:@"" success:^(id obj) {
+            
+            weakSelf.isFav = NO;
+            [SVProgressHUD showSuccessWithStatus:@"删除自选成功" maskType:SVProgressHUDMaskTypeBlack];
+            
+        } failue:^(NSString *errorMessage) {
+            
+            [SVProgressHUD showErrorWithStatus:errorMessage maskType:SVProgressHUDMaskTypeBlack];
+            
+        }];
     }
+    
+    return;
+    
+
 }
 
 //

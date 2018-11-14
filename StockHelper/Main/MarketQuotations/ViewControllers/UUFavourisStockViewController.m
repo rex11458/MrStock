@@ -61,7 +61,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.tabBarController.navigationItem.title = @"自选股";
-    self.tabBarController.navigationItem.rightBarButtonItem = nil;
+    [self addRightBarButtons];
     if (_dataArray != nil) {
         [self getStocksDetailInfo];
     }
@@ -86,6 +86,8 @@
     UIBarButtonItem *item2 = [[UIBarButtonItem alloc] initWithCustomView:searchButton];
     
     self.navigationItem.rightBarButtonItems = @[item1,item2];
+    self.tabBarController.navigationItem.rightBarButtonItems = @[item1,item2];
+
 }
 
 #pragma mark ----

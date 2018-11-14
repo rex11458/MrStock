@@ -83,7 +83,7 @@
     _stockDetailPortaitView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     self.view = _stockDetailPortaitView;
 //
-    _detailView = [[UUStockDetailView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) -UUToolBarHeight)];
+    _detailView = [[UUStockDetailView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) -kTabBarHeight)];
     _detailView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     
     _detailView.tableView.header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(refresh)];
@@ -96,19 +96,13 @@
     [_stockDetailPortaitView addSubview:_detailView];
 
 //    //工具条
-    NSArray *orgItems = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"UUStockDetailIToolBartems.plist" ofType:nil]];
-    
-    NSMutableArray *items = [NSMutableArray array];
-    for (NSInteger i = 0 ; i < orgItems.count ;i++) {
-        NSDictionary *dic = [orgItems objectAtIndex:i];
-        NSString *title = [dic objectForKey:@"title"];
-        UIImage *image = [UIImage imageNamed:[dic objectForKey:@"image"]];
-        UIImage *selectedImage = [UIImage imageNamed:[dic objectForKey:@"selectedImage"]];
-        UUTabbarItem *item = [[UUTabbarItem alloc] initWithTitle:title image:image selectedImage:selectedImage tag:i];
-        [items addObject:item];
-    }
-    
-    UUToolBar *toolBar = [[UUToolBar alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.bounds) - UUToolBarHeight, CGRectGetWidth(self.view.bounds), UUToolBarHeight) items:items delegate:self];
+//    NSArray *orgItems = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"UUStockDetailIToolBartems.plist" ofType:nil]];
+   
+    NSString *title = @"自选";
+    UIImage *image = [UIImage imageNamed:@"Toolbar_zixuan"];
+    UIImage *selectedImage = [UIImage imageNamed:@"Toolbar_zixuan_selected"];
+    UUTabbarItem *item = [[UUTabbarItem alloc] initWithTitle:title image:image selectedImage:selectedImage tag:0];
+    UUToolBar *toolBar = [[UUToolBar alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.bounds) - kTabBarHeight, CGRectGetWidth(self.view.bounds), kTabBarHeight) items:@[item] delegate:self];
     toolBar.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
     _toolBar = toolBar;
     [_stockDetailPortaitView addSubview:toolBar];
@@ -182,42 +176,32 @@
 #pragma mark - UUToolBarDelegate
 - (void)toolBar:(UUToolBar *)toolBar didSeletedIndex:(NSInteger)index
 {
-    if (index == 0 || index == 1) {
-        //买入
-        //买入或卖出
-        [[UUStockDetailViewController g_sharedStockDetailViewController] stockBuyingOrSell:index];
-    }else if (index == 2){
+    //添加自选
+    if (!_isFav) {
         
-        //添加自选
-        if (!_isFav) {
+        NSString *code = _stockModel.code;
+        //加自选
+        [[UUMarketQuationHandler sharedMarkeQuationHandler] addFavourisStockWithCode:code pos:0 success:^(id obj) {
             
-            NSString *code = _stockModel.code;
-            //加自选
-            [[UUMarketQuationHandler sharedMarkeQuationHandler] addFavourisStockWithCode:code pos:0 success:^(id obj) {
-                
-                [SVProgressHUD showSuccessWithStatus:@"添加成功" maskType:SVProgressHUDMaskTypeBlack];
-                
-                self.isFav = YES;
-                
-            } failue:^(NSString *errorMessage) {
-                [SVProgressHUD showErrorWithStatus:errorMessage maskType:SVProgressHUDMaskTypeBlack];
-            }];
-        }else{
+            [SVProgressHUD showSuccessWithStatus:@"添加成功" maskType:SVProgressHUDMaskTypeBlack];
             
-            [[UUMarketQuationHandler sharedMarkeQuationHandler] deleteFavourisStockWithListID:@"" success:^(id obj) {
-                
-                self.isFav = NO;
-                [SVProgressHUD showSuccessWithStatus:@"删除自选成功" maskType:SVProgressHUDMaskTypeBlack];
-                
-            } failue:^(NSString *errorMessage) {
-                
-                [SVProgressHUD showErrorWithStatus:errorMessage maskType:SVProgressHUDMaskTypeBlack];
-                
-            }];
-        }
-    }else if (index == 3){
+            self.isFav = YES;
+            
+        } failue:^(NSString *errorMessage) {
+            [SVProgressHUD showErrorWithStatus:errorMessage maskType:SVProgressHUDMaskTypeBlack];
+        }];
+    }else{
         
-        //讨论
+        [[UUMarketQuationHandler sharedMarkeQuationHandler] deleteFavourisStockWithListID:@"" success:^(id obj) {
+            
+            self.isFav = NO;
+            [SVProgressHUD showSuccessWithStatus:@"删除自选成功" maskType:SVProgressHUDMaskTypeBlack];
+            
+        } failue:^(NSString *errorMessage) {
+            
+            [SVProgressHUD showErrorWithStatus:errorMessage maskType:SVProgressHUDMaskTypeBlack];
+            
+        }];
     }
 }
 

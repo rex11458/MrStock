@@ -70,7 +70,7 @@ static UUStockDetailViewController *g_shared;
     [super viewDidLoad];
     if (_stockModel.code.length == 0) return;
     _titleView = [self createTitleView];
-    [self addRightBarButtons];
+//    [self addRightBarButtons];
     self.navigationItem.titleView = _titleView;
 
     if ([[UUDatabaseManager manager] isFavouris:_stockModel.code] != nil) {
