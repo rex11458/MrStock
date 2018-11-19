@@ -123,11 +123,7 @@
 
     [[UUSocketManager manager] setSuccess:^(AsyncSocket *socket){
         [[UUStockListViewController sharedUUStockListViewController] loadData];
-        
-        [UUStockListViewController sharedUUStockListViewController].loadDataCompeleted = ^{
-//            [weakSelf getStockList];
-
-        };
+        [self performSelector:@selector(getStockList) withObject:nil afterDelay:2];
     }];
     
     [UUSocketManager manager].failure = ^(NSError *error){
