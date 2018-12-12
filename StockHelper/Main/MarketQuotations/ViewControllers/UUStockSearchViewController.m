@@ -323,26 +323,26 @@
     favStockModel.code = stockModel.code;
     favStockModel.market =stockModel.market;
     //用户在线，通过网络请求添加删除自选股
-    if ([UUserDataManager userIsOnLine])
-    {
-        [SVProgressHUD showWithStatus:@"正在执行..." maskType:SVProgressHUDMaskTypeBlack];
-        NSString *code = stockModel.code;
-        if (k_IS_INDEX(stockModel.market)) {
-            code = [code stringByAppendingString:@".INX"];
-        }
-        [[UUMarketQuationHandler sharedMarkeQuationHandler] addFavourisStockWithCode:code pos:self.pos success:^(NSString *listID) {
-            self.pos++;
-            //listID加入favStockModel中
-            
-           [self addLocalFavourisWithFavStockModel:favStockModel ListID:listID];
-            
-        } failue:^(NSString *errorMessage) {
-            [SVProgressHUD showErrorWithStatus:errorMessage maskType:SVProgressHUDMaskTypeBlack];
-        }];
-    }else
-    {
+//    if ([UUserDataManager userIsOnLine])
+//    {
+//        [SVProgressHUD showWithStatus:@"正在执行..." maskType:SVProgressHUDMaskTypeBlack];
+//        NSString *code = stockModel.code;
+//        if (k_IS_INDEX(stockModel.market)) {
+//            code = [code stringByAppendingString:@".INX"];
+//        }
+//        [[UUMarketQuationHandler sharedMarkeQuationHandler] addFavourisStockWithCode:code pos:self.pos success:^(NSString *listID) {
+//            self.pos++;
+//            //listID加入favStockModel中
+//
+//           [self addLocalFavourisWithFavStockModel:favStockModel ListID:listID];
+//
+//        } failue:^(NSString *errorMessage) {
+//            [SVProgressHUD showErrorWithStatus:errorMessage maskType:SVProgressHUDMaskTypeBlack];
+//        }];
+//    }else
+//    {
         [self addLocalFavourisWithFavStockModel:favStockModel ListID:@""];
-    }
+//    }
 }
 
 - (void)addLocalFavourisWithFavStockModel:(UUFavourisStockModel *)favStockModel ListID:(NSString *)listID
@@ -361,20 +361,20 @@
 
 - (void)delFavourisWithStockCode:(UUFavourisStockModel *)favStockModel
 {
-    if ([UUserDataManager userIsOnLine])
-    {
-        [SVProgressHUD showWithStatus:@"正在执行..." maskType:SVProgressHUDMaskTypeBlack];
-        
-        [[UUMarketQuationHandler sharedMarkeQuationHandler] deleteFavourisStockWithListID:favStockModel.listID success:^(id obj) {
-            [self delLocalFavourisWithFavStockModel:favStockModel];
-        } failue:^(NSString *errorMessage) {
-            [SVProgressHUD showErrorWithStatus:errorMessage];
-        }];
-    }
-    else
-    {
+//    if ([UUserDataManager userIsOnLine])
+//    {
+//        [SVProgressHUD showWithStatus:@"正在执行..." maskType:SVProgressHUDMaskTypeBlack];
+//
+//        [[UUMarketQuationHandler sharedMarkeQuationHandler] deleteFavourisStockWithListID:favStockModel.listID success:^(id obj) {
+//            [self delLocalFavourisWithFavStockModel:favStockModel];
+//        } failue:^(NSString *errorMessage) {
+//            [SVProgressHUD showErrorWithStatus:errorMessage];
+//        }];
+//    }
+//    else
+//    {
         [self delLocalFavourisWithFavStockModel:favStockModel];
-    }
+//    }
 }
 
 - (void)delLocalFavourisWithFavStockModel:(UUFavourisStockModel *)favStockModel
