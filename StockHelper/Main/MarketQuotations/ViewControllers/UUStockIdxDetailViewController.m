@@ -86,17 +86,17 @@
     _toolbar = [[UUToolBar alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.bounds) - UUToolBarHeight, CGRectGetWidth(self.view.bounds), UUToolBarHeight) items:@[item] delegate:self];
 //    _toolbar.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
 
-    [self.view addSubview:_toolbar];
+//    [self.view addSubview:_toolbar];
     
-    [_toolbar mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.equalTo(self.view);
-        make.height.mas_equalTo(UUToolBarHeight);
-        make.bottom.equalTo(self.mas_bottomLayoutGuide);
-    }];
-    
+//    [_toolbar mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.right.equalTo(self.view);
+//        make.height.mas_equalTo(UUToolBarHeight);
+//        make.bottom.equalTo(self.mas_bottomLayoutGuide);
+//    }];
+//
     [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.right.equalTo(self.view);
-        make.bottom.equalTo(_toolbar.mas_top);
+        make.bottom.equalTo(self.view.mas_bottom);
     }];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadDataSuccess) name:stockDetailDidLoadSuccessNotificaiton object:nil];

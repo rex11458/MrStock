@@ -279,23 +279,7 @@ static UUStockDetailViewController *g_shared;
     }
 }
 
-#pragma mark - toolbar 操作条
-//股票买入/卖出
-- (void)stockBuyingOrSell:(NSInteger)type
-{
-    UUVirtualTansactionBuyingViewController *buyingVC = [[UUVirtualTansactionBuyingViewController alloc] init];
-    buyingVC.type = type;
-    buyingVC.stockModel = _stockModel;
-    [self.navigationController pushViewController:buyingVC animated:YES];
-}
 
-//讨论
-- (void)discuss
-{
-    UUStockTopicViewController *vc = [[UUStockTopicViewController alloc] init];
-    vc.stockModel = _stockModel;
-    [self.navigationController pushViewController:vc animated:YES];
-}
 
 - (void)backAction
 {

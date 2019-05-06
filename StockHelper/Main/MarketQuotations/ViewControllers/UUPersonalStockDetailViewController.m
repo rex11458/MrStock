@@ -98,14 +98,14 @@
 //    //工具条
 //    NSArray *orgItems = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"UUStockDetailIToolBartems.plist" ofType:nil]];
    
-    NSString *title = @"自选";
-    UIImage *image = [UIImage imageNamed:@"Toolbar_zixuan"];
-    UIImage *selectedImage = [UIImage imageNamed:@"Toolbar_zixuan_selected"];
-    UUTabbarItem *item = [[UUTabbarItem alloc] initWithTitle:title image:image selectedImage:selectedImage tag:0];
-    UUToolBar *toolBar = [[UUToolBar alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.bounds) - kTabBarHeight, CGRectGetWidth(self.view.bounds), kTabBarHeight) items:@[item] delegate:self];
-    toolBar.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
-    _toolBar = toolBar;
-    [_stockDetailPortaitView addSubview:toolBar];
+//    NSString *title = @"自选";
+//    UIImage *image = [UIImage imageNamed:@"Toolbar_zixuan"];
+//    UIImage *selectedImage = [UIImage imageNamed:@"Toolbar_zixuan_selected"];
+//    UUTabbarItem *item = [[UUTabbarItem alloc] initWithTitle:title image:image selectedImage:selectedImage tag:0];
+//    UUToolBar *toolBar = [[UUToolBar alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.bounds) - kTabBarHeight, CGRectGetWidth(self.view.bounds), kTabBarHeight) items:@[item] delegate:self];
+//    toolBar.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
+//    _toolBar = toolBar;
+//    [_stockDetailPortaitView addSubview:toolBar];
     
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadDataSuccess) name:stockDetailDidLoadSuccessNotificaiton object:nil];
