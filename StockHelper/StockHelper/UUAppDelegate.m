@@ -12,14 +12,13 @@
 #import "BaseNavigationController.h"
 #import "UUThemeManager.h"
 #import "UUStockListViewController.h"
-#import "UUIntroductionView.h"
 
 #import "UUMarketQuationHandler.h"
 #import "UUDatabaseManager.h"
 #import "UUSocketManager.h"
 #import "UULoginViewController.h"
 #import "UURegisterViewController.h"
-@interface UUAppDelegate ()<UUIntroductionViewDelegate>
+@interface UUAppDelegate ()
 {
     id _observer;
 }
@@ -56,39 +55,6 @@
     self.window.rootViewController = baseNav;
 }
 
-- (void)showIntroductionView
-{
-    //显示引导页
-    if (![UUIntroductionView equalVersion]) {
-        UUIntroductionView *introductionView = [[[NSBundle mainBundle] loadNibNamed:@"UUIntroductionView" owner:self options:nil] lastObject];
-        introductionView.delegate = self;
-        [introductionView show];
-    }
-}
-
-#pragma mark - UUIntroduc.tionViewDelegate
-- (void)introductionView:(UUIntroductionView *)introductionView didSelectedIndex:(NSInteger)index
-{
-    BaseNavigationController *nvc = (BaseNavigationController *)self.window.rootViewController;
-    
-    if (index == 0) {
-        //注册
-        UURegisterViewController *registerVC = [[UURegisterViewController alloc] init];
-        //引导页进入页面
-        registerVC.registerType = 1;
-        [nvc pushViewController:registerVC animated:YES];
-    }else if (index == 1){
-        //登录
-        UULoginViewController *loginVC = [[UULoginViewController alloc] initWithIndex:(nvc.viewControllers.count - 1) success:^{
-            
-        } failed:^{
-            
-        }];
-        [nvc pushViewController:loginVC animated:YES];
-    }
-}
-
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
@@ -105,9 +71,6 @@
     [self initRootViewController];
     
     //    [self configSubViews];
-    
-    //是否显示引导页
-    [self showIntroductionView];
     
     //连接Socket服务器
     //    [SVProgressHUD showWithStatus:@"连接服务器" maskType:SVProgressHUDMaskTypeBlack];
