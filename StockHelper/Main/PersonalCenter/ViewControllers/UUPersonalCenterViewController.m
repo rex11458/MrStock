@@ -15,12 +15,10 @@
 #import "UULoginHandler.h"
 #import "UUPersonalSettingViewController.h"
 #import <SVProgressHUD/SVProgressHUD.h>
-#import "UUShareView.h"
 #import "UUFavourisManagerViewController.h"
-#import <ShareSDK/ShareSDK.h>
 #import "UUMeHandler.h"
 #import "UUFillPersonalInfoViewController.h"
-@interface UUPersonalCenterViewController ()<UUPersonalCenterHeaderViewDelegate,UUShareViewDelegate>
+@interface UUPersonalCenterViewController ()<UUPersonalCenterHeaderViewDelegate>
 {
     NSArray *_viewControllers;
     NSDictionary *_remaindDic;
@@ -161,121 +159,18 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    if (indexPath.section == 1 && indexPath.row == 0)
-    {
-        //分享
-        UUShareView *shareView = [[UUShareView alloc] initWithFrame:CGRectMake(0,PHONE_HEIGHT - UUShareViewHeight, PHONE_WIDTH, UUShareViewHeight)];
-        shareView.delegate = self;
-        
-        [shareView show];
-    }
-    else
-    {
-        if ([UUserDataManager userIsOnLine]) {
-            UIViewController *vc = [[NSClassFromString(_viewControllers[indexPath.section][indexPath.row]) alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-        }else
-        {
-            UULoginViewController *loginVC = [[UULoginViewController alloc] initWithIndex:0 success:^{
-                
-            } failed:^{
-                
-            }];
-            [self.navigationController pushViewController:loginVC animated:YES];
-        }
-    }
-}
-
-#pragma mark - UUShareViewDelegate
-- (void)shareView:(UUShareView *)shareView shareWithType:(ShareType)shareType
-{
-    if (shareType == ShareTypeSinaWeibo) {
-        [self shareToSinaWeiBo];
+    if ([UUserDataManager userIsOnLine]) {
+        UIViewController *vc = [[NSClassFromString(_viewControllers[indexPath.section][indexPath.row]) alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
     }else
     {
-        
-        [self shareMessage:shareType];   
+        UULoginViewController *loginVC = [[UULoginViewController alloc] initWithIndex:0 success:^{
+            
+        } failed:^{
+            
+        }];
+        [self.navigationController pushViewController:loginVC animated:YES];
     }
-}
-#define SHARE_ICON_URL @""
--(void)shareMessage:(ShareType)shareType
-{
-    id<ISSCAttachment> imageAttach = [ShareSDK imageWithUrl:SHARE_ICON_URL];
-    
-    id<ISSContent> contentObj = [ShareSDK content:@"仅供测试。。。"
-                                   defaultContent:@"defaultContnt"
-                                            image:imageAttach
-                                            title:@"跟牛人买牛股,找股先生！"
-                                              url:@"http://www.66aicai.com"
-                                      description:@"仅供测试。。。"
-                                        mediaType:SSPublishContentMediaTypeNews];
-    
-    [ShareSDK shareContent:contentObj
-                      type:shareType
-               authOptions:nil
-              shareOptions:nil
-             statusBarTips:NO
-                    result:^(ShareType type, SSResponseState state, id<ISSPlatformShareInfo> statusInfo, id<ICMErrorInfo> error, BOOL end) {
-                        
-                        if (state == SSResponseStateSuccess) {
-                        
-                            [self sharedStatusAlert:@"提示" msg:@"分享成功"];
-                        }
-                    }];
-}
-
-- (void)sharedStatusAlert:(NSString *)strTitle msg:(NSString *)strMsg
-{
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:strTitle message:strMsg delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-    [alert show];
-}
-
-
-- (void)shareToSinaWeiBo
-{
-    id<ISSCAttachment> imageAttach = [ShareSDK imageWithUrl:SHARE_ICON_URL];
-    
-    //构造分享内容
-    id<ISSContent> publishContent = [ShareSDK content:@"海量基金任你选,牛市机遇不踏空;投资达人来助力,交易决策不再愁http://www.66toutou.com/download.html"
-                                       defaultContent:@"defaultContnt"
-                                                image:imageAttach
-                                                title:@"我在投投买基金,找达人"
-                                                  url:@"http://toutougonghui.com/"
-                                          description:@"description"
-                                            mediaType:SSPublishContentMediaTypeNews];
-    
-    //构建授权内容
-    id<ISSAuthOptions> authOptions = [ShareSDK authOptionsWithAutoAuth:YES
-                                                         allowCallback:NO
-                                                         authViewStyle:SSAuthViewStyleModal
-                                                          viewDelegate:nil
-                                               authManagerViewDelegate:nil];
-    [authOptions setPowerByHidden:YES];
-    
-    //分享项目集合
-    NSArray *shareList = [ShareSDK getShareListWithType:ShareTypeSinaWeibo, nil];
-    
-    
-    //一键分享
-    [ShareSDK oneKeyShareContent:publishContent
-                       shareList:shareList
-                     authOptions:authOptions
-                   statusBarTips:YES
-                          result:^(ShareType type, SSResponseState state, id<ISSPlatformShareInfo> statusInfo, id<ICMErrorInfo> error, BOOL end) {
-                              
-                              if (state == SSResponseStateSuccess) {
-                                  [self sharedStatusAlert:@"提示" msg:@"分享成功"];
-                              }
-                              //                                  if (state == SSResponseStateFail) {
-                              //                                      [self sharedStatusAlert:@"提示" msg:@"分享失败"];
-                              //                                  }
-                              //                                  if (state == SSResponseStateCancel) {
-                              //                                      [self sharedStatusAlert:@"提示" msg:@"分享取消"];
-                              //                                  }
-                          }];
-    
-    
 }
 
 

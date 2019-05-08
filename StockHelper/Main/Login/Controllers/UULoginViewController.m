@@ -11,9 +11,7 @@
 #import "UULoginHandler.h"
 #import "UUForgotPasswordViewController.h"
 #import "UURegisterViewController.h"
-#import <ShareSDK/ShareSDK.h>
 #import <SVProgressHUD/SVProgressHUD.h>
-#import "UUMarketQuationHandler.h"
 #import "UUDatabaseManager.h"
 #import "UUFavourisStockModel.h"
 #import "UUStockModel.h"
@@ -44,23 +42,6 @@
     [self configSubViews];
 }
 
-
-//- (void)loginAction
-//{
-//    //微博登录
-//    [ShareSDK getUserInfoWithType:ShareTypeSinaWeibo authOptions:nil result:^(BOOL result, id<ISSPlatformUser> userInfo, id<ICMErrorInfo> error) {
-//
-//    }];
-//    //qq登录
-////    [ShareSDK getUserInfoWithType:ShareTypeQQSpace authOptions:nil result:^(BOOL result, id<ISSPlatformUser> userInfo, id<ICMErrorInfo> error) {
-////
-////        NSLog(@"userInfo = %@",[userInfo nickname]);
-////        NSData *data = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:[userInfo profileImage]]];
-////        UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageWithData:data]];
-////        [self.view addSubview:imageView];
-////        imageView.center = CGPointMake(PHONE_WIDTH * 0.5, PHONE_HEIGHT * 0.5);
-////    }];
-//}
 
 - (void)configSubViews
 {
