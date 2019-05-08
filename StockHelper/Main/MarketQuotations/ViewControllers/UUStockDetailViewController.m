@@ -10,7 +10,6 @@
 #import "UUStockCommomHeaderView.h"
 #import "UUMarketQuationHandler.h"
 #import "UUStockDetailTitleView.h"
-#import "UUVirtualTansactionBuyingViewController.h"
 #import "UUDatabaseManager.h"
 #import "UUStockTopicViewController.h"
 #import <Masonry/Masonry.h>

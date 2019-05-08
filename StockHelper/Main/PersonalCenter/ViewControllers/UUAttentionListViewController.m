@@ -130,7 +130,6 @@
     UUFansListViewCell *cell = (UUFansListViewCell *)[tableView cellForRowAtIndexPath:indexPath];
     
     UUPersonalHomeViewController *homeVC = [[UUPersonalHomeViewController alloc] init];
-    homeVC.userId = cell.focusModel.customerID;
     
     [self.navigationController pushViewController:homeVC animated:YES];
 }

@@ -68,7 +68,6 @@
 		3D3E96931B43FC1E0008065A /* TQRichTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3E968E1B43FC1E0008065A /* TQRichTextView.m */; };
 		3D3EF2571B7323CC0078FA58 /* UUAttentionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3EF2561B7323CC0078FA58 /* UUAttentionListViewController.m */; };
 		3D3EF25A1B73258C0078FA58 /* UUFansListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3EF2591B73258C0078FA58 /* UUFansListViewCell.m */; };
-		3D3F97A61B28134300024E0D /* UUDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3F97A51B28134300024E0D /* UUDiscoverViewController.m */; };
 		3D3F97AA1B282A5800024E0D /* UUDiscoverViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3F97A91B282A5800024E0D /* UUDiscoverViewCell.m */; };
 		3D4044771BE0C413001CFFF9 /* UUReportSortStockModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4044761BE0C413001CFFF9 /* UUReportSortStockModel.m */; };
 		3D40447A1BE0D6BC001CFFF9 /* UUserTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4044791BE0D6BC001CFFF9 /* UUserTopicModel.m */; };
@@ -84,7 +83,6 @@
 		3D547D951BE70BAC00709949 /* UUSystemMessageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D547D941BE70BAC00709949 /* UUSystemMessageViewCell.m */; };
 		3D547D971BE70BCC00709949 /* UUSystemMessageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D547D961BE70BCC00709949 /* UUSystemMessageViewCell.xib */; };
 		3D55FA0A1B2ABB1500DBE2F0 /* UUThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D55FA091B2ABB1500DBE2F0 /* UUThemeManager.m */; };
-		3D55FA131B2AC3AF00DBE2F0 /* UUGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D55FA121B2AC3AF00DBE2F0 /* UUGroupViewController.m */; };
 		3D55FA161B2AC9B600DBE2F0 /* UUFavourisStockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D55FA151B2AC9B600DBE2F0 /* UUFavourisStockViewController.m */; };
 		3D5A143D1B96E59900C9A504 /* UUFavourisViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D5A143C1B96E59900C9A504 /* UUFavourisViewCell.xib */; };
 		3D5ADB411B8DA7D50034526F /* UUMeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5ADB401B8DA7D50034526F /* UUMeHandler.m */; };
@@ -99,27 +97,6 @@
 		3D5FEFFA1B83031600D99890 /* UUStockDetailLandspaceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D5FEFF91B83031600D99890 /* UUStockDetailLandspaceView.xib */; };
 		3D5FEFFF1B8323CD00D99890 /* UUStockShareTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5FEFFE1B8323CD00D99890 /* UUStockShareTimeView.m */; };
 		3D5FF0011B83241E00D99890 /* UUStockShareTimeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D5FF0001B83241E00D99890 /* UUStockShareTimeView.xib */; };
-		3D63552B1B954C7F00C52F56 /* UUTradeAnalyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6354F41B954C7F00C52F56 /* UUTradeAnalyView.m */; };
-		3D63552C1B954C7F00C52F56 /* UUTrandeAnalyHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6354F61B954C7F00C52F56 /* UUTrandeAnalyHistory.m */; };
-		3D63552D1B954C7F00C52F56 /* UUTrandeAnalyStockHold.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6354F81B954C7F00C52F56 /* UUTrandeAnalyStockHold.m */; };
-		3D63552E1B954C7F00C52F56 /* UUTransactionLogoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6354FA1B954C7F00C52F56 /* UUTransactionLogoutView.m */; };
-		3D63552F1B954C7F00C52F56 /* UUVirtualTansactionBusinessHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6354FC1B954C7F00C52F56 /* UUVirtualTansactionBusinessHeaderView.m */; };
-		3D6355301B954C7F00C52F56 /* UUVirtualTansactionBuyingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6354FE1B954C7F00C52F56 /* UUVirtualTansactionBuyingView.m */; };
-		3D6355311B954C7F00C52F56 /* UUVirtualTransactionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6355001B954C7F00C52F56 /* UUVirtualTransactionView.m */; };
-		3D6355321B954C7F00C52F56 /* UUTradeHistoryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6355031B954C7F00C52F56 /* UUTradeHistoryViewCell.m */; };
-		3D6355331B954C7F00C52F56 /* UUVirtualTansactionBusinessViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6355051B954C7F00C52F56 /* UUVirtualTansactionBusinessViewCell.m */; };
-		3D6355341B954C7F00C52F56 /* UUVirtualTansactionHoldStockViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6355071B954C7F00C52F56 /* UUVirtualTansactionHoldStockViewCell.m */; };
-		3D6355351B954C7F00C52F56 /* UUVirtualTansactionSelectViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6355091B954C7F00C52F56 /* UUVirtualTansactionSelectViewCell.m */; };
-		3D6355361B954C7F00C52F56 /* UUVirtualTansactionWithdrawViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D63550B1B954C7F00C52F56 /* UUVirtualTansactionWithdrawViewCell.m */; };
-		3D6355371B954C7F00C52F56 /* UUTradeAnalyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D63550E1B954C7F00C52F56 /* UUTradeAnalyViewController.m */; };
-		3D6355381B954C7F00C52F56 /* UUTransactionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6355101B954C7F00C52F56 /* UUTransactionViewController.m */; };
-		3D6355391B954C7F00C52F56 /* UUVirtualTansactionBusinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6355121B954C7F00C52F56 /* UUVirtualTansactionBusinessViewController.m */; };
-		3D63553A1B954C7F00C52F56 /* UUVirtualTansactionBuyingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6355141B954C7F00C52F56 /* UUVirtualTansactionBuyingViewController.m */; };
-		3D63553B1B954C7F00C52F56 /* UUVirtualTansactionHoldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6355161B954C7F00C52F56 /* UUVirtualTansactionHoldViewController.m */; };
-		3D63553C1B954C7F00C52F56 /* UUVirtualTansactionRemoveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6355181B954C7F00C52F56 /* UUVirtualTansactionRemoveViewController.m */; };
-		3D63553D1B954C7F00C52F56 /* UUVirtualTansactionSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D63551A1B954C7F00C52F56 /* UUVirtualTansactionSelectViewController.m */; };
-		3D63553E1B954C7F00C52F56 /* UUVirtualTansactionWithdrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D63551C1B954C7F00C52F56 /* UUVirtualTansactionWithdrawViewController.m */; };
-		3D63553F1B954C7F00C52F56 /* UUTransactionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D63551F1B954C7F00C52F56 /* UUTransactionHandler.m */; };
 		3D6355401B954C7F00C52F56 /* UUTransactionAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6355221B954C7F00C52F56 /* UUTransactionAssetModel.m */; };
 		3D6355411B954C7F00C52F56 /* UUTransactionDealModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6355241B954C7F00C52F56 /* UUTransactionDealModel.m */; };
 		3D6355421B954C7F00C52F56 /* UUTransactionDelegateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6355261B954C7F00C52F56 /* UUTransactionDelegateModel.m */; };
@@ -359,9 +336,7 @@
 		3D9CF40D1B71A346000482E2 /* UUSuggestionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9CF40C1B71A346000482E2 /* UUSuggestionView.m */; };
 		3D9CF4101B71B973000482E2 /* UUShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9CF40F1B71B973000482E2 /* UUShareView.m */; };
 		3D9EA67B1B4D3666008AAE55 /* UUTopicPraiseListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9EA67A1B4D3666008AAE55 /* UUTopicPraiseListModel.m */; };
-		3DA3A0611B57479B00744009 /* UUGeniusRankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA3A0601B57479B00744009 /* UUGeniusRankViewController.m */; };
 		3DA3A0641B5747BF00744009 /* UUGeniusRankViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA3A0631B5747BF00744009 /* UUGeniusRankViewCell.m */; };
-		3DA3A0671B5794E900744009 /* UUGeniusRankManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA3A0661B5794E900744009 /* UUGeniusRankManagerViewController.m */; };
 		3DA3E1421B37B1F30099A747 /* UUFavourisManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA3E1411B37B1F30099A747 /* UUFavourisManagerViewController.m */; };
 		3DA3E1451B37B2170099A747 /* UUFavourisGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA3E1441B37B2170099A747 /* UUFavourisGroupViewController.m */; };
 		3DA3E1481B37BCC40099A747 /* UUStockListHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA3E1471B37BCC40099A747 /* UUStockListHeaderView.m */; };
@@ -577,8 +552,6 @@
 		3D3EF2561B7323CC0078FA58 /* UUAttentionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUAttentionListViewController.m; sourceTree = "<group>"; };
 		3D3EF2581B73258C0078FA58 /* UUFansListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUFansListViewCell.h; sourceTree = "<group>"; };
 		3D3EF2591B73258C0078FA58 /* UUFansListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUFansListViewCell.m; sourceTree = "<group>"; };
-		3D3F97A41B28134300024E0D /* UUDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUDiscoverViewController.h; sourceTree = "<group>"; };
-		3D3F97A51B28134300024E0D /* UUDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUDiscoverViewController.m; sourceTree = "<group>"; };
 		3D3F97A81B282A5800024E0D /* UUDiscoverViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUDiscoverViewCell.h; sourceTree = "<group>"; };
 		3D3F97A91B282A5800024E0D /* UUDiscoverViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUDiscoverViewCell.m; sourceTree = "<group>"; };
 		3D4044751BE0C413001CFFF9 /* UUReportSortStockModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUReportSortStockModel.h; sourceTree = "<group>"; };
@@ -605,8 +578,6 @@
 		3D547D961BE70BCC00709949 /* UUSystemMessageViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UUSystemMessageViewCell.xib; sourceTree = "<group>"; };
 		3D55FA081B2ABB1500DBE2F0 /* UUThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUThemeManager.h; sourceTree = "<group>"; };
 		3D55FA091B2ABB1500DBE2F0 /* UUThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUThemeManager.m; sourceTree = "<group>"; };
-		3D55FA111B2AC3AF00DBE2F0 /* UUGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUGroupViewController.h; sourceTree = "<group>"; };
-		3D55FA121B2AC3AF00DBE2F0 /* UUGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUGroupViewController.m; sourceTree = "<group>"; };
 		3D55FA141B2AC9B600DBE2F0 /* UUFavourisStockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUFavourisStockViewController.h; sourceTree = "<group>"; };
 		3D55FA151B2AC9B600DBE2F0 /* UUFavourisStockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUFavourisStockViewController.m; sourceTree = "<group>"; };
 		3D5A143C1B96E59900C9A504 /* UUFavourisViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UUFavourisViewCell.xib; sourceTree = "<group>"; };
@@ -631,48 +602,6 @@
 		3D5FEFFD1B8323CD00D99890 /* UUStockShareTimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUStockShareTimeView.h; sourceTree = "<group>"; };
 		3D5FEFFE1B8323CD00D99890 /* UUStockShareTimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUStockShareTimeView.m; sourceTree = "<group>"; };
 		3D5FF0001B83241E00D99890 /* UUStockShareTimeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UUStockShareTimeView.xib; sourceTree = "<group>"; };
-		3D6354F31B954C7F00C52F56 /* UUTradeAnalyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUTradeAnalyView.h; sourceTree = "<group>"; };
-		3D6354F41B954C7F00C52F56 /* UUTradeAnalyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUTradeAnalyView.m; sourceTree = "<group>"; };
-		3D6354F51B954C7F00C52F56 /* UUTrandeAnalyHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUTrandeAnalyHistory.h; sourceTree = "<group>"; };
-		3D6354F61B954C7F00C52F56 /* UUTrandeAnalyHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUTrandeAnalyHistory.m; sourceTree = "<group>"; };
-		3D6354F71B954C7F00C52F56 /* UUTrandeAnalyStockHold.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUTrandeAnalyStockHold.h; sourceTree = "<group>"; };
-		3D6354F81B954C7F00C52F56 /* UUTrandeAnalyStockHold.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUTrandeAnalyStockHold.m; sourceTree = "<group>"; };
-		3D6354F91B954C7F00C52F56 /* UUTransactionLogoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUTransactionLogoutView.h; sourceTree = "<group>"; };
-		3D6354FA1B954C7F00C52F56 /* UUTransactionLogoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUTransactionLogoutView.m; sourceTree = "<group>"; };
-		3D6354FB1B954C7F00C52F56 /* UUVirtualTansactionBusinessHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUVirtualTansactionBusinessHeaderView.h; sourceTree = "<group>"; };
-		3D6354FC1B954C7F00C52F56 /* UUVirtualTansactionBusinessHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUVirtualTansactionBusinessHeaderView.m; sourceTree = "<group>"; };
-		3D6354FD1B954C7F00C52F56 /* UUVirtualTansactionBuyingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUVirtualTansactionBuyingView.h; sourceTree = "<group>"; };
-		3D6354FE1B954C7F00C52F56 /* UUVirtualTansactionBuyingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUVirtualTansactionBuyingView.m; sourceTree = "<group>"; };
-		3D6354FF1B954C7F00C52F56 /* UUVirtualTransactionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUVirtualTransactionView.h; sourceTree = "<group>"; };
-		3D6355001B954C7F00C52F56 /* UUVirtualTransactionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUVirtualTransactionView.m; sourceTree = "<group>"; };
-		3D6355021B954C7F00C52F56 /* UUTradeHistoryViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUTradeHistoryViewCell.h; sourceTree = "<group>"; };
-		3D6355031B954C7F00C52F56 /* UUTradeHistoryViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUTradeHistoryViewCell.m; sourceTree = "<group>"; };
-		3D6355041B954C7F00C52F56 /* UUVirtualTansactionBusinessViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUVirtualTansactionBusinessViewCell.h; sourceTree = "<group>"; };
-		3D6355051B954C7F00C52F56 /* UUVirtualTansactionBusinessViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUVirtualTansactionBusinessViewCell.m; sourceTree = "<group>"; };
-		3D6355061B954C7F00C52F56 /* UUVirtualTansactionHoldStockViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUVirtualTansactionHoldStockViewCell.h; sourceTree = "<group>"; };
-		3D6355071B954C7F00C52F56 /* UUVirtualTansactionHoldStockViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUVirtualTansactionHoldStockViewCell.m; sourceTree = "<group>"; };
-		3D6355081B954C7F00C52F56 /* UUVirtualTansactionSelectViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUVirtualTansactionSelectViewCell.h; sourceTree = "<group>"; };
-		3D6355091B954C7F00C52F56 /* UUVirtualTansactionSelectViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUVirtualTansactionSelectViewCell.m; sourceTree = "<group>"; };
-		3D63550A1B954C7F00C52F56 /* UUVirtualTansactionWithdrawViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUVirtualTansactionWithdrawViewCell.h; sourceTree = "<group>"; };
-		3D63550B1B954C7F00C52F56 /* UUVirtualTansactionWithdrawViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUVirtualTansactionWithdrawViewCell.m; sourceTree = "<group>"; };
-		3D63550D1B954C7F00C52F56 /* UUTradeAnalyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUTradeAnalyViewController.h; sourceTree = "<group>"; };
-		3D63550E1B954C7F00C52F56 /* UUTradeAnalyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUTradeAnalyViewController.m; sourceTree = "<group>"; };
-		3D63550F1B954C7F00C52F56 /* UUTransactionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUTransactionViewController.h; sourceTree = "<group>"; };
-		3D6355101B954C7F00C52F56 /* UUTransactionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUTransactionViewController.m; sourceTree = "<group>"; };
-		3D6355111B954C7F00C52F56 /* UUVirtualTansactionBusinessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUVirtualTansactionBusinessViewController.h; sourceTree = "<group>"; };
-		3D6355121B954C7F00C52F56 /* UUVirtualTansactionBusinessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUVirtualTansactionBusinessViewController.m; sourceTree = "<group>"; };
-		3D6355131B954C7F00C52F56 /* UUVirtualTansactionBuyingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUVirtualTansactionBuyingViewController.h; sourceTree = "<group>"; };
-		3D6355141B954C7F00C52F56 /* UUVirtualTansactionBuyingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUVirtualTansactionBuyingViewController.m; sourceTree = "<group>"; };
-		3D6355151B954C7F00C52F56 /* UUVirtualTansactionHoldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUVirtualTansactionHoldViewController.h; sourceTree = "<group>"; };
-		3D6355161B954C7F00C52F56 /* UUVirtualTansactionHoldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUVirtualTansactionHoldViewController.m; sourceTree = "<group>"; };
-		3D6355171B954C7F00C52F56 /* UUVirtualTansactionRemoveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUVirtualTansactionRemoveViewController.h; sourceTree = "<group>"; };
-		3D6355181B954C7F00C52F56 /* UUVirtualTansactionRemoveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUVirtualTansactionRemoveViewController.m; sourceTree = "<group>"; };
-		3D6355191B954C7F00C52F56 /* UUVirtualTansactionSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUVirtualTansactionSelectViewController.h; sourceTree = "<group>"; };
-		3D63551A1B954C7F00C52F56 /* UUVirtualTansactionSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUVirtualTansactionSelectViewController.m; sourceTree = "<group>"; };
-		3D63551B1B954C7F00C52F56 /* UUVirtualTansactionWithdrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUVirtualTansactionWithdrawViewController.h; sourceTree = "<group>"; };
-		3D63551C1B954C7F00C52F56 /* UUVirtualTansactionWithdrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUVirtualTansactionWithdrawViewController.m; sourceTree = "<group>"; };
-		3D63551E1B954C7F00C52F56 /* UUTransactionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUTransactionHandler.h; sourceTree = "<group>"; };
-		3D63551F1B954C7F00C52F56 /* UUTransactionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUTransactionHandler.m; sourceTree = "<group>"; };
 		3D6355211B954C7F00C52F56 /* UUTransactionAssetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUTransactionAssetModel.h; sourceTree = "<group>"; };
 		3D6355221B954C7F00C52F56 /* UUTransactionAssetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUTransactionAssetModel.m; sourceTree = "<group>"; };
 		3D6355231B954C7F00C52F56 /* UUTransactionDealModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUTransactionDealModel.h; sourceTree = "<group>"; };
@@ -978,12 +907,8 @@
 		3D9CF40F1B71B973000482E2 /* UUShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUShareView.m; sourceTree = "<group>"; };
 		3D9EA6791B4D3666008AAE55 /* UUTopicPraiseListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUTopicPraiseListModel.h; sourceTree = "<group>"; };
 		3D9EA67A1B4D3666008AAE55 /* UUTopicPraiseListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUTopicPraiseListModel.m; sourceTree = "<group>"; };
-		3DA3A05F1B57479B00744009 /* UUGeniusRankViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUGeniusRankViewController.h; sourceTree = "<group>"; };
-		3DA3A0601B57479B00744009 /* UUGeniusRankViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUGeniusRankViewController.m; sourceTree = "<group>"; };
 		3DA3A0621B5747BF00744009 /* UUGeniusRankViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUGeniusRankViewCell.h; sourceTree = "<group>"; };
 		3DA3A0631B5747BF00744009 /* UUGeniusRankViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUGeniusRankViewCell.m; sourceTree = "<group>"; };
-		3DA3A0651B5794E900744009 /* UUGeniusRankManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUGeniusRankManagerViewController.h; sourceTree = "<group>"; };
-		3DA3A0661B5794E900744009 /* UUGeniusRankManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUGeniusRankManagerViewController.m; sourceTree = "<group>"; };
 		3DA3E1401B37B1F30099A747 /* UUFavourisManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUFavourisManagerViewController.h; sourceTree = "<group>"; };
 		3DA3E1411B37B1F30099A747 /* UUFavourisManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUFavourisManagerViewController.m; sourceTree = "<group>"; };
 		3DA3E1431B37B2170099A747 /* UUFavourisGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUFavourisGroupViewController.h; sourceTree = "<group>"; };
@@ -1340,7 +1265,6 @@
 		3D2A65FE1B1C37200071D10A /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				3D63554D1B9574E700C52F56 /* Models */,
 				3D9ABA1B1B5384A60004AA9D /* Handler */,
 				3D9ABA1D1B5384A60004AA9D /* Views */,
 				3D2A66001B1C377B0071D10A /* Controllers */,
@@ -1416,7 +1340,6 @@
 				3D6355451B954CD200C52F56 /* Handler */,
 				3D6355461B954CD200C52F56 /* Models */,
 				3D3F97A01B28131500024E0D /* ChildViews */,
-				3D3F97A11B28131500024E0D /* Controllers */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -1429,19 +1352,6 @@
 				3DAE4F2E1B5E261C00E9854F /* UUHomeButtonView.m */,
 			);
 			path = ChildViews;
-			sourceTree = "<group>";
-		};
-		3D3F97A11B28131500024E0D /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				3D3F97A41B28134300024E0D /* UUDiscoverViewController.h */,
-				3D3F97A51B28134300024E0D /* UUDiscoverViewController.m */,
-				3DA3A05F1B57479B00744009 /* UUGeniusRankViewController.h */,
-				3DA3A0601B57479B00744009 /* UUGeniusRankViewController.m */,
-				3DA3A0651B5794E900744009 /* UUGeniusRankManagerViewController.h */,
-				3DA3A0661B5794E900744009 /* UUGeniusRankManagerViewController.m */,
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		3D3F97A71B282A2F00024E0D /* ViewCells */ = {
@@ -1463,55 +1373,6 @@
 				3D55FA091B2ABB1500DBE2F0 /* UUThemeManager.m */,
 			);
 			path = ThemeManager;
-			sourceTree = "<group>";
-		};
-		3D55FA0B1B2AC39600DBE2F0 /* Group */ = {
-			isa = PBXGroup;
-			children = (
-				3D55FA0C1B2AC39600DBE2F0 /* ChildViews */,
-				3D55FA0E1B2AC39600DBE2F0 /* Handler */,
-				3D55FA0F1B2AC39600DBE2F0 /* Models */,
-				3D55FA101B2AC39600DBE2F0 /* ViewControllers */,
-			);
-			path = Group;
-			sourceTree = "<group>";
-		};
-		3D55FA0C1B2AC39600DBE2F0 /* ChildViews */ = {
-			isa = PBXGroup;
-			children = (
-				3D55FA0D1B2AC39600DBE2F0 /* ViewCells */,
-			);
-			path = ChildViews;
-			sourceTree = "<group>";
-		};
-		3D55FA0D1B2AC39600DBE2F0 /* ViewCells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewCells;
-			sourceTree = "<group>";
-		};
-		3D55FA0E1B2AC39600DBE2F0 /* Handler */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Handler;
-			sourceTree = "<group>";
-		};
-		3D55FA0F1B2AC39600DBE2F0 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		3D55FA101B2AC39600DBE2F0 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				3D55FA111B2AC3AF00DBE2F0 /* UUGroupViewController.h */,
-				3D55FA121B2AC3AF00DBE2F0 /* UUGroupViewController.m */,
-			);
-			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		3D5ADB3D1B8DA7C10034526F /* Handler */ = {
@@ -1568,7 +1429,6 @@
 				3D2A65FE1B1C37200071D10A /* Login */,
 				3D6354F11B954C7F00C52F56 /* Transaction */,
 				3D3F979F1B2812D400024E0D /* Discover */,
-				3D55FA0B1B2AC39600DBE2F0 /* Group */,
 				3D6092271B00C56C00F3DB32 /* MarketQuotations */,
 				3D73AB201B3CF5CC001847B0 /* Community */,
 				3D7105111B01A20500EB5A5B /* PersonalCenter */,
@@ -1783,81 +1643,15 @@
 		3D6354F11B954C7F00C52F56 /* Transaction */ = {
 			isa = PBXGroup;
 			children = (
-				3D6354F21B954C7F00C52F56 /* ChildViews */,
 				3D63551D1B954C7F00C52F56 /* Handler */,
 				3D6355201B954C7F00C52F56 /* Models */,
-				3D63550C1B954C7F00C52F56 /* Controllers */,
 			);
 			path = Transaction;
-			sourceTree = "<group>";
-		};
-		3D6354F21B954C7F00C52F56 /* ChildViews */ = {
-			isa = PBXGroup;
-			children = (
-				3D6354F31B954C7F00C52F56 /* UUTradeAnalyView.h */,
-				3D6354F41B954C7F00C52F56 /* UUTradeAnalyView.m */,
-				3D6354F51B954C7F00C52F56 /* UUTrandeAnalyHistory.h */,
-				3D6354F61B954C7F00C52F56 /* UUTrandeAnalyHistory.m */,
-				3D6354F71B954C7F00C52F56 /* UUTrandeAnalyStockHold.h */,
-				3D6354F81B954C7F00C52F56 /* UUTrandeAnalyStockHold.m */,
-				3D6354F91B954C7F00C52F56 /* UUTransactionLogoutView.h */,
-				3D6354FA1B954C7F00C52F56 /* UUTransactionLogoutView.m */,
-				3D6354FB1B954C7F00C52F56 /* UUVirtualTansactionBusinessHeaderView.h */,
-				3D6354FC1B954C7F00C52F56 /* UUVirtualTansactionBusinessHeaderView.m */,
-				3D6354FD1B954C7F00C52F56 /* UUVirtualTansactionBuyingView.h */,
-				3D6354FE1B954C7F00C52F56 /* UUVirtualTansactionBuyingView.m */,
-				3D6354FF1B954C7F00C52F56 /* UUVirtualTransactionView.h */,
-				3D6355001B954C7F00C52F56 /* UUVirtualTransactionView.m */,
-				3D6355011B954C7F00C52F56 /* ViewCells */,
-			);
-			path = ChildViews;
-			sourceTree = "<group>";
-		};
-		3D6355011B954C7F00C52F56 /* ViewCells */ = {
-			isa = PBXGroup;
-			children = (
-				3D6355021B954C7F00C52F56 /* UUTradeHistoryViewCell.h */,
-				3D6355031B954C7F00C52F56 /* UUTradeHistoryViewCell.m */,
-				3D6355041B954C7F00C52F56 /* UUVirtualTansactionBusinessViewCell.h */,
-				3D6355051B954C7F00C52F56 /* UUVirtualTansactionBusinessViewCell.m */,
-				3D6355061B954C7F00C52F56 /* UUVirtualTansactionHoldStockViewCell.h */,
-				3D6355071B954C7F00C52F56 /* UUVirtualTansactionHoldStockViewCell.m */,
-				3D6355081B954C7F00C52F56 /* UUVirtualTansactionSelectViewCell.h */,
-				3D6355091B954C7F00C52F56 /* UUVirtualTansactionSelectViewCell.m */,
-				3D63550A1B954C7F00C52F56 /* UUVirtualTansactionWithdrawViewCell.h */,
-				3D63550B1B954C7F00C52F56 /* UUVirtualTansactionWithdrawViewCell.m */,
-			);
-			path = ViewCells;
-			sourceTree = "<group>";
-		};
-		3D63550C1B954C7F00C52F56 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				3D63550D1B954C7F00C52F56 /* UUTradeAnalyViewController.h */,
-				3D63550E1B954C7F00C52F56 /* UUTradeAnalyViewController.m */,
-				3D63550F1B954C7F00C52F56 /* UUTransactionViewController.h */,
-				3D6355101B954C7F00C52F56 /* UUTransactionViewController.m */,
-				3D6355111B954C7F00C52F56 /* UUVirtualTansactionBusinessViewController.h */,
-				3D6355121B954C7F00C52F56 /* UUVirtualTansactionBusinessViewController.m */,
-				3D6355131B954C7F00C52F56 /* UUVirtualTansactionBuyingViewController.h */,
-				3D6355141B954C7F00C52F56 /* UUVirtualTansactionBuyingViewController.m */,
-				3D6355151B954C7F00C52F56 /* UUVirtualTansactionHoldViewController.h */,
-				3D6355161B954C7F00C52F56 /* UUVirtualTansactionHoldViewController.m */,
-				3D6355171B954C7F00C52F56 /* UUVirtualTansactionRemoveViewController.h */,
-				3D6355181B954C7F00C52F56 /* UUVirtualTansactionRemoveViewController.m */,
-				3D6355191B954C7F00C52F56 /* UUVirtualTansactionSelectViewController.h */,
-				3D63551A1B954C7F00C52F56 /* UUVirtualTansactionSelectViewController.m */,
-				3D63551B1B954C7F00C52F56 /* UUVirtualTansactionWithdrawViewController.h */,
-				3D63551C1B954C7F00C52F56 /* UUVirtualTansactionWithdrawViewController.m */,
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		3D63551D1B954C7F00C52F56 /* Handler */ = {
 			isa = PBXGroup;
 			children = (
-				3D63551E1B954C7F00C52F56 /* UUTransactionHandler.h */,
-				3D63551F1B954C7F00C52F56 /* UUTransactionHandler.m */,
 			);
 			path = Handler;
 			sourceTree = "<group>";
@@ -1897,13 +1691,6 @@
 				3D63554F1B9574F800C52F56 /* UUTradeChanceModel.m */,
 				3D6355531B95A91A00C52F56 /* UUGeniusModel.h */,
 				3D6355541B95A91A00C52F56 /* UUGeniusModel.m */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		3D63554D1B9574E700C52F56 /* Models */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -3001,7 +2788,6 @@
 				3D0D5B3A1B300465001B96B2 /* UUExponentView.m in Sources */,
 				3DA3A0641B5747BF00744009 /* UUGeniusRankViewCell.m in Sources */,
 				3DCB0A631B71F7DF008EA040 /* UUNotificationViewController.m in Sources */,
-				3D63553A1B954C7F00C52F56 /* UUVirtualTansactionBuyingViewController.m in Sources */,
 				3D9C1B0C1BABCD53007637F5 /* UURichTextView.m in Sources */,
 				3DDC46871B81ACDC00B92F73 /* UUNewStockSectionView.m in Sources */,
 				3D9A070B1B32A02B00E88ADF /* UUStockDetailF10CompanyShareHolderViewCell.m in Sources */,
@@ -3012,14 +2798,11 @@
 				3D9EA67B1B4D3666008AAE55 /* UUTopicPraiseListModel.m in Sources */,
 				3D79AD221B396D9800616F44 /* UUStockDetailPortraitView.m in Sources */,
 				3D73AB311B3D43AB001847B0 /* UUCommunityTopicDetailViewCell.m in Sources */,
-				3D6355341B954C7F00C52F56 /* UUVirtualTansactionHoldStockViewCell.m in Sources */,
 				3DE6D38E1B0F5240008F1A6D /* UUKLineModel.m in Sources */,
 				3D5E972F1B005D0200E94E67 /* UIColorTools.m in Sources */,
-				3D6355391B954C7F00C52F56 /* UUVirtualTansactionBusinessViewController.m in Sources */,
 				3D9A07141B32B33400E88ADF /* UUStockDetailNewsViewCell.m in Sources */,
 				3D3ACE9C1BB40A64006C561E /* UUCommStruct.cpp.m in Sources */,
 				3DA603011B54EF9600A8FAFF /* UIDevice+IdentifierAddition.m in Sources */,
-				3D6355331B954C7F00C52F56 /* UUVirtualTansactionBusinessViewCell.m in Sources */,
 				3DE68BAA1B33AC42006DC1AA /* UUStockDetailComment.m in Sources */,
 				3D9ABA201B5384B90004AA9D /* UULoginView.m in Sources */,
 				3D83CDE21B00422000C4CE22 /* UUTabbarController.m in Sources */,
@@ -3028,7 +2811,6 @@
 				3D79ACE41B38F61600616F44 /* UUFavourisGroupEditViewController.m in Sources */,
 				3D3ACEA51BB40C2E006C561E /* UUMarketStructs.m in Sources */,
 				3DB47DBE1B42B0A900384115 /* UUCommunityHeaderTableViewCell.m in Sources */,
-				3D55FA131B2AC3AF00DBE2F0 /* UUGroupViewController.m in Sources */,
 				3DC6F4411BF253AC00E9B2E8 /* UUStockCommomHeaderView.m in Sources */,
 				3D6355431B954C7F00C52F56 /* UUTransactionHoldModel.m in Sources */,
 				3DFF45C01B4BC0FE00993EE9 /* HPGrowingTextView.m in Sources */,
@@ -3036,7 +2818,6 @@
 				3D3EF2571B7323CC0078FA58 /* UUAttentionListViewController.m in Sources */,
 				3D547D921BE7056000709949 /* UUSystemMessageModel.m in Sources */,
 				3D5ADB441B8DC9270034526F /* UUFocusModel.m in Sources */,
-				3D6355321B954C7F00C52F56 /* UUTradeHistoryViewCell.m in Sources */,
 				3D6355401B954C7F00C52F56 /* UUTransactionAssetModel.m in Sources */,
 				3DDA909F1B53B07500D5494F /* UUForgotPasswordView.m in Sources */,
 				3D36D5D31BD5E3C0000C4695 /* pinyin.c in Sources */,
@@ -3049,38 +2830,30 @@
 				3DDC468C1B81C6AF00B92F73 /* UUStockCurrentPriceModel.m in Sources */,
 				3DA855EB1B2146C0005409ED /* UUSearchViewCell.m in Sources */,
 				3DAE4F2F1B5E261C00E9854F /* UUHomeButtonView.m in Sources */,
-				3D63552B1B954C7F00C52F56 /* UUTradeAnalyView.m in Sources */,
 				3D6355421B954C7F00C52F56 /* UUTransactionDelegateModel.m in Sources */,
 				3D9A07051B3298E400E88ADF /* UUStockDetailF10CompanyProfileViewCell.m in Sources */,
 				3D8FF85D1B252CC500B744B1 /* UUTabbar.m in Sources */,
 				3D35306C1BBA7B9900AFF9A7 /* UUIntroductionView.m in Sources */,
-				3D6355371B954C7F00C52F56 /* UUTradeAnalyViewController.m in Sources */,
 				3DB6011B1B4CBD4700EB316C /* UUTopicReplyListModel.m in Sources */,
 				3DF839E51B53D4790061E1FC /* UURegisterViewController.m in Sources */,
 				3D8F1BAD1B81790100260953 /* UUNewStockViewController.m in Sources */,
 				3DA886FA1BE346F600C22149 /* UUPersonalReplyViewCell.m in Sources */,
 				3D55FA0A1B2ABB1500DBE2F0 /* UUThemeManager.m in Sources */,
 				3D6744231B05D51200A5DD09 /* UUStockSearchBar.m in Sources */,
-				3D6355311B954C7F00C52F56 /* UUVirtualTransactionView.m in Sources */,
 				3DBA858C1B20521D0033F8EF /* UUStockModel.m in Sources */,
-				3D63553C1B954C7F00C52F56 /* UUVirtualTansactionRemoveViewController.m in Sources */,
 				3DA602E21B54DACD00A8FAFF /* UUFillPersonalInfoViewController.m in Sources */,
 				3DCD59D91B70B9AE00AD0BFB /* UUPersonalRefreshTimeView.m in Sources */,
 				3DCD59C41B7063AE00AD0BFB /* UUPersonalSettingViewController.m in Sources */,
 				3D6355551B95A91A00C52F56 /* UUGeniusModel.m in Sources */,
 				3D5B409E1B45590100A2960B /* UUCommunityTopicListModel.m in Sources */,
-				3D63552D1B954C7F00C52F56 /* UUTrandeAnalyStockHold.m in Sources */,
 				3D5FEFFF1B8323CD00D99890 /* UUStockShareTimeView.m in Sources */,
 				3D71050D1B018EDD00EB5A5B /* UUKLineView.m in Sources */,
 				3D9CF4101B71B973000482E2 /* UUShareView.m in Sources */,
-				3D6355361B954C7F00C52F56 /* UUVirtualTansactionWithdrawViewCell.m in Sources */,
 				3D5ADB411B8DA7D50034526F /* UUMeHandler.m in Sources */,
-				3DA3A0671B5794E900744009 /* UUGeniusRankManagerViewController.m in Sources */,
 				3DA3E1421B37B1F30099A747 /* UUFavourisManagerViewController.m in Sources */,
 				3D3E96921B43FC1E0008065A /* TQRichTextRunURL.m in Sources */,
 				3D72A5BF1AFC515B00B0D83B /* main.m in Sources */,
 				3D9A07111B32B25400E88ADF /* UUStockDetailNews.m in Sources */,
-				3D63553D1B954C7F00C52F56 /* UUVirtualTansactionSelectViewController.m in Sources */,
 				3D7105191B01A37B00EB5A5B /* UUPersonalCenterViewController.m in Sources */,
 				3DFECEFB1B71EBF600FC248B /* UUPageViewController.m in Sources */,
 				3D85D6D21B662C3E002B0763 /* UUFavourisStockModel.m in Sources */,
@@ -3100,13 +2873,11 @@
 				3D25A3BC1B25751F0079F11F /* NavigationInteractiveTransition.m in Sources */,
 				3DBC88531C008D6F00CEC4C0 /* UUStockSortViewCell.m in Sources */,
 				3DA602E51B54DB2900A8FAFF /* UUFillPersonalInfoView.m in Sources */,
-				3D6355301B954C7F00C52F56 /* UUVirtualTansactionBuyingView.m in Sources */,
 				3DE68BAD1B33AF1B006DC1AA /* UUStockDetailCommentViewCell.m in Sources */,
 				3D42B9EB1C2BCA83006BF654 /* UUStockBlockModel.m in Sources */,
 				3DB822CE1BA97A4C00AF9132 /* UURichLabel.m in Sources */,
 				3D7E2B0E1BE30B6F008788A5 /* UUPersonalReplyModel.m in Sources */,
 				3D9A06FC1B325CA700E88ADF /* UUStockDetailTitleView.m in Sources */,
-				3D63552C1B954C7F00C52F56 /* UUTrandeAnalyHistory.m in Sources */,
 				3DC6F4471BF254D400E9B2E8 /* UUIndexStockHeaderView.m in Sources */,
 				3D5B40A11B46212200A2960B /* UUCommunityHandler.m in Sources */,
 				3D7145CB1BE1EAA100BD277C /* UUAttentionTopicModel.m in Sources */,
@@ -3127,7 +2898,6 @@
 				3D5E972B1B005C8B00E94E67 /* Reachability.m in Sources */,
 				3D847BB21B799A7B005F3858 /* UUPersonalHomeViewController.m in Sources */,
 				3D9A07021B3260A900E88ADF /* UUStockDetailF10Info.m in Sources */,
-				3D63552E1B954C7F00C52F56 /* UUTransactionLogoutView.m in Sources */,
 				3DCB0A691B720EAD008EA040 /* UURemindButton.m in Sources */,
 				3D5B40991B452B0100A2960B /* UUPersonalCenterViewCell.m in Sources */,
 				3D3E968F1B43FC1E0008065A /* TQRichTextRun.m in Sources */,
@@ -3135,14 +2905,12 @@
 				3D3E96911B43FC1E0008065A /* TQRichTextRunEmoji.m in Sources */,
 				3D87C4CF1BCDF25600FC459C /* UUIndexDetailModel.m in Sources */,
 				3D6355441B954C7F00C52F56 /* UUTransactionModel.m in Sources */,
-				3DA3A0611B57479B00744009 /* UUGeniusRankViewController.m in Sources */,
 				3DF9556E1C040A9900BF47D9 /* UUStockDetailFinance.m in Sources */,
 				3DA3E1481B37BCC40099A747 /* UUStockListHeaderView.m in Sources */,
 				3DCB0A5D1B71F7AF008EA040 /* UUAttentionViewController.m in Sources */,
 				3DB0BBF31C05CD7000B540EA /* UUStockDetailShortBrief.m in Sources */,
 				3DCD59CD1B70936900AD0BFB /* UUPersonalChangePasswordView.m in Sources */,
 				3DA3E14B1B37C1630099A747 /* UUFavourisViewCell.m in Sources */,
-				3D63553B1B954C7F00C52F56 /* UUVirtualTansactionHoldViewController.m in Sources */,
 				3DA602FE1B54EF9600A8FAFF /* CHKeychain.m in Sources */,
 				3D080CCB1BE7525B00499C5B /* UUStockFinancialModel.m in Sources */,
 				3DB47DB81B42773B00384115 /* UUEmotionKeyboard.m in Sources */,
@@ -3152,11 +2920,9 @@
 				3D4F71EF1BB128500042D3C4 /* UIImage+ImageEffects.m in Sources */,
 				3D413E471B7C9D5E00626EE8 /* UUStockDetailPriceView.m in Sources */,
 				3DA4BDCC1B8B040500364004 /* BaseDataSource.m in Sources */,
-				3D6355351B954C7F00C52F56 /* UUVirtualTansactionSelectViewCell.m in Sources */,
 				3D24DB731BA51F31002F6CC7 /* UUCommunityTopicDetailPraiseListView.m in Sources */,
 				3DA4477C1BA804FB0009EEEF /* UUStockDetailNoticeModel.m in Sources */,
 				3DF955791C0446B400BF47D9 /* UUStockDetailStockholderViewCell.m in Sources */,
-				3D63552F1B954C7F00C52F56 /* UUVirtualTansactionBusinessHeaderView.m in Sources */,
 				3D85D6CF1B660071002B0763 /* UUDatePickerView.m in Sources */,
 				3D0D5B001B2FB985001B96B2 /* UUToolBar.m in Sources */,
 				3DF839DF1B53C33C0061E1FC /* UUConfirmPasswordViewController.m in Sources */,
@@ -3170,10 +2936,7 @@
 				3D79ACE11B38F5F500616F44 /* UUFavourisStockEditViewController.m in Sources */,
 				3DF955711C040B9F00BF47D9 /* UUStockDetailFinanceViewCell.m in Sources */,
 				3DCB0A661B71F91E008EA040 /* UURemindViewCell.m in Sources */,
-				3D63553F1B954C7F00C52F56 /* UUTransactionHandler.m in Sources */,
 				3D78BE3F1B4F98A300B395E9 /* UUCommunityColumnsModel.m in Sources */,
-				3D3F97A61B28134300024E0D /* UUDiscoverViewController.m in Sources */,
-				3D6355381B954C7F00C52F56 /* UUTransactionViewController.m in Sources */,
 				3DA602FF1B54EF9600A8FAFF /* NSObject+Extension.m in Sources */,
 				3DAF1A411B2E62FF003AF188 /* UUDailyLimitViewController.m in Sources */,
 				3DA602FD1B54EF9600A8FAFF /* GTMBase64.m in Sources */,
@@ -3186,7 +2949,6 @@
 				3DFF45C11B4BC0FE00993EE9 /* HPTextViewInternal.m in Sources */,
 				3D5E97321B005D1F00E94E67 /* ColorModel.m in Sources */,
 				3D40447A1BE0D6BC001CFFF9 /* UUserTopicModel.m in Sources */,
-				3D63553E1B954C7F00C52F56 /* UUVirtualTansactionWithdrawViewController.m in Sources */,
 				3DFDBD191B00969D008290BA /* UUNetworkClient.m in Sources */,
 				3DAF1A4A1B2E9BB8003AF188 /* UUStockDetailViewCell.m in Sources */,
 				3DCD59C71B706B6E00AD0BFB /* UUPersonalSettingViewCell.m in Sources */,

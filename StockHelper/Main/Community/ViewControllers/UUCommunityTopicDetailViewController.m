@@ -251,7 +251,6 @@
     [headerView.praiseListView select:^(UUTopicPraiseModel * praiseModel) {
        
         UUPersonalHomeViewController *homeVC = [[UUPersonalHomeViewController alloc] init];
-        homeVC.userId = praiseModel.userId;
         [self.navigationController pushViewController:homeVC animated:YES];
     }];
     return headerView;
@@ -300,14 +299,12 @@
 - (void)pushToUserHomeViewController:(UUCommunityTopicDetailViewCell *)cell
 {
     UUPersonalHomeViewController *homeVC = [[UUPersonalHomeViewController alloc] init];
-    homeVC.userId = cell.topicReplyModel.userId;
     [self.navigationController pushViewController:homeVC animated:YES];
 }
 #pragma mark - 透视图点击头像跳转到用户主页
 - (void)headerViewPushToUserHomeViewController:(UUCommunityTopicDetailHeaderView *)headerView
 {
     UUPersonalHomeViewController *homeVC = [[UUPersonalHomeViewController alloc] init];
-    homeVC.userId = headerView.topicModel.userId;
     [self.navigationController pushViewController:homeVC animated:YES];
 }
 

@@ -25,7 +25,6 @@
 #import "UUStockDetailCurrentPriceView.h"
 #import "UUStockTimeEntity.h"
 #import <Masonry/Masonry.h>
-#import "UUVirtualTansactionBuyingViewController.h"
 #import "UUStockModel.h"
 #import "NSTimer+Addition.h"
 #import "UUTopicContainerView.h"

@@ -223,7 +223,6 @@
 - (void)userHomeAction:(UUCommunityViewCell *)cell
 {
     UUPersonalHomeViewController *homeVC = [[UUPersonalHomeViewController alloc] init];
-    homeVC.userId = cell.normalListModel.userId;
     [self.navigationController pushViewController:homeVC animated:YES];
 }
 
