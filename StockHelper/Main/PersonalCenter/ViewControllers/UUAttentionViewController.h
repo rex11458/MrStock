@@ -8,9 +8,5 @@
 
 #import "BaseViewController.h"
 
-@interface UUAttentionViewController : BaseViewController<UITableViewDelegate,UITableViewDataSource>
-{
-    UITableView *_tableView;
-    NSArray *_dataArray;
-}
+@interface UUAttentionViewController : BaseViewController
 @end

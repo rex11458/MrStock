@@ -13,7 +13,6 @@
 #import "UUTopicPraiseListModel.h"
 #import "UUCommunityColumnsModel.h"
 #import "UUserDataManager.h"
-#import "UUPersonalReplyModel.h"
 @implementation UUCommunityHandler
 static  UUCommunityHandler *shared = nil;
 + (UUCommunityHandler *)sharedCommunityHandler
@@ -598,46 +597,5 @@ static  UUCommunityHandler *shared = nil;
         }
     }];
 }
-
-/*
- *  获取某个人的发帖和回贴
- *  contentType	传参:1代表他的发表的话题 0代表他的回贴和话题
- */
-- (void)getTopicListWithUserID:(NSString *)userID contentType:(NSInteger)contentType pageNo:(NSInteger)pageNo pageSize:(NSInteger)pageSize success:(SuccessBlock)success failure:(FailueBlock)failure
-{
-    NSString *urlString = k_USER_TOPIC_LIST_URL;
-    
-    NSDictionary *params = k_USER_TOPIC_LIST_BODY(userID, contentType, pageNo, pageSize);
-    
-    [[UUNetworkClient sharedClient] loadWithRequstMethod:UURequestPOSTMethod url:urlString parameters:params isCache:YES completedBlock:^(id results, UURequestStatusType statusType, NSError *error) {
-        if (statusType == UURequestUnavailableType)
-        {
-            DLog(@"%@",NETWORK_UNAVAILABLE_MESSAGE);
-            failure(NETWORK_UNAVAILABLE_MESSAGE);
-        }
-        else if (statusType == UURequestErroredType)
-        {
-            DLog(@"%@",NETWORK_ERROR_MESSAGE);
-            failure(NETWORK_ERROR_MESSAGE);
-        }
-        else
-        {
-            NSDictionary *returnDic = [NSJSONSerialization JSONObjectWithData:results options:NSJSONReadingMutableContainers error:nil];
-
-            if ([returnDic[@"statusCode"] isEqualToString:@"0"]) {
-                
-                NSArray *dataArray = [UUPersonalReplyModel replyModelArrayWithDictionary:returnDic];
-                
-                success(dataArray);
-                
-            }else
-            {
-                failure(nil);
-            }
-        }
-    }];
-
-}
-
 
 @end

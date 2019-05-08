@@ -17,7 +17,6 @@
 #import <SVProgressHUD/SVProgressHUD.h>
 #import "UUShareView.h"
 #import "UUFavourisManagerViewController.h"
-#import "UUAttentionListViewController.h"
 #import <ShareSDK/ShareSDK.h>
 #import "UUMeHandler.h"
 #import "UUFillPersonalInfoViewController.h"
@@ -73,30 +72,12 @@
     [_headerView showWithIsLogging:[UUserDataManager userIsOnLine]];
     
     if ([UUserDataManager userIsOnLine]) {
-        [[UUMeHandler sharedMeHandler] isCheckedInSuccess:^(id obj) {
-            _headerView.checkInButton.selected  =[obj boolValue];
-            _headerView.checkInButton.userInteractionEnabled = ![obj boolValue];
-            
-        } failure:^(NSString *errorMessage) {
-            
-        }];
+       
         
         [[UULoginHandler sharedLoginHandler] getUserInfoWithSessionId:[UUserDataManager sharedUserDataManager].user.sessionID success:^(UULoginUser *user) {
             _headerView.user = user;
         } failure:^(NSString *errorMessage) {
             [SVProgressHUD showErrorWithStatus:errorMessage];
-        }];
-        
-        //获取红点提醒
-        [[UUMeHandler sharedMeHandler] getRemaindSuccess:^(NSDictionary *dic) {
-            
-            _remaindDic = dic;
-            
-            
-            [_tableView reloadData];
-            
-        } failure:^(NSString *errorMessage) {
-            
         }];
     }
 }
