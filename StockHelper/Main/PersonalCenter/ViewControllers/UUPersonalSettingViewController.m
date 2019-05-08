@@ -26,13 +26,12 @@
     _dataArray = @[
                    @[@"修改密码"/*,@"推送设置"*/,@"行情刷新"],
                    @[@"意见反馈"],
-                   @[@"关于股先生",@"退出"]
+                   @[@"退出"]
                    ];
     
     _viewControllers = @[
                     @[@"UUpersonalChangePasswordViewController"/*,@"UUPersonalPushSettingViewController"*/,@"UUPersonalRefrashTimeViewController"],
                          @[@"UUSuggestionViewController"],
-                         @[@"UUpersonalChangePasswordViewController"]
                          ];
     [self configSubViews];
 }
@@ -97,7 +96,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section == 2 && indexPath.row == 1)
+    if (indexPath.section == 2 && indexPath.row == 0)
     {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"确认退出登录?" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"退出", nil];
         [alertView show];

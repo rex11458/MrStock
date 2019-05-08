@@ -318,31 +318,6 @@
         }
         return;
     }
-    if (index == 0)
-    {
-        //修改信息
-        UUFillPersonalInfoViewController *editInfoVC = [[UUFillPersonalInfoViewController alloc] init];
-        editInfoVC.type = 1; //编辑信息
-        [self.navigationController pushViewController:editInfoVC animated:YES];
-   
-    }else if(index == 1){
-        //签到
-        [[UUMeHandler sharedMeHandler] checkInSuccess:^(id obj) {
-            [SVProgressHUD showSuccessWithStatus:@"签到成功!" maskType:SVProgressHUDMaskTypeBlack];
-            _headerView.checkInButton.selected = YES;
-            _headerView.checkInButton.userInteractionEnabled = NO;
-        } failure:^(NSString *errorMessage) {
-            [SVProgressHUD showErrorWithStatus:@"签到失败"];
-        }];
-    }else if (index == 2){
-        //粉丝列表
-        UUFansListViewController *fansListVC = [[UUFansListViewController alloc] init];
-        [self.navigationController pushViewController:fansListVC animated:YES];
-    }else if (index == 3){
-        //关注列表
-        UUAttentionListViewController *attentionListVC = [[UUAttentionListViewController alloc] init];
-        [self.navigationController pushViewController:attentionListVC animated:YES];
-    }
 }
 
 
@@ -404,7 +379,7 @@
     _nameLabel.adjustsFontSizeToFitWidth = YES;
     _nameLabel.center = CGPointMake(CGRectGetWidth(self.bounds) * 0.5,CGRectGetMaxY(_headerImageView.frame) + k_TOP_MARGIN + 10.0f);
     
-    _nameLabel.text = @"登录/注册";
+    _nameLabel.text = @"登录";
     [self addSubview:_nameLabel];
     
     CGFloat labelHeight = 40.0f;
@@ -509,7 +484,7 @@
         _fansCountLabel.upperText = @"0";
         _fansCountRemindView.hidden = YES;
         _attentionCountLabel.upperText = @"0";
-        _nameLabel.text = @"登录/注册";
+        _nameLabel.text = @"登录";
         _headerImageView.image = [UIImage imageNamed:@"Me_default_icon"];
     }
 }

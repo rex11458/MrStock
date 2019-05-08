@@ -106,67 +106,6 @@
             if (_success) {
                 _success();
             }
-            //同步自选股列表
-//            [SVProgressHUD setStatus:@"同步自选股信息..."];
-//            [[UUMarketQuationHandler sharedMarkeQuationHandler] getFavourisStockListSuccess:^(NSArray *favStockModelArray) {
-//                _successed = YES;
-//
-//                for (UUFavourisStockModel *favStockModel in favStockModelArray) {
-//                    UUStockModel *stockModel = nil;
-//                    if (favStockModel.code.length > 6) {
-//                        //指数
-//                        stockModel = [[UUDatabaseManager manager] selectStockModelWithCode:[favStockModel.code substringToIndex:6] market:UUStockExchangeIDXType];
-//                        favStockModel.code = [favStockModel.code substringToIndex:6];
-//                    }else{
-//                        //个股
-//                        stockModel = [[UUDatabaseManager manager] selectStockModelWithCode:favStockModel.code market:UUStockExchangeAShareType];
-//                    }
-//                    favStockModel.name = stockModel.name;
-//                    favStockModel.market = stockModel.market;
-//                }
-//                BOOL updateSuccess = [[UUDatabaseManager manager] addFavourisList:favStockModelArray];
-//
-//                if (updateSuccess)
-//                {
-//                    [[UUDatabaseManager manager] favoriousList:^(NSArray *localFavsStockModelArray) {
-//                        if (localFavsStockModelArray.count > 0) {
-//                            NSMutableArray *codes = [NSMutableArray array];
-//                            for (UUFavourisStockModel *stockModel in localFavsStockModelArray) {
-//
-//                                NSString *code = stockModel.code;
-//                                if (k_IS_INDEX(stockModel.market)) {
-//                                    code = [code stringByAppendingString:@".INX"];
-//                                }
-//                                [codes addObject:stockModel.code];
-//                            }
-//                            NSString *codeString = [NSString jsonStringWithArray:codes];
-//                            codeString = [codeString stringByReplacingOccurrencesOfString:@"[" withString:@""];
-//                            codeString = [codeString stringByReplacingOccurrencesOfString:@"]" withString:@""];
-//
-//                            [[UUMarketQuationHandler sharedMarkeQuationHandler] addFavourisStockWithCodes:codeString pos:0 success:^(id obj) {
-//
-//                            } failue:^(NSString *errorMessage) {
-//
-//                            }];
-//                        }
-//                    }];
-//                }
-//                else
-//                {
-////                    [SVProgressHUD showErrorWithStatus:@"自选股同步失败"];
-//                }
-//
-//            } failue:^(NSString *errorMessage) {
-////                [SVProgressHUD showErrorWithStatus:@"自选股同步失败"];
-//                [SVProgressHUD dismiss];
-//                //登录成功返回
-//                _successed = YES;
-//                if (_success) {
-//                    _success();
-//                }
-//                [self loginSuccessPopViewController];
-//            }];
-            
         } failure:^(NSString *errorMessage) {
             [SVProgressHUD showErrorWithStatus:errorMessage maskType:SVProgressHUDMaskTypeBlack];
             _successed = NO;

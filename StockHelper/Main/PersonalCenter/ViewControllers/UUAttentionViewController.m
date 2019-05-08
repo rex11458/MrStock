@@ -79,7 +79,33 @@
     
     _tableView.header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(refresh)];
     _tableView.footer = [MJRefreshAutoFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMore)];
+    
+    
+    [self.view addSubview:[self m_emptyView]];
 }
+
+
+//自选为空
+- (UIView *)m_emptyView
+{
+    UIView *emptyView = [[UIView alloc] initWithFrame:self.view.bounds];
+    emptyView.backgroundColor = k_BG_COLOR;
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon_none"]];
+    imageView.center = CGPointMake(CGRectGetWidth(emptyView.frame) * 0.5, CGRectGetHeight(emptyView.frame) * 0.5 - kNavigationBarHeight - 20);
+    imageView.userInteractionEnabled = YES;
+    imageView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
+    [emptyView addSubview:imageView];
+    UILabel *label =[[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(imageView.frame) + 10, CGRectGetWidth(emptyView.frame), 20)];
+    label.text = @"暂无数据";
+    label.textAlignment = NSTextAlignmentCenter;
+    label.textColor = [UIColor grayColor];
+    [emptyView addSubview:label];
+    return emptyView;
+}
+
+
+
 
 - (void)refresh
 {

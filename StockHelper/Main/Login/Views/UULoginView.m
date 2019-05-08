@@ -107,50 +107,11 @@
     
     
     [_scrollView addSubview:_loginButton];
-    //--注册按钮
-    _registerButton = [UIKitHelper buttonWithFrame:CGRectMake(CGRectGetMinX(_userNameTextField.frame), CGRectGetMaxY(_loginButton.frame) + 10.0f, CGRectGetWidth(_userNameTextField.frame), buttonHeight) title:@"注册" titleHexColor:@"#FFFFFF" font:k_BIG_TEXT_FONT];
-    [_registerButton setBackgroundImage:[UIKitHelper imageWithColor:k_NAVIGATION_BAR_COLOR] forState:UIControlStateNormal];
-    _registerButton.layer.cornerRadius =16.0f;
-    _registerButton.layer.masksToBounds = YES;
-    [_registerButton addTarget:self action:@selector(registerAction:) forControlEvents:UIControlEventTouchUpInside];
-    [_scrollView addSubview:_registerButton];
     
     
-    //第三方登录
-    lineView = [[UIView alloc] initWithFrame:CGRectMake(40, CGRectGetMaxY(_registerButton.frame) + k_TOP_MARGIN  * 2, CGRectGetWidth(_registerButton.frame), 0.5f)];
-    lineView.backgroundColor = k_NAVIGATION_BAR_COLOR;
-    [_scrollView addSubview:lineView];
-    CGFloat lWidth = 60.0f;
-    UILabel *textLabel = [UIKitHelper labelWithFrame:CGRectMake(40 + (CGRectGetWidth(lineView.frame) - lWidth) * 0.5, CGRectGetMinY(lineView.frame) - 10.0f, lWidth, 20.0f) Font:k_SMALL_TEXT_FONT textColor:k_NAVIGATION_BAR_COLOR];
-    textLabel.backgroundColor = k_BG_COLOR;
-    textLabel.text = @"第三方登录";
-    [_scrollView addSubview:textLabel];
-    
-    NSArray *imageArray = @[@"Login_weixin",@"Login_qq",@"Login_sinaweibo"];
-    NSArray *hexColors = @[@"#0ADE5F",@"#1499FF",@"#FF5C5D"];
-    CGFloat buttonY = CGRectGetMaxY(textLabel.frame) + k_TOP_MARGIN;
-    CGFloat buttonWidth = 60.0f;
-    CGFloat buttionMargin = (CGRectGetWidth(lineView.frame) - buttonWidth * imageArray.count) * 0.5;
-    
-    for (NSInteger i = 0; i < imageArray.count; i++) {
-    
-        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.frame = CGRectMake(40 + i * (buttonWidth + buttionMargin) , buttonY, buttonWidth, buttonWidth);
-        button.tag = i;
-        button.layer.cornerRadius = buttonWidth * 0.5;
-        button.layer.masksToBounds = YES;
-        button.hidden = YES;
-        [button setBackgroundImage:[UIKitHelper imageWithColor:[UIColorTools colorWithHexString:hexColors[i] withAlpha:1.0f]] forState:UIControlStateNormal];
-        [button setImage:[UIImage imageNamed:imageArray[i]] forState:UIControlStateNormal];
-        [_scrollView addSubview:button];
-    }
-    
-    lineView.hidden = YES;
-    textLabel.hidden = YES;
-    
-    
+
     //----
-    _scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.bounds), CGRectGetMaxY(textLabel.frame) + 64.0f + 2 * k_TOP_MARGIN + buttonWidth );
+    _scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.bounds),  CGRectGetMaxY(_loginButton.frame) + k_TOP_MARGIN  * 2);
     _contentSize = _scrollView.contentSize;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldDidChange:) name:UITextFieldTextDidChangeNotification object:nil];

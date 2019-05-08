@@ -22,6 +22,7 @@
     self.navigationItem.title = @"行情刷新设置";
     _refreshTimeView = [[UUPersonalRefreshTimeView alloc] initWithFrame:self.view.bounds];
     _refreshTimeView.seconds = [[[NSUserDefaults standardUserDefaults] objectForKey:UUMarketQuotationTimeInfoKey] integerValue];
+    _refreshTimeView.seconds = 5;
     self.baseView = _refreshTimeView;
 }
 
