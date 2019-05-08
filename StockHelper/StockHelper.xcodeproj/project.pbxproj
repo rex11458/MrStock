@@ -66,7 +66,6 @@
 		3D3E96911B43FC1E0008065A /* TQRichTextRunEmoji.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3E968A1B43FC1E0008065A /* TQRichTextRunEmoji.m */; };
 		3D3E96921B43FC1E0008065A /* TQRichTextRunURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3E968C1B43FC1E0008065A /* TQRichTextRunURL.m */; };
 		3D3E96931B43FC1E0008065A /* TQRichTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3E968E1B43FC1E0008065A /* TQRichTextView.m */; };
-		3D3EF2541B7323B20078FA58 /* UUFansListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3EF2531B7323B20078FA58 /* UUFansListViewController.m */; };
 		3D3EF2571B7323CC0078FA58 /* UUAttentionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3EF2561B7323CC0078FA58 /* UUAttentionListViewController.m */; };
 		3D3EF25A1B73258C0078FA58 /* UUFansListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3EF2591B73258C0078FA58 /* UUFansListViewCell.m */; };
 		3D3F97A61B28134300024E0D /* UUDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3F97A51B28134300024E0D /* UUDiscoverViewController.m */; };
@@ -385,7 +384,6 @@
 		3DA886FC1BE3471000C22149 /* UUPersonalReplyViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DA886FB1BE3471000C22149 /* UUPersonalReplyViewCell.xib */; };
 		3DA886FF1BE34B1E00C22149 /* UUPersonalReplyTopicDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA886FE1BE34B1E00C22149 /* UUPersonalReplyTopicDataSource.m */; };
 		3DA8B9EE1B032CE700172D82 /* UUStockShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA8B9ED1B032CE700172D82 /* UUStockShareView.m */; };
-		3DAC88FD1B78482B00CE5D05 /* UUWarningRemindSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC88FC1B78482B00CE5D05 /* UUWarningRemindSettingViewController.m */; };
 		3DAC89001B78496200CE5D05 /* UUWarningRemindSettingViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC88FF1B78496200CE5D05 /* UUWarningRemindSettingViewCell.m */; };
 		3DAE4F2F1B5E261C00E9854F /* UUHomeButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE4F2E1B5E261C00E9854F /* UUHomeButtonView.m */; };
 		3DAF1A411B2E62FF003AF188 /* UUDailyLimitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF1A401B2E62FF003AF188 /* UUDailyLimitViewController.m */; };
@@ -415,7 +413,6 @@
 		3DC6F4441BF254C400E9B2E8 /* UUPersonalStockHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6F4431BF254C400E9B2E8 /* UUPersonalStockHeaderView.m */; };
 		3DC6F4471BF254D400E9B2E8 /* UUIndexStockHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6F4461BF254D400E9B2E8 /* UUIndexStockHeaderView.m */; };
 		3DCB0A5D1B71F7AF008EA040 /* UUAttentionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCB0A5C1B71F7AF008EA040 /* UUAttentionViewController.m */; };
-		3DCB0A601B71F7D1008EA040 /* UURemindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCB0A5F1B71F7D1008EA040 /* UURemindViewController.m */; };
 		3DCB0A631B71F7DF008EA040 /* UUNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCB0A621B71F7DF008EA040 /* UUNotificationViewController.m */; };
 		3DCB0A661B71F91E008EA040 /* UURemindViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCB0A651B71F91E008EA040 /* UURemindViewCell.m */; };
 		3DCB0A691B720EAD008EA040 /* UURemindButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCB0A681B720EAD008EA040 /* UURemindButton.m */; };
@@ -423,7 +420,6 @@
 		3DCD59C71B706B6E00AD0BFB /* UUPersonalSettingViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCD59C61B706B6E00AD0BFB /* UUPersonalSettingViewCell.m */; };
 		3DCD59CA1B7090AF00AD0BFB /* UUpersonalChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCD59C91B7090AF00AD0BFB /* UUpersonalChangePasswordViewController.m */; };
 		3DCD59CD1B70936900AD0BFB /* UUPersonalChangePasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCD59CC1B70936900AD0BFB /* UUPersonalChangePasswordView.m */; };
-		3DCD59D01B709B4B00AD0BFB /* UUPersonalPushSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCD59CF1B709B4B00AD0BFB /* UUPersonalPushSettingViewController.m */; };
 		3DCD59D31B709BD700AD0BFB /* UUPersonalPushSettingViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCD59D21B709BD700AD0BFB /* UUPersonalPushSettingViewCell.m */; };
 		3DCD59D61B70B8BF00AD0BFB /* UUPersonalRefrashTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCD59D51B70B8BF00AD0BFB /* UUPersonalRefrashTimeViewController.m */; };
 		3DCD59D91B70B9AE00AD0BFB /* UUPersonalRefreshTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCD59D81B70B9AE00AD0BFB /* UUPersonalRefreshTimeView.m */; };
@@ -444,7 +440,6 @@
 		3DE6D38E1B0F5240008F1A6D /* UUKLineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE6D38D1B0F5240008F1A6D /* UUKLineModel.m */; };
 		3DE97B111B621DEC00859E56 /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DE97B101B621DEC00859E56 /* PushConfig.plist */; };
 		3DEA9BBA1B81914400478369 /* UUNewStockViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DEA9BB91B81914400478369 /* UUNewStockViewCell.xib */; };
-		3DEF8F951B7446C700570025 /* UUWarningRemindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEF8F941B7446C700570025 /* UUWarningRemindViewController.m */; };
 		3DEF8F981B74478D00570025 /* UUWarningRemindViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEF8F971B74478D00570025 /* UUWarningRemindViewCell.m */; };
 		3DF839DF1B53C33C0061E1FC /* UUConfirmPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF839DE1B53C33C0061E1FC /* UUConfirmPasswordViewController.m */; };
 		3DF839E21B53C3630061E1FC /* UUConfirmPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF839E11B53C3630061E1FC /* UUConfirmPasswordView.m */; };
@@ -459,11 +454,6 @@
 		3DF9557B1C0446C400BF47D9 /* UUStockDetailStockholderViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DF9557A1C0446C400BF47D9 /* UUStockDetailStockholderViewCell.xib */; };
 		3DFDBD151B0090B4008290BA /* UIKitHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFDBD141B0090B4008290BA /* UIKitHelper.m */; };
 		3DFDBD191B00969D008290BA /* UUNetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFDBD181B00969D008290BA /* UUNetworkClient.m */; };
-		3DFECEEC1B71DFA800FC248B /* UUActivitiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFECEEB1B71DFA800FC248B /* UUActivitiesViewController.m */; };
-		3DFECEEF1B71E37800FC248B /* UUFavourisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFECEEE1B71E37800FC248B /* UUFavourisViewController.m */; };
-		3DFECEF21B71E46900FC248B /* UUMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFECEF11B71E46900FC248B /* UUMessageViewController.m */; };
-		3DFECEF51B71E65500FC248B /* UUFavTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFECEF41B71E65500FC248B /* UUFavTopicViewController.m */; };
-		3DFECEF81B71E7B700FC248B /* UUFavNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFECEF71B71E7B700FC248B /* UUFavNewsViewController.m */; };
 		3DFECEFB1B71EBF600FC248B /* UUPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFECEFA1B71EBF600FC248B /* UUPageViewController.m */; };
 		3DFF45C01B4BC0FE00993EE9 /* HPGrowingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF45B31B4BC0FE00993EE9 /* HPGrowingTextView.m */; };
 		3DFF45C11B4BC0FE00993EE9 /* HPTextViewInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF45B51B4BC0FE00993EE9 /* HPTextViewInternal.m */; };
@@ -583,8 +573,6 @@
 		3D3E968C1B43FC1E0008065A /* TQRichTextRunURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQRichTextRunURL.m; sourceTree = "<group>"; };
 		3D3E968D1B43FC1E0008065A /* TQRichTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQRichTextView.h; sourceTree = "<group>"; };
 		3D3E968E1B43FC1E0008065A /* TQRichTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQRichTextView.m; sourceTree = "<group>"; };
-		3D3EF2521B7323B20078FA58 /* UUFansListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUFansListViewController.h; sourceTree = "<group>"; };
-		3D3EF2531B7323B20078FA58 /* UUFansListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUFansListViewController.m; sourceTree = "<group>"; };
 		3D3EF2551B7323CC0078FA58 /* UUAttentionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUAttentionListViewController.h; sourceTree = "<group>"; };
 		3D3EF2561B7323CC0078FA58 /* UUAttentionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUAttentionListViewController.m; sourceTree = "<group>"; };
 		3D3EF2581B73258C0078FA58 /* UUFansListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUFansListViewCell.h; sourceTree = "<group>"; };
@@ -1039,8 +1027,6 @@
 		3DA886FE1BE34B1E00C22149 /* UUPersonalReplyTopicDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUPersonalReplyTopicDataSource.m; sourceTree = "<group>"; };
 		3DA8B9EC1B032CE700172D82 /* UUStockShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUStockShareView.h; sourceTree = "<group>"; };
 		3DA8B9ED1B032CE700172D82 /* UUStockShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUStockShareView.m; sourceTree = "<group>"; };
-		3DAC88FB1B78482B00CE5D05 /* UUWarningRemindSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUWarningRemindSettingViewController.h; sourceTree = "<group>"; };
-		3DAC88FC1B78482B00CE5D05 /* UUWarningRemindSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUWarningRemindSettingViewController.m; sourceTree = "<group>"; };
 		3DAC88FE1B78496200CE5D05 /* UUWarningRemindSettingViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUWarningRemindSettingViewCell.h; sourceTree = "<group>"; };
 		3DAC88FF1B78496200CE5D05 /* UUWarningRemindSettingViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUWarningRemindSettingViewCell.m; sourceTree = "<group>"; };
 		3DAC89021B788FD400CE5D05 /* libPods-StockHelper-AFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-StockHelper-AFNetworking.a"; path = "/Users/Rex_wp/Desktop/UUStock/Pods/../build/Debug-iphoneos/libPods-StockHelper-AFNetworking.a"; sourceTree = "<absolute>"; };
@@ -1098,8 +1084,6 @@
 		3DC6F4461BF254D400E9B2E8 /* UUIndexStockHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUIndexStockHeaderView.m; sourceTree = "<group>"; };
 		3DCB0A5B1B71F7AF008EA040 /* UUAttentionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUAttentionViewController.h; sourceTree = "<group>"; };
 		3DCB0A5C1B71F7AF008EA040 /* UUAttentionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUAttentionViewController.m; sourceTree = "<group>"; };
-		3DCB0A5E1B71F7D1008EA040 /* UURemindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UURemindViewController.h; sourceTree = "<group>"; };
-		3DCB0A5F1B71F7D1008EA040 /* UURemindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UURemindViewController.m; sourceTree = "<group>"; };
 		3DCB0A611B71F7DF008EA040 /* UUNotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUNotificationViewController.h; sourceTree = "<group>"; };
 		3DCB0A621B71F7DF008EA040 /* UUNotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUNotificationViewController.m; sourceTree = "<group>"; };
 		3DCB0A641B71F91E008EA040 /* UURemindViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UURemindViewCell.h; sourceTree = "<group>"; };
@@ -1114,8 +1098,6 @@
 		3DCD59C91B7090AF00AD0BFB /* UUpersonalChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUpersonalChangePasswordViewController.m; sourceTree = "<group>"; };
 		3DCD59CB1B70936900AD0BFB /* UUPersonalChangePasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUPersonalChangePasswordView.h; sourceTree = "<group>"; };
 		3DCD59CC1B70936900AD0BFB /* UUPersonalChangePasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUPersonalChangePasswordView.m; sourceTree = "<group>"; };
-		3DCD59CE1B709B4B00AD0BFB /* UUPersonalPushSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUPersonalPushSettingViewController.h; sourceTree = "<group>"; };
-		3DCD59CF1B709B4B00AD0BFB /* UUPersonalPushSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUPersonalPushSettingViewController.m; sourceTree = "<group>"; };
 		3DCD59D11B709BD700AD0BFB /* UUPersonalPushSettingViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUPersonalPushSettingViewCell.h; sourceTree = "<group>"; };
 		3DCD59D21B709BD700AD0BFB /* UUPersonalPushSettingViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUPersonalPushSettingViewCell.m; sourceTree = "<group>"; };
 		3DCD59D41B70B8BF00AD0BFB /* UUPersonalRefrashTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUPersonalRefrashTimeViewController.h; sourceTree = "<group>"; };
@@ -1155,8 +1137,6 @@
 		3DE97B0D1B62186D00859E56 /* APService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APService.h; sourceTree = "<group>"; };
 		3DE97B101B621DEC00859E56 /* PushConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PushConfig.plist; sourceTree = "<group>"; };
 		3DEA9BB91B81914400478369 /* UUNewStockViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UUNewStockViewCell.xib; sourceTree = "<group>"; };
-		3DEF8F931B7446C700570025 /* UUWarningRemindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUWarningRemindViewController.h; sourceTree = "<group>"; };
-		3DEF8F941B7446C700570025 /* UUWarningRemindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUWarningRemindViewController.m; sourceTree = "<group>"; };
 		3DEF8F961B74478D00570025 /* UUWarningRemindViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUWarningRemindViewCell.h; sourceTree = "<group>"; };
 		3DEF8F971B74478D00570025 /* UUWarningRemindViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUWarningRemindViewCell.m; sourceTree = "<group>"; };
 		3DF839DD1B53C33C0061E1FC /* UUConfirmPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUConfirmPasswordViewController.h; sourceTree = "<group>"; };
@@ -1183,16 +1163,6 @@
 		3DFDBD141B0090B4008290BA /* UIKitHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIKitHelper.m; sourceTree = "<group>"; };
 		3DFDBD171B00969D008290BA /* UUNetworkClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUNetworkClient.h; sourceTree = "<group>"; };
 		3DFDBD181B00969D008290BA /* UUNetworkClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUNetworkClient.m; sourceTree = "<group>"; };
-		3DFECEEA1B71DFA800FC248B /* UUActivitiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUActivitiesViewController.h; sourceTree = "<group>"; };
-		3DFECEEB1B71DFA800FC248B /* UUActivitiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUActivitiesViewController.m; sourceTree = "<group>"; };
-		3DFECEED1B71E37800FC248B /* UUFavourisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUFavourisViewController.h; sourceTree = "<group>"; };
-		3DFECEEE1B71E37800FC248B /* UUFavourisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUFavourisViewController.m; sourceTree = "<group>"; };
-		3DFECEF01B71E46900FC248B /* UUMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUMessageViewController.h; sourceTree = "<group>"; };
-		3DFECEF11B71E46900FC248B /* UUMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUMessageViewController.m; sourceTree = "<group>"; };
-		3DFECEF31B71E65500FC248B /* UUFavTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUFavTopicViewController.h; sourceTree = "<group>"; };
-		3DFECEF41B71E65500FC248B /* UUFavTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUFavTopicViewController.m; sourceTree = "<group>"; };
-		3DFECEF61B71E7B700FC248B /* UUFavNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUFavNewsViewController.h; sourceTree = "<group>"; };
-		3DFECEF71B71E7B700FC248B /* UUFavNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUFavNewsViewController.m; sourceTree = "<group>"; };
 		3DFECEF91B71EBF600FC248B /* UUPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUPageViewController.h; sourceTree = "<group>"; };
 		3DFECEFA1B71EBF600FC248B /* UUPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUPageViewController.m; sourceTree = "<group>"; };
 		3DFF45B21B4BC0FE00993EE9 /* HPGrowingTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPGrowingTextView.h; sourceTree = "<group>"; };
@@ -2004,40 +1974,20 @@
 				3D7105181B01A37B00EB5A5B /* UUPersonalCenterViewController.m */,
 				3D847BB01B799A7B005F3858 /* UUPersonalHomeViewController.h */,
 				3D847BB11B799A7B005F3858 /* UUPersonalHomeViewController.m */,
-				3DEF8F931B7446C700570025 /* UUWarningRemindViewController.h */,
-				3DEF8F941B7446C700570025 /* UUWarningRemindViewController.m */,
-				3DAC88FB1B78482B00CE5D05 /* UUWarningRemindSettingViewController.h */,
-				3DAC88FC1B78482B00CE5D05 /* UUWarningRemindSettingViewController.m */,
-				3D3EF2521B7323B20078FA58 /* UUFansListViewController.h */,
-				3D3EF2531B7323B20078FA58 /* UUFansListViewController.m */,
 				3D3EF2551B7323CC0078FA58 /* UUAttentionListViewController.h */,
 				3D3EF2561B7323CC0078FA58 /* UUAttentionListViewController.m */,
 				3DCD59C21B7063AE00AD0BFB /* UUPersonalSettingViewController.h */,
 				3DCD59C31B7063AE00AD0BFB /* UUPersonalSettingViewController.m */,
 				3DCD59C81B7090AF00AD0BFB /* UUpersonalChangePasswordViewController.h */,
 				3DCD59C91B7090AF00AD0BFB /* UUpersonalChangePasswordViewController.m */,
-				3DCD59CE1B709B4B00AD0BFB /* UUPersonalPushSettingViewController.h */,
-				3DCD59CF1B709B4B00AD0BFB /* UUPersonalPushSettingViewController.m */,
 				3DCD59D41B70B8BF00AD0BFB /* UUPersonalRefrashTimeViewController.h */,
 				3DCD59D51B70B8BF00AD0BFB /* UUPersonalRefrashTimeViewController.m */,
 				3D9CF4081B71A326000482E2 /* UUSuggestionViewController.h */,
 				3D9CF4091B71A326000482E2 /* UUSuggestionViewController.m */,
-				3DFECEEA1B71DFA800FC248B /* UUActivitiesViewController.h */,
-				3DFECEEB1B71DFA800FC248B /* UUActivitiesViewController.m */,
-				3DFECEF01B71E46900FC248B /* UUMessageViewController.h */,
-				3DFECEF11B71E46900FC248B /* UUMessageViewController.m */,
 				3DCB0A5B1B71F7AF008EA040 /* UUAttentionViewController.h */,
 				3DCB0A5C1B71F7AF008EA040 /* UUAttentionViewController.m */,
-				3DCB0A5E1B71F7D1008EA040 /* UURemindViewController.h */,
-				3DCB0A5F1B71F7D1008EA040 /* UURemindViewController.m */,
 				3DCB0A611B71F7DF008EA040 /* UUNotificationViewController.h */,
 				3DCB0A621B71F7DF008EA040 /* UUNotificationViewController.m */,
-				3DFECEED1B71E37800FC248B /* UUFavourisViewController.h */,
-				3DFECEEE1B71E37800FC248B /* UUFavourisViewController.m */,
-				3DFECEF61B71E7B700FC248B /* UUFavNewsViewController.h */,
-				3DFECEF71B71E7B700FC248B /* UUFavNewsViewController.m */,
-				3DFECEF31B71E65500FC248B /* UUFavTopicViewController.h */,
-				3DFECEF41B71E65500FC248B /* UUFavTopicViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -3045,7 +2995,6 @@
 				3D3E96901B43FC1E0008065A /* TQRichTextRunDelegate.m in Sources */,
 				3D73AB281B3CF756001847B0 /* UUCommunityViewController.m in Sources */,
 				3D9A07171B32C5AC00E88ADF /* UUStockDetailView.m in Sources */,
-				3DFECEF51B71E65500FC248B /* UUFavTopicViewController.m in Sources */,
 				3D7826871B7B3A3700FB469D /* UUStockDetailModel.m in Sources */,
 				3DAF1A441B2E671C003AF188 /* UUDailyLimitViewCell.m in Sources */,
 				3D83CDE51B00423A00C4CE22 /* BaseNavigationController.m in Sources */,
@@ -3077,13 +3026,10 @@
 				3DDD3BE51B4112DF00ECC365 /* UUCommunityPublicTopicViewController.m in Sources */,
 				3DA602E81B54E47200A8FAFF /* UULoginHandler.m in Sources */,
 				3D79ACE41B38F61600616F44 /* UUFavourisGroupEditViewController.m in Sources */,
-				3DAC88FD1B78482B00CE5D05 /* UUWarningRemindSettingViewController.m in Sources */,
 				3D3ACEA51BB40C2E006C561E /* UUMarketStructs.m in Sources */,
 				3DB47DBE1B42B0A900384115 /* UUCommunityHeaderTableViewCell.m in Sources */,
-				3DFECEEF1B71E37800FC248B /* UUFavourisViewController.m in Sources */,
 				3D55FA131B2AC3AF00DBE2F0 /* UUGroupViewController.m in Sources */,
 				3DC6F4411BF253AC00E9B2E8 /* UUStockCommomHeaderView.m in Sources */,
-				3DFECEEC1B71DFA800FC248B /* UUActivitiesViewController.m in Sources */,
 				3D6355431B954C7F00C52F56 /* UUTransactionHoldModel.m in Sources */,
 				3DFF45C01B4BC0FE00993EE9 /* HPGrowingTextView.m in Sources */,
 				3DA603021B54EF9600A8FAFF /* UULogicHelper.m in Sources */,
@@ -3112,7 +3058,6 @@
 				3DB6011B1B4CBD4700EB316C /* UUTopicReplyListModel.m in Sources */,
 				3DF839E51B53D4790061E1FC /* UURegisterViewController.m in Sources */,
 				3D8F1BAD1B81790100260953 /* UUNewStockViewController.m in Sources */,
-				3DEF8F951B7446C700570025 /* UUWarningRemindViewController.m in Sources */,
 				3DA886FA1BE346F600C22149 /* UUPersonalReplyViewCell.m in Sources */,
 				3D55FA0A1B2ABB1500DBE2F0 /* UUThemeManager.m in Sources */,
 				3D6744231B05D51200A5DD09 /* UUStockSearchBar.m in Sources */,
@@ -3123,7 +3068,6 @@
 				3DCD59D91B70B9AE00AD0BFB /* UUPersonalRefreshTimeView.m in Sources */,
 				3DCD59C41B7063AE00AD0BFB /* UUPersonalSettingViewController.m in Sources */,
 				3D6355551B95A91A00C52F56 /* UUGeniusModel.m in Sources */,
-				3DCD59D01B709B4B00AD0BFB /* UUPersonalPushSettingViewController.m in Sources */,
 				3D5B409E1B45590100A2960B /* UUCommunityTopicListModel.m in Sources */,
 				3D63552D1B954C7F00C52F56 /* UUTrandeAnalyStockHold.m in Sources */,
 				3D5FEFFF1B8323CD00D99890 /* UUStockShareTimeView.m in Sources */,
@@ -3162,7 +3106,6 @@
 				3DB822CE1BA97A4C00AF9132 /* UURichLabel.m in Sources */,
 				3D7E2B0E1BE30B6F008788A5 /* UUPersonalReplyModel.m in Sources */,
 				3D9A06FC1B325CA700E88ADF /* UUStockDetailTitleView.m in Sources */,
-				3D3EF2541B7323B20078FA58 /* UUFansListViewController.m in Sources */,
 				3D63552C1B954C7F00C52F56 /* UUTrandeAnalyHistory.m in Sources */,
 				3DC6F4471BF254D400E9B2E8 /* UUIndexStockHeaderView.m in Sources */,
 				3D5B40A11B46212200A2960B /* UUCommunityHandler.m in Sources */,
@@ -3202,7 +3145,6 @@
 				3D63553B1B954C7F00C52F56 /* UUVirtualTansactionHoldViewController.m in Sources */,
 				3DA602FE1B54EF9600A8FAFF /* CHKeychain.m in Sources */,
 				3D080CCB1BE7525B00499C5B /* UUStockFinancialModel.m in Sources */,
-				3DFECEF21B71E46900FC248B /* UUMessageViewController.m in Sources */,
 				3DB47DB81B42773B00384115 /* UUEmotionKeyboard.m in Sources */,
 				3D7C6E281B846A13003A7ECE /* UUMarketQuotationView.m in Sources */,
 				3DBA85891B2046EF0033F8EF /* UUDatabaseManager.m in Sources */,
@@ -3235,7 +3177,6 @@
 				3DA602FF1B54EF9600A8FAFF /* NSObject+Extension.m in Sources */,
 				3DAF1A411B2E62FF003AF188 /* UUDailyLimitViewController.m in Sources */,
 				3DA602FD1B54EF9600A8FAFF /* GTMBase64.m in Sources */,
-				3DFECEF81B71E7B700FC248B /* UUFavNewsViewController.m in Sources */,
 				3DA603061B551E2B00A8FAFF /* UUserDataManager.m in Sources */,
 				3D3ACE9D1BB40A64006C561E /* UUDataBuffer.cpp.m in Sources */,
 				3D8F1BB11B8179C700260953 /* UUNewStockViewCell.m in Sources */,
@@ -3254,7 +3195,6 @@
 				3D71051C1B01A8EE00EB5A5B /* UUStockListViewController.m in Sources */,
 				3D6355491B954CE200C52F56 /* UUDiscoverHandler.m in Sources */,
 				3DDD3BE81B41149500ECC365 /* UUCommunityPublicTopicView.m in Sources */,
-				3DCB0A601B71F7D1008EA040 /* UURemindViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

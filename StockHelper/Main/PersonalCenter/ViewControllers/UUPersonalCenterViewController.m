@@ -16,9 +16,7 @@
 #import "UUPersonalSettingViewController.h"
 #import <SVProgressHUD/SVProgressHUD.h>
 #import "UUShareView.h"
-#import "UUActivitiesViewController.h"
 #import "UUFavourisManagerViewController.h"
-#import "UUFansListViewController.h"
 #import "UUAttentionListViewController.h"
 #import <ShareSDK/ShareSDK.h>
 #import "UUMeHandler.h"
@@ -54,8 +52,7 @@
     
     
     _viewControllers = @[
-//                         @[@"UUWarningRemindViewController"],
-                         @[@"UUFavourisStockViewController",@"UUAttentionViewController",@"UUNotificationViewController"]
+@[@"UUFavourisStockViewController",@"UUAttentionViewController",@"UUNotificationViewController"]
                          ];
     [self configSubViews];
 }

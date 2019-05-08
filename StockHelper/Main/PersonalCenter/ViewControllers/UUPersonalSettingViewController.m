@@ -30,7 +30,8 @@
                    ];
     
     _viewControllers = @[
-                    @[@"UUpersonalChangePasswordViewController"/*,@"UUPersonalPushSettingViewController"*/,@"UUPersonalRefrashTimeViewController"],
+                    @[@"UUpersonalChangePasswordViewController"
+                      ,@"UUPersonalRefrashTimeViewController"],
                          @[@"UUSuggestionViewController"],
                          ];
     [self configSubViews];

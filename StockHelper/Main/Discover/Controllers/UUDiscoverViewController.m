@@ -16,7 +16,7 @@
 #import "UUFavourisStockViewController.h"
 #import "UUTabbar.h"
 #import "UUHomeButtonView.h"
-#import "UUDiscoverHandler.h"
+#import "UUDiscoverHandler.h" 
 #import "UUTradeChanceModel.h"
 #import "UUPersonalHomeViewController.h"
 #import "UUVirtualTansactionBuyingViewController.h"
