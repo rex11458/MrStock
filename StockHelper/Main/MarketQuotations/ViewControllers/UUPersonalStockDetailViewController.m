@@ -13,7 +13,6 @@
 #import "UUOptionView.h"
 #import "UUStockDetailF10Info.h"
 #import "UUStockDetailNews.h"
-#import "UUStockDetailComment.h"
 #import "UUStockDetailShortBrief.h"
 #import "UUStockDetailView.h"
 #import "UUMarketQuotationView.h"
@@ -27,15 +26,12 @@
 #import <Masonry/Masonry.h>
 #import "UUStockModel.h"
 #import "NSTimer+Addition.h"
-#import "UUTopicContainerView.h"
-#import "UUCommunityHandler.h"
 #import <MJRefresh/MJRefresh.h>
-#import "UUCommunityTopicDetailViewController.h"
 #import "UUStockFinancialModel.h"
 #import "UUStockDetailViewController.h"
 #import "UUStockDetailFinance.h"
 #import "UUStockDetailStockHolder.h"
-@interface UUPersonalStockDetailViewController ()<UUOptionViewDelegate,UITableViewDelegate,UUToolBarDelegate,UUStockDetailCommentViewCellDelegate>
+@interface UUPersonalStockDetailViewController ()<UUOptionViewDelegate,UITableViewDelegate,UUToolBarDelegate>
 {
 //    UUStockDetailTitleView *_titleView;
     

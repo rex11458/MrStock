@@ -16,8 +16,6 @@
 #import "UUStockSortViewCell.h"
 #import "UUToolBar.h"
 #import "UUTabbar.h"
-#import "UUCommunityHandler.h"
-#import "UUCommunityTopicListModel.h"
 @interface UUStockIdxDetailViewController ()<UITableViewDelegate,UITableViewDataSource,UUToolBarDelegate>
 {
     UIView *_sectionView;
@@ -135,16 +133,7 @@
     if (k_IS_INDEX(_stockModel.market)) {
         relenvanceId = [relenvanceId stringByAppendingString:@".INX"];
     }
-    //获取话题列表
-    [[UUCommunityHandler sharedCommunityHandler] getCommunityTopicListWithRelevanceId:relenvanceId status:0 type:1 pageNo:1 pageSize:1 success:^(UUCommunityTopicListModel *topicListModel) {
-        
-//        NSString *title = [NSString stringWithFormat:@"%@条讨论",topicListModel.todayAmount];
-        
-//        [_toolbar setTitle:title index:0];
-        
-    } failure:^(NSString *errorMessage) {
-        
-    }];
+  
 }
 
 #pragma  - 

@@ -9,7 +9,6 @@
 #import "UUStockDetailView.h"
 #import "BaseDataSource.h"
 #import <MJRefresh/MJRefresh.h>
-#import "UUStockDetailCommentViewCell.h"
 @implementation UUStockDetailView
 
 

@@ -11,7 +11,6 @@
 #import "UUMarketQuationHandler.h"
 #import "UUStockDetailTitleView.h"
 #import "UUDatabaseManager.h"
-#import "UUStockTopicViewController.h"
 #import <Masonry/Masonry.h>
 NSString * const stockDetailDidLoadSuccessNotificaiton = @"StockDetailDidLoadSuccessNotificaiton";
 @interface UUStockDetailViewController ()

@@ -8,9 +8,5 @@
 
 #import "BaseViewController.h"
 
-@interface UUNotificationViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate>
-{
-    UITableView *_tableView;
-    NSArray *_dataArray;
-}
+@interface UUNotificationViewController : BaseViewController
 @end

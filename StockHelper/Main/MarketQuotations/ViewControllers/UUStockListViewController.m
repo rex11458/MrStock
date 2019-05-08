@@ -13,7 +13,6 @@
 #import "UUPersonalStockDetailViewController.h"
 #import "UUFavourisManagerViewController.h"
 #import "UUStockIdxDetailViewController.h"
-#import "UUNewStockViewController.h"
 #import "UUDatabaseManager.h"
 #import "UUStockKeyboard.h"
 #import "UUStockModel.h"
