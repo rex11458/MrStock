@@ -13,7 +13,7 @@
 
 - (NSDictionary *)baseParameters:(NSDictionary *)dic
 {
-    NSMutableDictionary *baseBody = [NSMutableDictionary dictionaryWithObjectsAndKeys:[UUserDataManager sharedUserDataManager].user.customerID,@"userID",[[UUserDataManager sharedUserDataManager].user.sessionID lowercaseString],@"sessionID",nil];
+    NSMutableDictionary *baseBody = [NSMutableDictionary dictionaryWithObjectsAndKeys:[UUserDataManager sharedUserDataManager].user.customerID,@"customerID",[[UUserDataManager sharedUserDataManager].user.sessionID lowercaseString],@"sessionID",nil];
     [baseBody addEntriesFromDictionary:dic];
     return baseBody;
 }

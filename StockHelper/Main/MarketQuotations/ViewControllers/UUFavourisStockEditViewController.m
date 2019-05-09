@@ -79,11 +79,18 @@ static const void *IndieBandNameKey = &IndieBandNameKey;
 
 - (UIView *)footerView
 {
+    CGFloat height = 0;
+    
+    if (@available(iOS 11.0, *)) {
+        UIWindow *keyWindow = [[[UIApplication sharedApplication] delegate] window];
+        // 获取底部安全区域高度，iPhone X 竖屏下为 34.0，横屏下为 21.0，其他类型设备都为 0
+        height = keyWindow.safeAreaInsets.bottom;
+    }
     CGFloat footerViewHeight = StockEditViewFooterViewHeight;
-    UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0,CGRectGetHeight(self.view.bounds) - footerViewHeight, CGRectGetWidth(self.view.bounds), footerViewHeight)];
+    UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0,CGRectGetHeight(self.view.bounds) - footerViewHeight - height, CGRectGetWidth(self.view.bounds), footerViewHeight)];
     footerView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
     
-    UIColor *titleColor = k_NAVIGATION_BAR_COLOR;
+    UIColor *titleColor = k_NAVIGATION_BAR_COLOR; 
     
     NSArray *titles = @[@"全选",@"删除"];
     NSArray *selectedTitle = @[@"取消全选",@""];
@@ -154,24 +161,7 @@ static const void *IndieBandNameKey = &IndieBandNameKey;
             }
         }];
         
-        [SVProgressHUD showWithStatus:@"正在执行..." maskType:SVProgressHUDMaskTypeBlack];
-        if ([UUserDataManager userIsOnLine]) {
-            
-            [[UUMarketQuationHandler sharedMarkeQuationHandler] deleteFavourisStockWithListIDArray:listIDArray success:^(id obj)
-            {
-                
-                [self deleteFavStocksSuccess];
-                
-            } failue:^(NSString *errorMessage) {
-                
-                [SVProgressHUD showErrorWithStatus:errorMessage maskType:SVProgressHUDMaskTypeBlack];
-            }];
-        }
-        else
-        {
-            [self deleteFavStocksSuccess];
-
-        }
+        [self deleteFavStocksSuccess];
 
     }
 }
@@ -299,24 +289,8 @@ static const void *IndieBandNameKey = &IndieBandNameKey;
 {
     UUFavourisStockModel *stockModelA = [_stockModelArray objectAtIndex:sourceIndexPath.row];
     UUFavourisStockModel *stockModelB = [_stockModelArray objectAtIndex:destinationIndexPath.row];
-  
-    if ([UUserDataManager userIsOnLine]) {
-     
-        [SVProgressHUD showWithStatus:@"正在执行..." maskType:SVProgressHUDMaskTypeBlack];
-        [[UUMarketQuationHandler sharedMarkeQuationHandler] updatePositionWithListIDA:stockModelA.listID listIDB:stockModelB.listID success:^(id obj) {
-            
-            [self exchangePostionWithStockModel:stockModelA destinationIndexPath:destinationIndexPath];
+    [self exchangePostionWithStockModel:stockModelA destinationIndexPath:destinationIndexPath];
 
-        } failue:^(NSString *errorMessage) {
-            
-            [SVProgressHUD showErrorWithStatus:errorMessage maskType:SVProgressHUDMaskTypeBlack];
-            
-        }];
-    }
-    else
-    {
-        [self exchangePostionWithStockModel:stockModelA destinationIndexPath:destinationIndexPath];
-    }
 }
 
 - (void)exchangePostionWithStockModel:(UUFavourisStockModel *)stockModel destinationIndexPath:(NSIndexPath *)indexPath
@@ -334,7 +308,7 @@ static const void *IndieBandNameKey = &IndieBandNameKey;
     
     [[UUDatabaseManager manager] addFavourisList:_stockModelArray];
     [_tableView reloadData];
-    [SVProgressHUD showSuccessWithStatus:@"修改成功"];
+//    [SVProgressHUD showSuccessWithStatus:@"修改成功"];
 }
 
 @end

@@ -128,7 +128,7 @@
     line.backgroundColor = [UIColorTools colorWithHexString:@"ADADAD" withAlpha:1.0f];
     [headerView addSubview:line];
     
-    UILabel *lable = [UIKitHelper labelWithFrame:CGRectMake(CGRectGetMaxX(line.frame) + k_LEFT_MARGIN, 0, 200, CGRectGetHeight(headerView.bounds)) Font:[UIFont systemFontOfSize:16.0f] textColor:[UIColorTools colorWithHexString:@"#ADADAD" withAlpha:1.0f]];
+    UILabel *lable = [UIKitHelper labelWithFrame:CGRectMake(CGRectGetMaxX(line.frame) + k_LEFT_MARGIN, 0, 250, CGRectGetHeight(headerView.bounds)) Font:[UIFont systemFontOfSize:16.0f] textColor:[UIColorTools colorWithHexString:@"#ADADAD" withAlpha:1.0f]];
     lable.text = @"历史搜索记录";
     [headerView addSubview:lable];
     return headerView;
@@ -138,7 +138,7 @@
 {
     UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, PHONE_WIDTH, 60.0f)];
     
-    UIButton *button = [UIKitHelper buttonWithFrame:CGRectMake(0, 0, 112.0f, 30.0f) title:@"清除搜索历史记录" titleHexColor:@"#ADADAD" font:[UIFont systemFontOfSize:14.0f]];
+    UIButton *button = [UIKitHelper buttonWithFrame:CGRectMake(0, 0, 120.0f, 30.0f) title:@"清除搜索历史记录" titleHexColor:@"#ADADAD" font:[UIFont systemFontOfSize:14.0f]];
     button.center = CGPointMake(CGRectGetWidth(footerView.bounds) * 0.5, CGRectGetHeight(button.bounds) * 0.75);
     [button addTarget:self action:@selector(removeAllSearchRecord) forControlEvents:UIControlEventTouchUpInside];
     [footerView addSubview:button];

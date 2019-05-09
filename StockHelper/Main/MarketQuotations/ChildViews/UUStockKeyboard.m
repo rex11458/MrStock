@@ -22,9 +22,17 @@ static UUStockKeyboard *g_keyboard;
 
 @implementation UUStockKeyboard
 
+
 + (UUStockKeyboard *)keyboardWithType:(UUStockKeyboardType)keyboardType
 {
-    UUStockKeyboard *keyboard = [[UUStockKeyboard alloc] initWithFrame:CGRectMake(0, 0, PHONE_WIDTH, KEYBOARD_HEIGHT) keyboardType:keyboardType];
+    CGFloat height = 0;
+
+    if (@available(iOS 11.0, *)) {
+        UIWindow *keyWindow = [[[UIApplication sharedApplication] delegate] window];
+        // 获取底部安全区域高度，iPhone X 竖屏下为 34.0，横屏下为 21.0，其他类型设备都为 0
+        height = keyWindow.safeAreaInsets.bottom;
+    }
+    UUStockKeyboard *keyboard = [[UUStockKeyboard alloc] initWithFrame:CGRectMake(0, 0, PHONE_WIDTH,KEYBOARD_HEIGHT + height) keyboardType:keyboardType];
     
     return keyboard;
 }

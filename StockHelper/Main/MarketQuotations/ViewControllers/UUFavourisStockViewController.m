@@ -60,7 +60,9 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    self.tabBarController.navigationItem.title = @"自选股";
+    self.tabBarController.navigationItem.title = @"我的自选";
+    self.navigationItem.title = @"我的自选";
+
     [self addRightBarButtons];
     if (_dataArray != nil) {
         [self getStocksDetailInfo];
@@ -108,7 +110,7 @@
     [self loadDBData];
     
 //    从网络获取自选列表
-        [self loadData];
+//        [self loadData];
 }
 
 - (void)loadDBData
