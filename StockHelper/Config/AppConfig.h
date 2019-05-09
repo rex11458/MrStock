@@ -12,7 +12,7 @@
 
 
 //股票开盘时间
-#define k_STOCK_OPEN_DATE @"1970-1-1 09:30:00"
+#define k_STOCK_OPEN_DATE @"1970-1-1 09:00:00"
 
 #define SZ_CRC_CODE_KEY @"sz_crc_code_key"
 #define SS_CRC_CODE_KEY @"ss_crc_code_key"

@@ -138,7 +138,7 @@
 
 - (void)fillStockSortData
 {
-    _blockLabel.text = [NSString stringWithFormat:@"%@(%@)",_reportSortStockModel.name,_reportSortStockModel.code];
+    _blockLabel.text = [NSString stringWithFormat:@"%@(%@)",!!_reportSortStockModel.name ?_reportSortStockModel.name : @"" ,_reportSortStockModel.code];
     [_blockLabel sizeToFit];
     CGFloat labelWidth = _blockLabel.bounds.size.width;
     _blockLabel.frame = CGRectMake(2* k_LEFT_MARGIN,0,labelWidth, UUStockBlockViewSortCellHeight);

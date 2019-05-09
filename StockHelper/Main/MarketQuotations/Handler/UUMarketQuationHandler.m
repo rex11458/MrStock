@@ -51,7 +51,7 @@ static UUMarketQuationHandler *shared = nil;
     UUCommRequest *request = UUMarket_StockListRequest();
     NSMutableData *m_data = [NSMutableData dataWithBytes:request length:request->head.nLength];
 
-    [_socketManager.socket writeData:m_data withTimeout:-1 tag:request->head.cIdentifier];
+    [_socketManager.socket writeData:m_data withTimeout:5 tag:request->head.cIdentifier];
 
     return [self dealNotificationDataWithRequest:request success:^(UUCommResponse *respose) {
         
@@ -74,7 +74,7 @@ static UUMarketQuationHandler *shared = nil;
     UUCommRequest *request = UUMarket_FavouriteStockListRequest(codes);
     NSMutableData *m_data = [NSMutableData dataWithBytes:request length:request->head.nLength];
 
-    [_socketManager.socket writeData:m_data withTimeout:-1 tag:request->head.cIdentifier];
+    [_socketManager.socket writeData:m_data withTimeout:5 tag:request->head.cIdentifier];
 
     return [self dealNotificationDataWithRequest:request success:^(UUCommResponse *response) {
         
@@ -113,7 +113,7 @@ static UUMarketQuationHandler *shared = nil;
 
     NSMutableData *m_data = [NSMutableData dataWithBytes:request length:request->head.nLength];
     
-    [[UUSocketManager manager].socket writeData:m_data withTimeout:-1 tag:request->head.cIdentifier];
+    [[UUSocketManager manager].socket writeData:m_data withTimeout:5 tag:request->head.cIdentifier];
     //收到数据
       return [self dealNotificationDataWithRequest:request success:^(UUCommResponse *respose) {
           //数据填充
@@ -137,7 +137,7 @@ static UUMarketQuationHandler *shared = nil;
     
     NSMutableData *m_data = [NSMutableData dataWithBytes:request length:request->head.nLength];
 
-    [[UUSocketManager manager].socket writeData:m_data withTimeout:-1 tag:request->head.cIdentifier];
+    [[UUSocketManager manager].socket writeData:m_data withTimeout:5 tag:request->head.cIdentifier];
     
     
     return [self dealNotificationDataWithRequest:request success:^(UUCommResponse *response) {
@@ -164,12 +164,12 @@ static UUMarketQuationHandler *shared = nil;
 /**
  *  k线
  * lineType
- 0--1分钟线
+ 0-5分钟线
  1--5分钟线
- 2--15分钟线
+ 2-55分钟线
  3--30分钟线
  4--60分钟线
- 5--120分钟线
+ 5-520分钟线
  6--日线
  7--周线
  8--月线
@@ -181,7 +181,7 @@ static UUMarketQuationHandler *shared = nil;
     UUCommRequest *request = UUMarket_KLineRequest(code, type, lineType);
     NSMutableData *m_data = [NSMutableData dataWithBytes:request length:request->head.nLength];
 
-    [[UUSocketManager manager].socket writeData:m_data withTimeout:-1 tag:request->head.cIdentifier];
+    [[UUSocketManager manager].socket writeData:m_data withTimeout:5 tag:request->head.cIdentifier];
     
     return [self dealNotificationDataWithRequest:request success:^(UUCommResponse *response) {
         UUCommAttribute *attribute = (UUCommAttribute *)response->cAttributes;
@@ -204,7 +204,7 @@ static UUMarketQuationHandler *shared = nil;
   
     NSMutableData *m_data = [NSMutableData dataWithBytes:request length:request->head.nLength];
 
-    [[UUSocketManager manager].socket writeData:m_data withTimeout:-1 tag:request->head.cIdentifier];
+    [[UUSocketManager manager].socket writeData:m_data withTimeout:5 tag:request->head.cIdentifier];
 
     
     return [self dealNotificationDataWithRequest:request success:^(UUCommResponse *response) {
@@ -230,7 +230,7 @@ static UUMarketQuationHandler *shared = nil;
     
     NSMutableData *m_data = [NSMutableData dataWithBytes:request length:request->head.nLength];
     
-    [[UUSocketManager manager].socket writeData:m_data withTimeout:-1 tag:request->head.cIdentifier];
+    [[UUSocketManager manager].socket writeData:m_data withTimeout:5 tag:request->head.cIdentifier];
     
     return [self dealNotificationDataWithRequest:request success:^(UUCommResponse *response) {
        
@@ -260,7 +260,7 @@ static UUMarketQuationHandler *shared = nil;
     //----
     NSMutableData *m_data = [NSMutableData dataWithBytes:request length:request->head.nLength];
 
-    [[UUSocketManager manager].socket writeData:m_data withTimeout:-1 tag:request->head.cIdentifier];
+    [[UUSocketManager manager].socket writeData:m_data withTimeout:5 tag:request->head.cIdentifier];
     
     return [self dealNotificationDataWithRequest:request success:^(UUCommResponse *response) {
         UUCommAttribute *attribute = (UUCommAttribute *)response->cAttributes;
@@ -292,7 +292,7 @@ static UUMarketQuationHandler *shared = nil;
     NSMutableData *m_data = [NSMutableData dataWithBytes:request length:request->head.nLength];
     
     
-    [[UUSocketManager manager].socket writeData:m_data withTimeout:-1 tag:request->head.cIdentifier];
+    [[UUSocketManager manager].socket writeData:m_data withTimeout:5 tag:request->head.cIdentifier];
     
     NSMutableData *totalData = [NSMutableData data];
     return [[NSNotificationCenter defaultCenter] addObserverForName:SocketdidReceivedDataNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
@@ -356,7 +356,7 @@ static UUMarketQuationHandler *shared = nil;
     //----
     NSMutableData *m_data = [NSMutableData dataWithBytes:request length:request->head.nLength];
     
-    [[UUSocketManager manager].socket writeData:m_data withTimeout:-1 tag:request->head.cIdentifier];
+    [[UUSocketManager manager].socket writeData:m_data withTimeout:5 tag:request->head.cIdentifier];
 
     return [self dealNotificationDataWithRequest:request success:^(UUCommResponse *response) {
     
@@ -379,7 +379,7 @@ static UUMarketQuationHandler *shared = nil;
     
     NSMutableData *m_data = [NSMutableData dataWithBytes:request length:request->head.nLength];
     
-    [[UUSocketManager manager].socket writeData:m_data withTimeout:-1 tag:request->head.cIdentifier];
+    [[UUSocketManager manager].socket writeData:m_data withTimeout:5 tag:request->head.cIdentifier];
     
     return [self dealNotificationDataWithRequest:request success:^(UUCommResponse *response) {
         
