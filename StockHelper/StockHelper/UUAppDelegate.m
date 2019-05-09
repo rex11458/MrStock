@@ -36,6 +36,10 @@
     /*
      *获取沪深股票列表
      */
+//    selectStockModelWithCondition
+    UUStockModel *model = [[UUDatabaseManager manager] selectStockModelWithCode:@"000001" market:1];
+    if(model) return;
+    
     _observer = [[UUMarketQuationHandler sharedMarkeQuationHandler] getStockListSuccess:^(NSArray *stockModelArray) {
         
         if (stockModelArray != nil && stockModelArray.count > 0) {

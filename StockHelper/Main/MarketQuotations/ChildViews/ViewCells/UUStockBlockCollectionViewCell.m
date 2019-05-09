@@ -145,7 +145,7 @@
 
     double upRaiseRate = _reportSortStockModel.value;
     //换手率和振幅需要乘以十
-    if (_indexPath.section > 3) {
+    if (_indexPath.section > 1) {
         upRaiseRate *= 10;
     }
     
@@ -155,7 +155,7 @@
     if (upRaiseRate > 0){
         color = k_UPPER_COLOR;
         
-        if (_indexPath.section <=3) {
+        if (_indexPath.section <=1) {
             rate = [@"+" stringByAppendingString:rate];
         }
     }else if(upRaiseRate < 0){

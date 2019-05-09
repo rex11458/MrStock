@@ -375,9 +375,16 @@ static UUStockListViewController *g_vc = nil;
 
 - (void)configCollectionView
 {
+    CGFloat height = 0;
+    
+    if (@available(iOS 11.0, *)) {
+        UIWindow *keyWindow = [[[UIApplication sharedApplication] delegate] window];
+        // 获取底部安全区域高度，iPhone X 竖屏下为 34.0，横屏下为 21.0，其他类型设备都为 0
+        height = keyWindow.safeAreaInsets.bottom;
+    }
 //    [self.view addSubview:[self headerView]];
-    CGRect frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), PHONE_HEIGHT - kTabBarHeight);
-
+    CGRect frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), PHONE_HEIGHT - kTabBarHeight - height);
+ 
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     layout.headerReferenceSize = CGSizeMake(CGRectGetWidth(self.view.frame) - 20, UUStockBlockSectionViewHeight);
     _collectionView = [[UICollectionView alloc] initWithFrame:frame collectionViewLayout:layout];
