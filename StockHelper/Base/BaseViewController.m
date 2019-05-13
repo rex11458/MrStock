@@ -24,8 +24,9 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
 
     UIBarButtonItem *item = [[UIBarButtonItem alloc] init];
-    item.title = @"返回";
-    self.navigationItem.backBarButtonItem = item;
+    item.title = nil;
+    self.tabBarController.navigationItem.backBarButtonItem = item;
+    
 //    if (self.navigationController.viewControllers.count > 1)
 //    {
 ////        self.navigationController.enableBackGesture = YES;

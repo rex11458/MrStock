@@ -61,7 +61,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.tabBarController.navigationItem.title = @"我的自选";
-    self.navigationItem.title = @"我的自选";
+    self.tabBarController.navigationItem.titleView = nil;
 
     [self addRightBarButtons];
     if (_dataArray != nil) {
