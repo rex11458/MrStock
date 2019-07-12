@@ -331,7 +331,7 @@
 		3D71051B1B01A8EE00EB5A5B /* UUStockListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUStockListViewController.m; sourceTree = "<group>"; };
 		3D71051D1B01A99A00EB5A5B /* UUTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUTableViewController.h; sourceTree = "<group>"; };
 		3D71051E1B01A99A00EB5A5B /* UUTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUTableViewController.m; sourceTree = "<group>"; };
-		3D72A5B91AFC515B00B0D83B /* StockHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D72A5B91AFC515B00B0D83B /* 投投股票.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "投投股票.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D72A5BD1AFC515B00B0D83B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D72A5BE1AFC515B00B0D83B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3D72A5C01AFC515B00B0D83B /* UUAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUAppDelegate.h; sourceTree = "<group>"; };
@@ -1021,7 +1021,7 @@
 		3D72A5BA1AFC515B00B0D83B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3D72A5B91AFC515B00B0D83B /* StockHelper.app */,
+				3D72A5B91AFC515B00B0D83B /* 投投股票.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1376,7 +1376,7 @@
 			);
 			name = StockHelper;
 			productName = StockHelper;
-			productReference = 3D72A5B91AFC515B00B0D83B /* StockHelper.app */;
+			productReference = 3D72A5B91AFC515B00B0D83B /* 投投股票.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1400,6 +1400,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 				"zh-Hans",
@@ -1864,7 +1865,7 @@
 					"\"UIKit\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.66money.mrstock;
-				PRODUCT_NAME = StockHelper;
+				PRODUCT_NAME = "投投股票";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1951,7 +1952,7 @@
 					"\"UIKit\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.66money.mrstock;
-				PRODUCT_NAME = StockHelper;
+				PRODUCT_NAME = "投投股票";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
