@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -26,17 +26,10 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lauchImage_3" translatesAutoresizingMaskIntoConstraints="NO" id="57S-mh-gfi" userLabel="icon">
-                    <rect key="frame" x="92.5" y="562" width="80" height="80"/>
+                    <rect key="frame" x="147.5" y="562" width="80" height="80"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="80" id="URM-OA-7eX"/>
                         <constraint firstAttribute="height" constant="80" id="y6F-lf-Iyv"/>
-                    </constraints>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lauchImage_2" translatesAutoresizingMaskIntoConstraints="NO" id="ioF-MV-ZvY">
-                    <rect key="frame" x="192.5" y="577" width="105" height="50"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="105" id="MJF-17-7ot"/>
-                        <constraint firstAttribute="height" constant="50" id="ZHH-zb-fNc"/>
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EFP-j2-hgy" userLabel="contentView">
@@ -52,21 +45,19 @@
                 <constraint firstItem="EFP-j2-hgy" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="3La-Yr-zcj"/>
                 <constraint firstItem="EFP-j2-hgy" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-65" id="3Xg-bu-mue"/>
                 <constraint firstItem="4ct-wc-BCT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="8FY-G2-CXZ"/>
-                <constraint firstItem="57S-mh-gfi" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="-55" id="Oom-N1-y6v"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4ct-wc-BCT" secondAttribute="trailing" id="Fpy-Ru-dQ4"/>
+                <constraint firstItem="57S-mh-gfi" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Oom-N1-y6v"/>
                 <constraint firstItem="4ct-wc-BCT" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="X3w-OI-J2W"/>
                 <constraint firstAttribute="bottom" secondItem="57S-mh-gfi" secondAttribute="bottom" constant="25" id="ciV-4w-xMv"/>
                 <constraint firstAttribute="trailing" secondItem="EFP-j2-hgy" secondAttribute="trailing" constant="10" id="i9v-pQ-Mvg"/>
                 <constraint firstAttribute="bottom" secondItem="4ct-wc-BCT" secondAttribute="bottom" constant="130" id="nBZ-RS-GQf"/>
                 <constraint firstItem="EFP-j2-hgy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="phd-hC-Gg9"/>
-                <constraint firstItem="ioF-MV-ZvY" firstAttribute="leading" secondItem="57S-mh-gfi" secondAttribute="trailing" constant="20" id="rQ5-us-ZUb"/>
-                <constraint firstItem="ioF-MV-ZvY" firstAttribute="centerY" secondItem="57S-mh-gfi" secondAttribute="centerY" id="tVi-vt-Dnu"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <point key="canvasLocation" x="603.20000000000005" y="308.54572713643182"/>
         </view>
     </objects>
     <resources>
-        <image name="lauchImage_2" width="104" height="50"/>
-        <image name="lauchImage_3" width="80" height="80"/>
+        <image name="lauchImage_3" width="1024" height="1024"/>
     </resources>
 </document>

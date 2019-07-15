@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3D72A5B81AFC515B00B0D83B"
-               BuildableName = "StockHelper.app"
+               BuildableName = "&#x6295;&#x6295;&#x80a1;&#x7968;.app"
                BlueprintName = "StockHelper"
                ReferencedContainer = "container:StockHelper.xcodeproj">
             </BuildableReference>
@@ -57,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3D72A5B81AFC515B00B0D83B"
-            BuildableName = "StockHelper.app"
+            BuildableName = "&#x6295;&#x6295;&#x80a1;&#x7968;.app"
             BlueprintName = "StockHelper"
             ReferencedContainer = "container:StockHelper.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3D72A5B81AFC515B00B0D83B"
-            BuildableName = "StockHelper.app"
+            BuildableName = "&#x6295;&#x6295;&#x80a1;&#x7968;.app"
             BlueprintName = "StockHelper"
             ReferencedContainer = "container:StockHelper.xcodeproj">
          </BuildableReference>
@@ -106,7 +106,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3D72A5B81AFC515B00B0D83B"
-            BuildableName = "StockHelper.app"
+            BuildableName = "&#x6295;&#x6295;&#x80a1;&#x7968;.app"
             BlueprintName = "StockHelper"
             ReferencedContainer = "container:StockHelper.xcodeproj">
          </BuildableReference>
